@@ -7,7 +7,8 @@
 
 import UIKit
 
-class CoverViewController: UIViewController {
+/// 表紙画面
+final class CoverViewController: UIViewController {
     
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var todayLabel: UILabel!

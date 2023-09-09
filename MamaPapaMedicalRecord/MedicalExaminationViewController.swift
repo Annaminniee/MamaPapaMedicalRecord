@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MedicalExaminationViewController: UIViewController {
+///受診画面
+final class MedicalExaminationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
