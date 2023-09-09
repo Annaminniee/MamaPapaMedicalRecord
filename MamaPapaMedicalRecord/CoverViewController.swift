@@ -16,28 +16,28 @@ final class CoverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            navigationItem.title = "名前"
+        navigationItem.title = "名前"
             
-            let calendarBarButtonItem = UIBarButtonItem(image: UIImage(named: "calendarIcon"),
-                                                        style: UIBarButtonItem.Style.plain,
-                                                        target: self,
-                                                        action: #selector(tapCalendar))
-            self.navigationItem.leftBarButtonItem = calendarBarButtonItem
+        let calendarBarButtonItem = UIBarButtonItem(image: UIImage(named: "calendarIcon"),
+                                                    style: UIBarButtonItem.Style.plain,
+                                                    target: self,
+                                                    action: #selector(tapCalendar))
+        self.navigationItem.leftBarButtonItem = calendarBarButtonItem
             
-            let familyBarButtonItem = UIBarButtonItem(image: UIImage(named: "familyIcon"),
-                                                      style: UIBarButtonItem.Style.plain,
-                                                      target: self,
-                                                      action: #selector(tapFamily))
-            self.navigationItem.rightBarButtonItem = familyBarButtonItem
+        let familyBarButtonItem = UIBarButtonItem(image: UIImage(named: "familyIcon"),
+                                                    style: UIBarButtonItem.Style.plain,
+                                                    target: self,
+                                                    action: #selector(tapFamily))
+        self.navigationItem.rightBarButtonItem = familyBarButtonItem
         }
         
-        @objc func tapCalendar() {
-            print("カレンダーアイコンがタップされました")
-            ///画面遷移処理
-        }
-        
-        @objc func tapFamily() {
-            print("家族アイコンがタップされました")
-            ///画面遷移処理
-        }
+    @objc func tapCalendar() {
+        print("カレンダーアイコンがタップされました")
+        ///画面遷移処理
     }
+        
+    @objc func tapFamily() {
+        print("家族アイコンがタップされました")
+        ///画面遷移処理
+    }
+}
