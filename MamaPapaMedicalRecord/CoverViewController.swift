@@ -24,7 +24,7 @@ final class CoverViewController: UIViewController {
                                                     action: #selector(tapCalendar))
         self.navigationItem.leftBarButtonItem = calendarBarButtonItem
             
-        let familyBarButtonItem = UIBarButtonItem(image: UIImage(named: "familyIcon"),
+        let familyBarButtonItem = UIBarButtonItem(image: UIImage(named: "familySettingIcon"),
                                                     style: UIBarButtonItem.Style.plain,
                                                     target: self,
                                                     action: #selector(tapFamily))
