@@ -10,9 +10,9 @@ import UIKit
 /// 表紙画面
 final class CoverViewController: UIViewController {
     
-    @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var todayLabel: UILabel!
-    @IBOutlet weak var memoListTableView: UITableView!
+    @IBOutlet private weak var monthLabel: UILabel!
+    @IBOutlet private weak var todayLabel: UILabel!
+    @IBOutlet private weak var memoListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
