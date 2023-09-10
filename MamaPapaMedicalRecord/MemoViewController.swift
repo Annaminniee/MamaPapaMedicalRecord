@@ -7,7 +7,7 @@
 
 import UIKit
 
-///メモ画面
+/// メモ画面
 final class MemoViewController: UIViewController {
     
     override func viewDidLoad() {

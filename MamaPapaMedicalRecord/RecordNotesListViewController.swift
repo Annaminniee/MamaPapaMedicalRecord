@@ -7,7 +7,7 @@
 
 import UIKit
 
-///記録ノート一覧画面
+/// 記録ノート一覧画面
 final class RecordNotesListViewController: UIViewController {
     
     override func viewDidLoad() {

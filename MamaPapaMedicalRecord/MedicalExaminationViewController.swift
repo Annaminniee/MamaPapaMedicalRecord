@@ -7,7 +7,7 @@
 
 import UIKit
 
-///受診画面
+/// 受診画面
 final class MedicalExaminationViewController: UIViewController {
     
     override func viewDidLoad() {
