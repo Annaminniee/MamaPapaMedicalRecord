@@ -33,15 +33,12 @@ final class CoverViewController: UIViewController {
         let monthLabel = UILabel()
         monthLabel.frame = CGRect(x: 0, y: 88, width: 414, height: 20)
         monthLabel.textAlignment = NSTextAlignment.center
-        let rgba = UIColor(red: 245, green: 188, blue: 245, alpha: 1)
-        monthLabel.backgroundColor = rgba
         monthLabel.text = ""
         self.view.addSubview(monthLabel)
         
         let todayLabel = UILabel()
         todayLabel.frame = CGRect(x: 0, y: 378, width: 414, height: 20)
         todayLabel.textAlignment = NSTextAlignment.center
-        todayLabel.backgroundColor = rgba
         todayLabel.text = ""
         self.view.addSubview(todayLabel)
         
