@@ -132,7 +132,6 @@
                             <constraint firstItem="JAt-a3-6BG" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="XSc-hQ-PUU"/>
                             <constraint firstItem="qMl-hg-J2d" firstAttribute="trailing" secondItem="OsS-ts-NZG" secondAttribute="trailing" constant="10" id="av2-L6-TYD"/>
                             <constraint firstItem="JAt-a3-6BG" firstAttribute="top" secondItem="Xn4-xk-cFr" secondAttribute="bottom" id="dcC-bG-uLP"/>
-                            <constraint firstItem="Xn4-xk-cFr" firstAttribute="top" secondItem="Hau-fU-oAJ" secondAttribute="bottom" id="j1d-uV-Kgi"/>
                             <constraint firstItem="Xn4-xk-cFr" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="l0x-Lh-FeK"/>
                             <constraint firstItem="Xn4-xk-cFr" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="nG7-TX-LwL"/>
                             <constraint firstItem="aia-uH-dgO" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="reZ-rc-Q77"/>
