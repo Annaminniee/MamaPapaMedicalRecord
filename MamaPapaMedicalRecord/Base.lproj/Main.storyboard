@@ -70,10 +70,10 @@
                                     <navigationItem title="Title" id="hx3-Jz-eps"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-xk-cFr" userLabel="MonthView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-xk-cFr" userLabel="MonthView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-f6-eEo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-f6-eEo">
                                         <rect key="frame" x="182.5" y="0.0" width="49" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -86,14 +86,14 @@
                                     <constraint firstItem="B5M-f6-eEo" firstAttribute="centerY" secondItem="Xn4-xk-cFr" secondAttribute="centerY" id="93H-tE-Mlt"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
                                 <rect key="frame" x="0.0" y="108" width="414" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aia-uH-dgO" userLabel="TodayView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aia-uH-dgO" userLabel="TodayView">
                                 <rect key="frame" x="0.0" y="408" width="414" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6u-UJ-p5F">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6u-UJ-p5F">
                                         <rect key="frame" x="181.5" y="0.0" width="51.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -118,10 +118,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hau-fU-oAJ" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="2eX-SI-mhc"/>
-                            <constraint firstAttribute="bottom" secondItem="JAt-a3-6BG" secondAttribute="bottom" constant="488" id="4lb-lM-HgM"/>
                             <constraint firstItem="Xn4-xk-cFr" firstAttribute="top" secondItem="Hau-fU-oAJ" secondAttribute="bottom" id="4rT-N2-2Oq"/>
                             <constraint firstItem="OsS-ts-NZG" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" constant="10" id="5H3-Gf-q4e"/>
-                            <constraint firstItem="JAt-a3-6BG" firstAttribute="top" secondItem="pv6-ch-2Tp" secondAttribute="top" constant="108" id="9bu-XC-93R"/>
                             <constraint firstItem="OsS-ts-NZG" firstAttribute="top" secondItem="aia-uH-dgO" secondAttribute="bottom" id="ArJ-RO-WAT"/>
                             <constraint firstItem="aia-uH-dgO" firstAttribute="top" secondItem="JAt-a3-6BG" secondAttribute="bottom" id="BrJ-pw-FJq"/>
                             <constraint firstItem="JAt-a3-6BG" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="FWF-lq-ch6"/>
