@@ -64,6 +64,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-fU-oAJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hx3-Jz-eps"/>
+                                </items>
+                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-xk-cFr" userLabel="MonthView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="20"/>
                                 <subviews>
@@ -81,6 +87,10 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B5M-f6-eEo" secondAttribute="trailing" constant="20" symbolic="YES" id="bci-kJ-gea"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
+                                <rect key="frame" x="0.0" y="108" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aia-uH-dgO" userLabel="TodayView">
                                 <rect key="frame" x="0.0" y="408" width="414" height="20"/>
                                 <subviews>
@@ -97,16 +107,6 @@
                                     <constraint firstItem="c6u-UJ-p5F" firstAttribute="leading" secondItem="aia-uH-dgO" secondAttribute="leading" constant="180" id="gXn-Ai-nSp"/>
                                     <constraint firstItem="c6u-UJ-p5F" firstAttribute="top" secondItem="aia-uH-dgO" secondAttribute="top" id="lTh-Gr-l5U"/>
                                 </constraints>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-fU-oAJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="hx3-Jz-eps"/>
-                                </items>
-                            </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
-                                <rect key="frame" x="0.0" y="108" width="414" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OsS-ts-NZG">
                                 <rect key="frame" x="10" y="428" width="394" height="385"/>
