@@ -17,31 +17,45 @@ final class CoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "名前"
+        configurecalendarBarButtonItem()
+        configurefamilySettingBarButtonItem()
+        configuremonthLabel()
+        configuretodayLabel()
+    }
+    
+    func configurecalendarBarButtonItem () {
+        let leftBarButton = UIBarButtonItem(
+            image: UIImage(named: "calendarIcon"),
+            style: .plain,
+            target: self,
+            action: #selector(tapCalendar)
+        )
+        self.navigationItem.leftBarButtonItem = leftBarButton
+    }
+    
+    func configurefamilySettingBarButtonItem () {
+        let rightBarButton = UIBarButtonItem(
+            image: UIImage (named: "familySettingIcon"),
+            style: .plain,
+            target: self,
+            action: #selector(tapFamily)
+        )
+        self.navigationItem.rightBarButtonItem = rightBarButton
         
-        let calendarBarButtonItem = UIBarButtonItem(image: UIImage(named: "calendarIcon"),
-                                                    style: UIBarButtonItem.Style.plain,
-                                                    target: self,
-                                                    action: #selector(tapCalendar))
-        self.navigationItem.leftBarButtonItem = calendarBarButtonItem
-        
-        let familyBarButtonItem = UIBarButtonItem(image: UIImage(named: "familySettingIcon"),
-                                                  style: UIBarButtonItem.Style.plain,
-                                                  target: self,
-                                                  action: #selector(tapFamily))
-        self.navigationItem.rightBarButtonItem = familyBarButtonItem
-        
-        let monthLabel = UILabel()
-        monthLabel.frame = CGRect(x: 0, y: 88, width: 414, height: 20)
+    }
+    
+    func configuremonthLabel () {
+        monthLabel.frame = CGRect(x: 0, y: 88, width: 50, height: 20)
         monthLabel.textAlignment = NSTextAlignment.center
         monthLabel.text = ""
         self.view.addSubview(monthLabel)
-        
-        let todayLabel = UILabel()
-        todayLabel.frame = CGRect(x: 0, y: 378, width: 414, height: 20)
+    }
+    
+    func configuretodayLabel () {
+        todayLabel.frame = CGRect(x: 0, y: 408, width: 50, height: 20)
         todayLabel.textAlignment = NSTextAlignment.center
         todayLabel.text = ""
         self.view.addSubview(todayLabel)
-        
     }
     
     @objc func tapCalendar() {
