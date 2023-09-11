@@ -74,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-f6-eEo">
-                                        <rect key="frame" x="180" y="0.0" width="49" height="20"/>
+                                        <rect key="frame" x="182.5" y="0.0" width="49" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -82,9 +82,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745289999996" green="0.8078432083" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="leading" secondItem="Xn4-xk-cFr" secondAttribute="leading" constant="180" id="2oJ-cf-Qny"/>
-                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="top" secondItem="Xn4-xk-cFr" secondAttribute="top" id="NW8-Jf-wwf"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B5M-f6-eEo" secondAttribute="trailing" constant="20" symbolic="YES" id="bci-kJ-gea"/>
+                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="centerX" secondItem="Xn4-xk-cFr" secondAttribute="centerX" id="7Pb-Sp-ybP"/>
+                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="centerY" secondItem="Xn4-xk-cFr" secondAttribute="centerY" id="93H-tE-Mlt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
@@ -95,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="408" width="414" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6u-UJ-p5F">
-                                        <rect key="frame" x="180" y="0.0" width="51.5" height="20"/>
+                                        <rect key="frame" x="181.5" y="0.0" width="51.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -103,9 +102,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.97429049015045166" green="0.79544058537829165" blue="0.94360187641906568" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c6u-UJ-p5F" secondAttribute="trailing" constant="20" symbolic="YES" id="ddw-HL-TkI"/>
-                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="leading" secondItem="aia-uH-dgO" secondAttribute="leading" constant="180" id="gXn-Ai-nSp"/>
-                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="top" secondItem="aia-uH-dgO" secondAttribute="top" id="lTh-Gr-l5U"/>
+                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="centerX" secondItem="aia-uH-dgO" secondAttribute="centerX" id="PAd-XK-Ifa"/>
+                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="centerY" secondItem="aia-uH-dgO" secondAttribute="centerY" id="gB7-ql-es7"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OsS-ts-NZG">
