@@ -18,7 +18,7 @@ final class CoverViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "名前"
         configureCalendarBarButtonItem()
-        configurefamilySettingBarButtonItem()
+        configureFamilySettingBarButtonItem()
         configuremonthLabel()
         configuretodayLabel()
     }
@@ -33,7 +33,7 @@ final class CoverViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
-    func configurefamilySettingBarButtonItem () {
+    func configureFamilySettingBarButtonItem () {
         let rightBarButton = UIBarButtonItem(
             image: UIImage (named: "familySettingIcon"),
             style: .plain,
