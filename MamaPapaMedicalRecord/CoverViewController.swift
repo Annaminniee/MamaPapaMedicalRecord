@@ -20,7 +20,7 @@ final class CoverViewController: UIViewController {
         configureCalendarBarButtonItem()
         configureFamilySettingBarButtonItem()
         configureMonthLabel()
-        configuretodayLabel()
+        configureTodayLabel()
     }
     
     func configureCalendarBarButtonItem () {
@@ -51,7 +51,7 @@ final class CoverViewController: UIViewController {
         self.view.addSubview(monthLabel)
     }
     
-    func configuretodayLabel () {
+    func configureTodayLabel () {
         todayLabel.frame = CGRect(x: 0, y: 408, width: 50, height: 20)
         todayLabel.textAlignment = NSTextAlignment.center
         todayLabel.text = ""
