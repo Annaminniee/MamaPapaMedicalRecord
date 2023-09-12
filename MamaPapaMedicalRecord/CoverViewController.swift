@@ -17,13 +17,13 @@ final class CoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "名前"
-        configurecalendarBarButtonItem()
+        configureCalendarBarButtonItem()
         configurefamilySettingBarButtonItem()
         configuremonthLabel()
         configuretodayLabel()
     }
     
-    func configurecalendarBarButtonItem () {
+    func configureCalendarBarButtonItem () {
         let leftBarButton = UIBarButtonItem(
             image: UIImage(named: "calendarIcon"),
             style: .plain,
