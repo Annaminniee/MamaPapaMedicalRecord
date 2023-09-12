@@ -19,7 +19,7 @@ final class CoverViewController: UIViewController {
         navigationItem.title = "名前"
         configureCalendarBarButtonItem()
         configureFamilySettingBarButtonItem()
-        configuremonthLabel()
+        configureMonthLabel()
         configuretodayLabel()
     }
     
@@ -44,7 +44,7 @@ final class CoverViewController: UIViewController {
         
     }
     
-    func configuremonthLabel () {
+    func configureMonthLabel () {
         monthLabel.frame = CGRect(x: 0, y: 88, width: 50, height: 20)
         monthLabel.textAlignment = NSTextAlignment.center
         monthLabel.text = ""
