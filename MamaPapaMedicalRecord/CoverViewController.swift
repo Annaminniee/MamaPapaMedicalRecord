@@ -11,6 +11,8 @@ import FSCalendar
 /// 表紙画面
 final class CoverViewController: UIViewController {
     
+    let dateFormatter = DateFormatter()
+    
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
@@ -47,8 +49,24 @@ final class CoverViewController: UIViewController {
     }
     
     func configureLabel() {
-        monthLabel.text = ""
-        todayLabel.text = ""
+        monthLabel.text = formatMonthText()
+        todayLabel.text = formatTodayText()
+    }
+    
+    /// 今日の日付を"yyyy年MM月"で出力
+    private func formatMonthText() -> String {
+        dateFormatter.dateFormat = "yyyy年M月"
+        let date1 = Date()
+        let formattedDate1 = dateFormatter.string(from: date1)
+        return formattedDate1
+    }
+    
+    /// 今日の日付を"yyyy年MM月dd日（E）"で出力
+    private func formatTodayText() -> String {
+        dateFormatter.dateFormat = "yyyy年M月d日（E）"
+        let date2 = Date()
+        let formattedDate2 = dateFormatter.string(from: date2)
+        return formattedDate2
     }
     
     func configureCalendar() {
