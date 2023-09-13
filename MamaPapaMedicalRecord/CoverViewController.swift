@@ -27,7 +27,7 @@ final class CoverViewController: UIViewController {
         configureCalendar()
     }
     
-    func configureCalendarBarButtonItem() {
+    private func configureCalendarBarButtonItem() {
         let leftBarButton = UIBarButtonItem(
             image: UIImage(named: "calendarIcon"),
             style: .plain,
@@ -37,7 +37,7 @@ final class CoverViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
-    func configureFamilySettingBarButtonItem() {
+    private func configureFamilySettingBarButtonItem() {
         let rightBarButton = UIBarButtonItem(
             image: UIImage (named: "familySettingIcon"),
             style: .plain,
@@ -48,7 +48,7 @@ final class CoverViewController: UIViewController {
         
     }
     
-    func configureLabel() {
+    private func configureLabel() {
         monthLabel.text = formatMonthText()
         todayLabel.text = formatTodayText()
     }
@@ -69,7 +69,7 @@ final class CoverViewController: UIViewController {
         return formattedDate2
     }
     
-    func configureCalendar() {
+    private func configureCalendar() {
         calendarView.appearance.headerDateFormat = ""
         calendarView.appearance.todayColor = .orange
         calendarView.appearance.weekdayTextColor = .black
