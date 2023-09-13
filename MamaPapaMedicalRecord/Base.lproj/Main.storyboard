@@ -1,24 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a9J-NK-pgH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item 2-->
+        <scene sceneID="mZi-iK-dLO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="V7j-6S-bxp" customClass="MemoViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afa-8H-IEV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="nqW-Sn-snY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="memoIcon" id="imC-eC-4ww"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-411" y="294"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="bD3-Un-uiZ">
+            <objects>
+                <viewController id="Pms-sf-ujN" customClass="RecordNotesListViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MLC-Wj-seX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KIJ-x1-6zl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="recordIcon" id="gge-g6-RDP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="928-fA-hIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411" y="961"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Df2-cW-4eF">
+            <objects>
+                <viewController id="Alm-sH-VPX" customClass="MedicalExaminationViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oNI-JO-vVg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="y9c-7I-haT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="hospitalIcon" id="9fe-7r-p8T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zEq-vg-yYy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="1617"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="6vQ-lw-JRf">
+            <objects>
+                <viewController id="MSV-oc-AtW" customClass="CoverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pv6-ch-2Tp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-fU-oAJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hx3-Jz-eps"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-xk-cFr" userLabel="MonthView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5M-f6-eEo">
+                                        <rect key="frame" x="182.5" y="0.0" width="49" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862745289999996" green="0.8078432083" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="top" secondItem="Xn4-xk-cFr" secondAttribute="top" id="4ci-Ma-KqT"/>
+                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="centerX" secondItem="Xn4-xk-cFr" secondAttribute="centerX" id="7Pb-Sp-ybP"/>
+                                    <constraint firstItem="B5M-f6-eEo" firstAttribute="centerY" secondItem="Xn4-xk-cFr" secondAttribute="centerY" id="93H-tE-Mlt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-a3-6BG" userLabel="CalendarView">
+                                <rect key="frame" x="0.0" y="108" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aia-uH-dgO" userLabel="TodayView">
+                                <rect key="frame" x="0.0" y="408" width="414" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6u-UJ-p5F">
+                                        <rect key="frame" x="181.5" y="0.0" width="51.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97429049015045166" green="0.79544058537829165" blue="0.94360187641906568" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="centerX" secondItem="aia-uH-dgO" secondAttribute="centerX" id="PAd-XK-Ifa"/>
+                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="top" secondItem="aia-uH-dgO" secondAttribute="top" id="d2o-6h-mJZ"/>
+                                    <constraint firstItem="c6u-UJ-p5F" firstAttribute="centerY" secondItem="aia-uH-dgO" secondAttribute="centerY" id="gB7-ql-es7"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OsS-ts-NZG">
+                                <rect key="frame" x="10" y="428" width="394" height="385"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="385" id="81M-DF-UDq"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qMl-hg-J2d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hau-fU-oAJ" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="2eX-SI-mhc"/>
+                            <constraint firstItem="Xn4-xk-cFr" firstAttribute="top" secondItem="Hau-fU-oAJ" secondAttribute="bottom" id="4rT-N2-2Oq"/>
+                            <constraint firstItem="OsS-ts-NZG" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" constant="10" id="5H3-Gf-q4e"/>
+                            <constraint firstItem="OsS-ts-NZG" firstAttribute="top" secondItem="aia-uH-dgO" secondAttribute="bottom" id="ArJ-RO-WAT"/>
+                            <constraint firstItem="aia-uH-dgO" firstAttribute="top" secondItem="JAt-a3-6BG" secondAttribute="bottom" id="BrJ-pw-FJq"/>
+                            <constraint firstItem="JAt-a3-6BG" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="FWF-lq-ch6"/>
+                            <constraint firstItem="aia-uH-dgO" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="JLE-As-f4S"/>
+                            <constraint firstItem="Hau-fU-oAJ" firstAttribute="top" secondItem="pv6-ch-2Tp" secondAttribute="top" constant="44" id="SSo-rL-uQ4"/>
+                            <constraint firstItem="JAt-a3-6BG" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="XSc-hQ-PUU"/>
+                            <constraint firstItem="qMl-hg-J2d" firstAttribute="trailing" secondItem="OsS-ts-NZG" secondAttribute="trailing" constant="10" id="av2-L6-TYD"/>
+                            <constraint firstItem="JAt-a3-6BG" firstAttribute="top" secondItem="Xn4-xk-cFr" secondAttribute="bottom" id="dcC-bG-uLP"/>
+                            <constraint firstItem="Xn4-xk-cFr" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="l0x-Lh-FeK"/>
+                            <constraint firstItem="Xn4-xk-cFr" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="nG7-TX-LwL"/>
+                            <constraint firstItem="aia-uH-dgO" firstAttribute="leading" secondItem="qMl-hg-J2d" secondAttribute="leading" id="reZ-rc-Q77"/>
+                            <constraint firstItem="OsS-ts-NZG" firstAttribute="bottom" secondItem="qMl-hg-J2d" secondAttribute="bottom" id="xla-hN-jGs"/>
+                            <constraint firstItem="Hau-fU-oAJ" firstAttribute="trailing" secondItem="qMl-hg-J2d" secondAttribute="trailing" id="yA4-cR-vxr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="homeIcon" id="7Ne-CZ-oXf"/>
+                    <connections>
+                        <outlet property="memoListTableView" destination="OsS-ts-NZG" id="91Y-gO-ohF"/>
+                        <outlet property="monthLabel" destination="B5M-f6-eEo" id="KcR-wn-Rkj"/>
+                        <outlet property="navigationItem" destination="hx3-Jz-eps" id="jvs-ye-8Iy"/>
+                        <outlet property="todayLabel" destination="c6u-UJ-p5F" id="Hxl-Da-Q0N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yp4-CB-029" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="-358.25892857142856"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="iKy-rh-SOq">
+            <objects>
+                <tabBarController id="a9J-NK-pgH" customClass="MainTabBarController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y1w-p7-Lai">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MSV-oc-AtW" kind="relationship" relationship="viewControllers" id="k6k-ZK-qVW"/>
+                        <segue destination="V7j-6S-bxp" kind="relationship" relationship="viewControllers" id="gQw-gg-JHt"/>
+                        <segue destination="Pms-sf-ujN" kind="relationship" relationship="viewControllers" id="HHX-iY-mlq"/>
+                        <segue destination="Alm-sH-VPX" kind="relationship" relationship="viewControllers" id="WHd-TJ-tEL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbA-xD-HoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1315" y="-54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeIcon" width="25" height="25"/>
+        <image name="hospitalIcon" width="25" height="25"/>
+        <image name="memoIcon" width="25" height="25"/>
+        <image name="recordIcon" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

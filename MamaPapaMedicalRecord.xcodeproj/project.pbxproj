@@ -16,6 +16,11 @@
 		9596444E2AAB4ADE006E4114 /* MamaPapaMedicalRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596444D2AAB4ADE006E4114 /* MamaPapaMedicalRecordTests.swift */; };
 		959644582AAB4ADE006E4114 /* MamaPapaMedicalRecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644572AAB4ADE006E4114 /* MamaPapaMedicalRecordUITests.swift */; };
 		9596445A2AAB4ADE006E4114 /* MamaPapaMedicalRecordUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644592AAB4ADE006E4114 /* MamaPapaMedicalRecordUITestsLaunchTests.swift */; };
+		959644672AAB52D1006E4114 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644662AAB52D1006E4114 /* MainTabBarController.swift */; };
+		959644692AAB52EC006E4114 /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644682AAB52EC006E4114 /* CoverViewController.swift */; };
+		9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446A2AAB5301006E4114 /* MemoViewController.swift */; };
+		9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */; };
+		9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		959644532AAB4ADE006E4114 /* MamaPapaMedicalRecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MamaPapaMedicalRecordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959644572AAB4ADE006E4114 /* MamaPapaMedicalRecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamaPapaMedicalRecordUITests.swift; sourceTree = "<group>"; };
 		959644592AAB4ADE006E4114 /* MamaPapaMedicalRecordUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamaPapaMedicalRecordUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		959644662AAB52D1006E4114 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		959644682AAB52EC006E4114 /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
+		9596446A2AAB5301006E4114 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordNotesListViewController.swift; sourceTree = "<group>"; };
+		9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalExaminationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				9596443F2AAB4ADE006E4114 /* Assets.xcassets */,
 				959644412AAB4ADE006E4114 /* LaunchScreen.storyboard */,
 				959644442AAB4ADE006E4114 /* Info.plist */,
+				959644662AAB52D1006E4114 /* MainTabBarController.swift */,
+				959644682AAB52EC006E4114 /* CoverViewController.swift */,
+				9596446A2AAB5301006E4114 /* MemoViewController.swift */,
+				9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */,
+				9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */,
 			);
 			path = MamaPapaMedicalRecord;
 			sourceTree = "<group>";
@@ -260,6 +275,11 @@
 			files = (
 				9596443B2AAB4ADE006E4114 /* ViewController.swift in Sources */,
 				959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */,
+				9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */,
+				959644692AAB52EC006E4114 /* CoverViewController.swift in Sources */,
+				9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */,
+				9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */,
+				959644672AAB52D1006E4114 /* MainTabBarController.swift in Sources */,
 				959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
