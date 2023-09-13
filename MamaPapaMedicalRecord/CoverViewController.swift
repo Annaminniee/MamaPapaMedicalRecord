@@ -14,7 +14,6 @@ final class CoverViewController: UIViewController {
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
-    
     @IBOutlet weak var calendarView: FSCalendar!
     override func viewDidLoad() {
         super.viewDidLoad()
