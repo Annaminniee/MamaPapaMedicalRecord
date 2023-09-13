@@ -16,7 +16,7 @@ final class CoverTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    private func setup(memo: String) {
+    func setup(memo: String) {
         memoLabel.text = memo
     }
     
