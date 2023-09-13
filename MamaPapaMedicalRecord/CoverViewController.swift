@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FSCalendar
 
 /// 表紙画面
 final class CoverViewController: UIViewController {
@@ -14,16 +15,17 @@ final class CoverViewController: UIViewController {
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
     
+    @IBOutlet weak var calendarView: FSCalendar!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "名前"
         configureCalendarBarButtonItem()
         configureFamilySettingBarButtonItem()
-        configureMonthLabel()
-        configureTodayLabel()
+        configureLabel()
+        configureCalendar()
     }
     
-    func configureCalendarBarButtonItem () {
+    func configureCalendarBarButtonItem() {
         let leftBarButton = UIBarButtonItem(
             image: UIImage(named: "calendarIcon"),
             style: .plain,
@@ -33,7 +35,7 @@ final class CoverViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarButton
     }
     
-    func configureFamilySettingBarButtonItem () {
+    func configureFamilySettingBarButtonItem() {
         let rightBarButton = UIBarButtonItem(
             image: UIImage (named: "familySettingIcon"),
             style: .plain,
@@ -44,18 +46,25 @@ final class CoverViewController: UIViewController {
         
     }
     
-    func configureMonthLabel () {
-        monthLabel.frame = CGRect(x: 0, y: 88, width: 50, height: 20)
-        monthLabel.textAlignment = NSTextAlignment.center
+    func configureLabel() {
         monthLabel.text = ""
-        self.view.addSubview(monthLabel)
+        todayLabel.text = ""
     }
     
-    func configureTodayLabel () {
-        todayLabel.frame = CGRect(x: 0, y: 408, width: 50, height: 20)
-        todayLabel.textAlignment = NSTextAlignment.center
-        todayLabel.text = ""
-        self.view.addSubview(todayLabel)
+    func configureCalendar() {
+        calendarView.appearance.headerDateFormat = "yyyy年MM月dd日"
+        calendarView.appearance.todayColor = .orange
+        calendarView.appearance.headerTitleColor = .orange
+        calendarView.appearance.weekdayTextColor = .black
+        calendarView.calendarWeekdayView.weekdayLabels[0].text = "日"
+        calendarView.calendarWeekdayView.weekdayLabels[1].text = "月"
+        calendarView.calendarWeekdayView.weekdayLabels[2].text = "火"
+        calendarView.calendarWeekdayView.weekdayLabels[3].text = "水"
+        calendarView.calendarWeekdayView.weekdayLabels[4].text = "木"
+        calendarView.calendarWeekdayView.weekdayLabels[5].text = "金"
+        calendarView.calendarWeekdayView.weekdayLabels[6].text = "土"
+        calendarView.calendarWeekdayView.weekdayLabels[0].textColor = .red
+        calendarView.calendarWeekdayView.weekdayLabels[6].textColor = .blue
     }
     
     @objc func tapCalendar() {
