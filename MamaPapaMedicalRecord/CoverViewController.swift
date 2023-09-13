@@ -52,9 +52,8 @@ final class CoverViewController: UIViewController {
     }
     
     func configureCalendar() {
-        calendarView.appearance.headerDateFormat = "yyyy年MM月dd日"
+        calendarView.appearance.headerDateFormat = ""
         calendarView.appearance.todayColor = .orange
-        calendarView.appearance.headerTitleColor = .orange
         calendarView.appearance.weekdayTextColor = .black
         calendarView.calendarWeekdayView.weekdayLabels[0].text = "日"
         calendarView.calendarWeekdayView.weekdayLabels[1].text = "月"
