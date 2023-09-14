@@ -8,6 +8,8 @@
 import UIKit
 
 struct MemoDataModel {
-    var text: String
     var recordDate: Date
+    var text: String
+    var button: String
+
 }

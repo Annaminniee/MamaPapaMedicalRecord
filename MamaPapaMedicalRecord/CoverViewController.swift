@@ -107,7 +107,7 @@ final class CoverViewController: UIViewController {
     }
     
     func setMemoData() {
-        let memoDataModel = MemoDataModel(text: "", recordDate: Date())
+        let memoDataModel = MemoDataModel(recordDate: Date(), text: "", button: "熱, 食欲, 水分補給, 機嫌, 睡眠, 咳, 鼻水")
             memoDataList.append(memoDataModel)
     }
 }
