@@ -27,8 +27,6 @@ final class CoverViewController: UIViewController {
         configureFamilySettingBarButtonItem()
         configureLabel()
         configureCalendar()
-        memoListTableView.dataSource = self
-        memoListTableView.delegate = self
         setMemoData()
     }
     
@@ -89,6 +87,15 @@ final class CoverViewController: UIViewController {
         calendarView.calendarWeekdayView.weekdayLabels[6].textColor = .blue
     }
     
+    func configureTableView() {
+        memoListTableView.dataSource = self
+        memoListTableView.delegate = self
+        memoListTableView.tableFooterView = UIView()
+        //カスタムセル
+        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
+        memoListTableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+    }
+    
     @objc func tapCalendar() {
         print("カレンダーアイコンがタップされました")
         ///画面遷移処理
@@ -111,7 +118,7 @@ extension CoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "CoverTableViewCell")
         let memoDataModel: MemoDataModel = memoDataList[indexPath.row]
         cell.textLabel?.text = memoDataModel.text
         cell.detailTextLabel?.text = "\(memoDataModel.recordDate)"
