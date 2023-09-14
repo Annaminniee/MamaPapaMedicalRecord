@@ -180,9 +180,6 @@ extension CoverViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "CoverTableViewCell")
-        let memoDataModel: MemoDataModel = memoDataList[indexPath.row]
-        cell.textLabel?.text = memoDataModel.id
-        cell.detailTextLabel?.text = "\(memoDataModel.recordDate)"
         return cell
     }
 }
