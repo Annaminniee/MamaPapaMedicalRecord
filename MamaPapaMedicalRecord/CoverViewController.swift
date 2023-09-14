@@ -136,8 +136,12 @@ extension CoverViewController: UITableViewDataSource {
 }
 
 extension CoverViewController: UITableViewDelegate {
-    func tableView(_ tableview: UITableView, didSelectRowAt indextPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        _ = storyboard.instantiateViewController(identifier: "MemoViewController") as! MemoViewController
+    // 右スワイプでボタンを出す
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        let targetMemo = memoDataList[indexPath.row]
+       // TODO: 削除処理を書く
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
