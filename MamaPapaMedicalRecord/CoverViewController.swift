@@ -97,19 +97,19 @@ final class CoverViewController: UIViewController {
         memoListTableView.dataSource = self
         memoListTableView.delegate = self
         memoListTableView.tableFooterView = UIView()
-        //カスタムセル
+        // カスタムセル
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         memoListTableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
     }
     
     @objc func tapCalendar() {
         print("カレンダーアイコンがタップされました")
-        ///画面遷移処理
+        /// 画面遷移処理
     }
     
     @objc func tapFamily() {
         print("家族アイコンがタップされました")
-        ///画面遷移処理
+        /// 画面遷移処理
     }
     
     struct MemoDataModel {
