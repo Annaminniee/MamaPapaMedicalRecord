@@ -11,14 +11,14 @@ import FSCalendar
 /// 表紙画面
 final class CoverViewController: UIViewController {
     
-    let dateFormatter = DateFormatter()
+    private let dateFormatter = DateFormatter()
+    
+    private var memoDataList: [MemoDataModel] = []
     
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
     @IBOutlet private weak var calendarView: FSCalendar!
-    
-    var memoDataList: [MemoDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
