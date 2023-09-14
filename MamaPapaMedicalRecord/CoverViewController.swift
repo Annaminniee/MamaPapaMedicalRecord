@@ -18,6 +18,8 @@ final class CoverViewController: UIViewController {
     @IBOutlet private weak var memoListTableView: UITableView!
     @IBOutlet private weak var calendarView: FSCalendar!
     
+    var memoDataList: [MemoDataModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "名前"
@@ -25,6 +27,9 @@ final class CoverViewController: UIViewController {
         configureFamilySettingBarButtonItem()
         configureLabel()
         configureCalendar()
+        memoListTableView.dataSource = self
+        memoListTableView.delegate = self
+        setMemoData()
     }
     
     private func configureCalendarBarButtonItem() {
@@ -92,5 +97,31 @@ final class CoverViewController: UIViewController {
     @objc func tapFamily() {
         print("家族アイコンがタップされました")
         ///画面遷移処理
+    }
+    
+    func setMemoData() {
+        let memoDataModel = MemoDataModel(text: "", recordDate: Date())
+            memoDataList.append(memoDataModel)
+    }
+}
+
+extension CoverViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return memoDataList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let memoDataModel: MemoDataModel = memoDataList[indexPath.row]
+        cell.textLabel?.text = memoDataModel.text
+        cell.detailTextLabel?.text = "\(memoDataModel.recordDate)"
+        return cell
+    }
+}
+
+extension CoverViewController: UITableViewDelegate {
+    func tableView(_ tableview: UITableView, didSelectRowAT indextPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let memoViewController = storyboard.instantiateViewController(identifier: "MemoViewController") as! MemoViewController
     }
 }

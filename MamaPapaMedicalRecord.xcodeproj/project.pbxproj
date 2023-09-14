@@ -25,6 +25,7 @@
 		9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */; };
 		959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644702AB1A124006E4114 /* CoverTableViewCell.swift */; };
 		959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959644712AB1A124006E4114 /* CoverTableViewCell.xib */; };
+		959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644742AB28B44006E4114 /* MemoDataModel.swift */; };
 		EFCA7C573D0105158B74BEEB /* Pods_MamaPapaMedicalRecordTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA9E61FB5ACC3618B54C4C2 /* Pods_MamaPapaMedicalRecordTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalExaminationViewController.swift; sourceTree = "<group>"; };
 		959644702AB1A124006E4114 /* CoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverTableViewCell.swift; sourceTree = "<group>"; };
 		959644712AB1A124006E4114 /* CoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverTableViewCell.xib; sourceTree = "<group>"; };
+		959644742AB28B44006E4114 /* MemoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDataModel.swift; sourceTree = "<group>"; };
 		A9D748885987CF339C0FF184 /* Pods-MamaPapaMedicalRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.debug.xcconfig"; sourceTree = "<group>"; };
 		B38262B75BDFE2692EC4A5AA /* Pods-MamaPapaMedicalRecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC8C44D3F430A177E8004C39 /* Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */,
 				959644702AB1A124006E4114 /* CoverTableViewCell.swift */,
 				959644712AB1A124006E4114 /* CoverTableViewCell.xib */,
+				959644742AB28B44006E4114 /* MemoDataModel.swift */,
 			);
 			path = MamaPapaMedicalRecord;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */,
 				959644692AAB52EC006E4114 /* CoverViewController.swift in Sources */,
 				9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */,
+				959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */,
 				9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */,
 				959644672AAB52D1006E4114 /* MainTabBarController.swift in Sources */,
 				959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */,

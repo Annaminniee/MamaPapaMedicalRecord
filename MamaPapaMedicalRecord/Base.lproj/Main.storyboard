@@ -59,7 +59,7 @@
         <!--Item 1-->
         <scene sceneID="6vQ-lw-JRf">
             <objects>
-                <viewController id="MSV-oc-AtW" customClass="CoverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoverViewController" id="MSV-oc-AtW" customClass="CoverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pv6-ch-2Tp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
