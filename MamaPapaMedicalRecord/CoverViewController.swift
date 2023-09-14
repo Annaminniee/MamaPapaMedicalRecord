@@ -11,14 +11,19 @@ import FSCalendar
 /// 表紙画面
 final class CoverViewController: UIViewController {
     
-    private let dateFormatter = DateFormatter()
+    // MARK: - Properties
     
+    private let dateFormatter = DateFormatter()
     private var memoDataList: [MemoDataModel] = []
+    
+    // MARK: - IBOutlets
     
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
     @IBOutlet private weak var calendarView: FSCalendar!
+    
+    // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +34,8 @@ final class CoverViewController: UIViewController {
         configureCalendar()
         setMemoData()
     }
+    
+    // MARK: - Other Methods
     
     private func configureCalendarBarButtonItem() {
         let leftBarButton = UIBarButtonItem(
@@ -111,6 +118,8 @@ final class CoverViewController: UIViewController {
             memoDataList.append(memoDataModel)
     }
 }
+
+// MARK: - Extentions
 
 extension CoverViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
