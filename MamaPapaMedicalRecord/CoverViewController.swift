@@ -32,6 +32,7 @@ final class CoverViewController: UIViewController {
         configureFamilySettingBarButtonItem()
         configureLabel()
         configureCalendar()
+        configureTableView()
     }
     
     // MARK: - Other Methods
