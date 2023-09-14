@@ -127,8 +127,8 @@ extension CoverViewController: UITableViewDataSource {
 }
 
 extension CoverViewController: UITableViewDelegate {
-    func tableView(_ tableview: UITableView, didSelectRowAT indextPath: IndexPath) {
+    func tableView(_ tableview: UITableView, didSelectRowAt indextPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let memoViewController = storyboard.instantiateViewController(identifier: "MemoViewController") as! MemoViewController
+        _ = storyboard.instantiateViewController(identifier: "MemoViewController") as! MemoViewController
     }
 }
