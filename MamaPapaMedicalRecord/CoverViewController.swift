@@ -11,12 +11,19 @@ import FSCalendar
 /// 表紙画面
 final class CoverViewController: UIViewController {
     
-    let dateFormatter = DateFormatter()
+    // MARK: - Properties
+    
+    private let dateFormatter = DateFormatter()
+    private var memoDataList: [MemoDataModel] = []
+    
+    // MARK: - IBOutlets
     
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var todayLabel: UILabel!
     @IBOutlet private weak var memoListTableView: UITableView!
     @IBOutlet private weak var calendarView: FSCalendar!
+    
+    // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +32,10 @@ final class CoverViewController: UIViewController {
         configureFamilySettingBarButtonItem()
         configureLabel()
         configureCalendar()
+        configureTableView()
     }
+    
+    // MARK: - Other Methods
     
     private func configureCalendarBarButtonItem() {
         let leftBarButton = UIBarButtonItem(
@@ -84,13 +94,49 @@ final class CoverViewController: UIViewController {
         calendarView.calendarWeekdayView.weekdayLabels[6].textColor = .blue
     }
     
+    func configureTableView() {
+        memoListTableView.dataSource = self
+        memoListTableView.delegate = self
+        memoListTableView.tableFooterView = UIView()
+        // カスタムセル
+        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
+        memoListTableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+    }
+    
+    let memoDataModel = MemoDataModel(id: "", data: ["": ""])
+    
     @objc func tapCalendar() {
         print("カレンダーアイコンがタップされました")
-        ///画面遷移処理
+        /// 画面遷移処理
     }
     
     @objc func tapFamily() {
         print("家族アイコンがタップされました")
-        ///画面遷移処理
+        /// 画面遷移処理
+    }
+}
+
+// MARK: - Extentions
+
+extension CoverViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
+        cell.setup(memo: "あああ")
+        return cell
+    }
+}
+
+extension CoverViewController: UITableViewDelegate {
+    // 右スワイプでボタンを出す
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        let targetMemo = memoDataList[indexPath.row]
+       // TODO: 削除処理を書く
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 }
