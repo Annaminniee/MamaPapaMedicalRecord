@@ -58,6 +58,11 @@ final class CoverViewController: UIViewController {
         
     }
     
+     @IBAction private func rightBarButton(_ sender: UIButton) {
+        let nextvc = FamilySettingViewController()
+        navigationController?.pushViewController(nextvc, animated: true)
+    }
+    
     private func configureLabel() {
         monthLabel.text = formatMonthText()
         todayLabel.text = formatTodayText()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		021F57A2501F4F4C15CE3FAD /* Pods_MamaPapaMedicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0585F532280F72D34723CB4F /* Pods_MamaPapaMedicalRecord.framework */; };
 		3D434163AF6B6127B7F80F39 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0579501AD928B1AC13AED119 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework */; };
+		955E16AB2AB4284600EF91C2 /* FamilySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16AA2AB4284600EF91C2 /* FamilySettingViewController.swift */; };
 		959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644362AAB4ADE006E4114 /* AppDelegate.swift */; };
 		959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644382AAB4ADE006E4114 /* SceneDelegate.swift */; };
 		9596443B2AAB4ADE006E4114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596443A2AAB4ADE006E4114 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		582E2FBCCFEC9C4FB7937D2D /* Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75A872DC78CD1504269BCCBD /* Pods-MamaPapaMedicalRecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BEE6CBE3421BE992C079995 /* Pods-MamaPapaMedicalRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.release.xcconfig"; sourceTree = "<group>"; };
+		955E16AA2AB4284600EF91C2 /* FamilySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingViewController.swift; sourceTree = "<group>"; };
 		959644332AAB4ADE006E4114 /* MamaPapaMedicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaPapaMedicalRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959644362AAB4ADE006E4114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959644382AAB4ADE006E4114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				959644702AB1A124006E4114 /* CoverTableViewCell.swift */,
 				959644712AB1A124006E4114 /* CoverTableViewCell.xib */,
 				959644742AB28B44006E4114 /* MemoDataModel.swift */,
+				955E16AA2AB4284600EF91C2 /* FamilySettingViewController.swift */,
 			);
 			path = MamaPapaMedicalRecord;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955E16AB2AB4284600EF91C2 /* FamilySettingViewController.swift in Sources */,
 				9596443B2AAB4ADE006E4114 /* ViewController.swift in Sources */,
 				959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */,
 				9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */,
