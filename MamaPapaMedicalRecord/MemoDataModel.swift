@@ -31,6 +31,7 @@ struct MemoDataModel {
         self.sleepingTime = data["sleeping_time"] as? String ?? ""
         self.cough = data["cough"] as? Bool ?? false
         self.snot = data["snot"] as? Bool ?? false
+        self.memo = data["memo"] as? String ?? ""
     }
 }
 
