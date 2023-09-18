@@ -35,6 +35,17 @@ final class CoverViewController: UIViewController {
         configureTableView()
     }
     
+    @objc func tapCalendar() {
+        print("カレンダーアイコンがタップされました")
+        /// 画面遷移処理
+    }
+    
+    @objc func tapFamily() {
+        let nextvc = FamilySettingViewController()
+            navigationController?.pushViewController(nextvc, animated: true)
+        print("家族アイコンがタップされました")
+    }
+    
     // MARK: - Other Methods
     
     private func configureCalendarBarButtonItem() {
@@ -104,16 +115,6 @@ final class CoverViewController: UIViewController {
     }
     
     let memoDataModel = MemoDataModel(id: "", data: ["": ""])
-    
-    @objc func tapCalendar() {
-        print("カレンダーアイコンがタップされました")
-        /// 画面遷移処理
-    }
-    
-    @objc func tapFamily() {
-        print("家族アイコンがタップされました")
-        /// 画面遷移処理
-    }
 }
 
 // MARK: - Extentions

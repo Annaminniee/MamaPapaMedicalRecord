@@ -67,7 +67,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-fU-oAJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem id="3QJ-EE-4C3"/>
+                                    <navigationItem id="1gi-dw-dFu"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-xk-cFr" userLabel="MonthView">
