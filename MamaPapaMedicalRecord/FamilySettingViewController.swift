@@ -19,6 +19,7 @@ final class FamilySettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()
+        navigationItem.title = "家族設定"
     }
 
     // MARK: - Other Methods
