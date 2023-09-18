@@ -35,6 +35,8 @@ final class CoverViewController: UIViewController {
         configureTableView()
     }
     
+    // MARK: - Other Methods
+    
     @objc func tapCalendar() {
         print("カレンダーアイコンがタップされました")
         /// 画面遷移処理
@@ -45,8 +47,6 @@ final class CoverViewController: UIViewController {
             navigationController?.pushViewController(nextvc, animated: true)
         print("家族アイコンがタップされました")
     }
-    
-    // MARK: - Other Methods
     
     private func configureCalendarBarButtonItem() {
         let leftBarButton = UIBarButtonItem(
