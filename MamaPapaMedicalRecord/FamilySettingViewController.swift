@@ -14,6 +14,8 @@ final class FamilySettingViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    // MARK: - View Life-Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()
