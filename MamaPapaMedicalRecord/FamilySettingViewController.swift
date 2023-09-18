@@ -12,6 +12,8 @@ final class FamilySettingViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()
