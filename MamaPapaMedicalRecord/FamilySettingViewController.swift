@@ -21,7 +21,7 @@ final class FamilySettingViewController: UIViewController {
         configureCancelButtonItem()
     }
 
-    // MARK: - Other Methodsつけてください
+    // MARK: - Other Methods
     
     /// 戻るボタンの設定
     private func configureCancelButtonItem() {
