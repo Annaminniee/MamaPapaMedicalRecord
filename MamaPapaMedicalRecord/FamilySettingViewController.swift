@@ -21,6 +21,8 @@ final class FamilySettingViewController: UIViewController {
         configureCancelButtonItem()
     }
 
+    // MARK: - Other Methodsつけてください
+    
     /// 戻るボタンの設定
     func configureCancelButtonItem() {
         let cancelButton = UIBarButtonItem(title: "<戻る",
