@@ -11,6 +11,10 @@
 		3D434163AF6B6127B7F80F39 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0579501AD928B1AC13AED119 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework */; };
 		955E16AE2AB7CEA900EF91C2 /* FamilySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */; };
 		955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */; };
+		955E16B62AB91AC000EF91C2 /* ChildrenListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16B42AB91AC000EF91C2 /* ChildrenListTableViewCell.swift */; };
+		955E16B72AB91AC000EF91C2 /* ChildrenListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B52AB91AC000EF91C2 /* ChildrenListTableViewCell.xib */; };
+		955E16BA2AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16B82AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.swift */; };
+		955E16BB2AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B92AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.xib */; };
 		959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644362AAB4ADE006E4114 /* AppDelegate.swift */; };
 		959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644382AAB4ADE006E4114 /* SceneDelegate.swift */; };
 		9596443B2AAB4ADE006E4114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596443A2AAB4ADE006E4114 /* ViewController.swift */; };
@@ -57,6 +61,10 @@
 		7BEE6CBE3421BE992C079995 /* Pods-MamaPapaMedicalRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.release.xcconfig"; sourceTree = "<group>"; };
 		955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingViewController.swift; sourceTree = "<group>"; };
 		955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilySettingViewController.xib; sourceTree = "<group>"; };
+		955E16B42AB91AC000EF91C2 /* ChildrenListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrenListTableViewCell.swift; sourceTree = "<group>"; };
+		955E16B52AB91AC000EF91C2 /* ChildrenListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildrenListTableViewCell.xib; sourceTree = "<group>"; };
+		955E16B82AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyManagementListTableViewCell.swift; sourceTree = "<group>"; };
+		955E16B92AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyManagementListTableViewCell.xib; sourceTree = "<group>"; };
 		959644332AAB4ADE006E4114 /* MamaPapaMedicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaPapaMedicalRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959644362AAB4ADE006E4114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959644382AAB4ADE006E4114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +184,10 @@
 				959644742AB28B44006E4114 /* MemoDataModel.swift */,
 				955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */,
 				955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */,
+				955E16B42AB91AC000EF91C2 /* ChildrenListTableViewCell.swift */,
+				955E16B52AB91AC000EF91C2 /* ChildrenListTableViewCell.xib */,
+				955E16B82AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.swift */,
+				955E16B92AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.xib */,
 			);
 			path = MamaPapaMedicalRecord;
 			sourceTree = "<group>";
@@ -306,6 +318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955E16BB2AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.xib in Resources */,
+				955E16B72AB91AC000EF91C2 /* ChildrenListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
 				959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */,
 				959644402AAB4ADE006E4114 /* Assets.xcassets in Resources */,
@@ -448,6 +462,8 @@
 				9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */,
 				959644672AAB52D1006E4114 /* MainTabBarController.swift in Sources */,
 				959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */,
+				955E16B62AB91AC000EF91C2 /* ChildrenListTableViewCell.swift in Sources */,
+				955E16BA2AB91F9C00EF91C2 /* FamilyManagementListTableViewCell.swift in Sources */,
 				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
