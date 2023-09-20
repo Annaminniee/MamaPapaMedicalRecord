@@ -9,7 +9,7 @@ import UIKit
 
 final class AddListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var addListLabel: UILabel!
+    @IBOutlet private weak var addListLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
