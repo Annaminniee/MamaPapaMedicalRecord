@@ -9,14 +9,14 @@ import UIKit
 
 final class AddListTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var labelText: UILabel!
+    @IBOutlet private weak var addListLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setup(label: String) {
-        labelText.text = label
+    func setup(labelText: String) {
+        addListLabel.text = labelText
     }
 }
