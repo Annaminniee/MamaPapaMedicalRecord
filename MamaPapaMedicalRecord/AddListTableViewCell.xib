@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="addListLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-vi-mLl" userLabel="add List Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="labelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-vi-mLl">
                         <rect key="frame" x="10" y="5" width="300" height="20"/>
                         <color key="tintColor" systemColor="systemBlueColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,7 +34,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="addListLabel" destination="d5d-vi-mLl" id="LaC-N0-UDK"/>
+                <outlet property="labelText" destination="d5d-vi-mLl" id="cIo-Or-sGz"/>
             </connections>
             <point key="canvasLocation" x="10.687022900763358" y="4.9295774647887329"/>
         </tableViewCell>

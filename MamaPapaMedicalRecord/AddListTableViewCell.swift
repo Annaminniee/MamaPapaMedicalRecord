@@ -9,7 +9,7 @@ import UIKit
 
 final class AddListTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var addListLabel: UILabel!
+    @IBOutlet private weak var labelText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +22,7 @@ final class AddListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(addlist: String) {
-        addListLabel.text = addlist
+    func setup(label: String) {
+        labelText.text = label
     }
 }
