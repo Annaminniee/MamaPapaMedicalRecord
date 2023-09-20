@@ -1,5 +1,5 @@
 //
-//  ChildrenListTableViewCell.swift
+//  FamilyManagementListTableViewCell.swift
 //  MamaPapaMedicalRecord
 //
 //  Created by 菊地原杏菜 on 2023/09/19.
@@ -7,10 +7,9 @@
 
 import UIKit
 
-final class ChildrenListTableViewCell: UITableViewCell {
+final class AddListTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var birthdayLabel: UILabel!
+    @IBOutlet weak var addListLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +22,7 @@ final class ChildrenListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(name: String, birthday: String) {
-        nameLabel.text = name
-        birthdayLabel.text = birthday
+    func setup(addlist: String) {
+        addListLabel.text = addlist
     }
 }
