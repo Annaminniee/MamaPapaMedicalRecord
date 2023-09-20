@@ -25,7 +25,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="445-qy-MJG" userLabel="Detail Label">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="445-qy-MJG">
                         <rect key="frame" x="10" y="35" width="300" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="18" id="m3i-Bc-G32"/>
@@ -47,8 +47,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="detailLabel" destination="445-qy-MJG" id="sk5-a6-set"/>
-                <outlet property="nameLabel" destination="d5d-vi-mLl" id="QJd-cB-8Yh"/>
+                <outlet property="detailLabel" destination="445-qy-MJG" id="QV2-5P-bTf"/>
+                <outlet property="nameLabel" destination="d5d-vi-mLl" id="HBK-qh-kAe"/>
             </connections>
             <point key="canvasLocation" x="10.687022900763358" y="14.788732394366198"/>
         </tableViewCell>
