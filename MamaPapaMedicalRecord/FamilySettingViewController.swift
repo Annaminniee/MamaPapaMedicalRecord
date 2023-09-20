@@ -38,3 +38,19 @@ final class FamilySettingViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
+
+// MARK: - Extentions
+
+extension FamilySettingViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath)as! ListTableViewCell
+        let cell2 = tableView.dequeueReusableCell(withIdentifier: "AddListTableViewCell", for: indexPath)as! AddListTableViewCell
+        cell1.setup(name: "あああ", detail: "あああ")
+        cell2.setup(labelText: "あああ")
+        return cell1; cell2
+    }
+}
