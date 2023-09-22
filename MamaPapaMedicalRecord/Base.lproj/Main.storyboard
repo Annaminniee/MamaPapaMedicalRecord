@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Memo View Controller-->
         <scene sceneID="mZi-iK-dLO">
             <objects>
                 <viewController id="V7j-6S-bxp" customClass="MemoViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,11 +18,11 @@
                         <viewLayoutGuide key="safeArea" id="nqW-Sn-snY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="memoIcon" id="imC-eC-4ww"/>
+                    <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-411" y="294"/>
+            <point key="canvasLocation" x="498.55072463768118" y="293.97321428571428"/>
         </scene>
         <!--Record Notes List View Controller-->
         <scene sceneID="bD3-Un-uiZ">
@@ -178,15 +178,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="oRN-Db-PhW" kind="relationship" relationship="viewControllers" id="k6k-ZK-qVW"/>
-<<<<<<< HEAD
-                        <segue destination="V7j-6S-bxp" kind="relationship" relationship="viewControllers" id="gQw-gg-JHt"/>
-                        <segue destination="Pms-sf-ujN" kind="relationship" relationship="viewControllers" id="HHX-iY-mlq"/>
-                        <segue destination="Alm-sH-VPX" kind="relationship" relationship="viewControllers" id="WHd-TJ-tEL"/>
-=======
                         <segue destination="7Jk-tR-a3g" kind="relationship" relationship="viewControllers" id="gQw-gg-JHt"/>
                         <segue destination="dbW-lh-pBZ" kind="relationship" relationship="viewControllers" id="HHX-iY-mlq"/>
                         <segue destination="ewz-eY-IWM" kind="relationship" relationship="viewControllers" id="WHd-TJ-tEL"/>
->>>>>>> 9c98e1b (記録ノート一覧画面のUIパーツの配置とIBOutlet接続と表紙画面からの遷移を実装しました)
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbA-xD-HoT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,8 +206,6 @@
             </objects>
             <point key="canvasLocation" x="-410.14492753623193" y="-358.25892857142856"/>
         </scene>
-<<<<<<< HEAD
-=======
         <!--Item 2-->
         <scene sceneID="PhX-He-aj0">
             <objects>
@@ -271,7 +263,6 @@
             </objects>
             <point key="canvasLocation" x="-410.14492753623193" y="1616.5178571428571"/>
         </scene>
->>>>>>> 9c98e1b (記録ノート一覧画面のUIパーツの配置とIBOutlet接続と表紙画面からの遷移を実装しました)
     </scenes>
     <resources>
         <image name="homeIcon" width="25" height="25"/>
