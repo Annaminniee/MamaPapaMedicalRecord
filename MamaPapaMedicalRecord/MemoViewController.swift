@@ -18,26 +18,11 @@ final class MemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCancelButtonItem()
         configureSaveButtonItem()
         navigationItem.title = "症状"
     }
     
     // MARK: - Other Methods
-    
-    /// 戻るボタンの設定
-    private func configureCancelButtonItem() {
-        let cancelButton = UIBarButtonItem(title: "<戻る",
-                                           style: .plain,
-                                           target: self,
-                                           action: #selector(cancelButtonTapped))
-        navigationItem.leftBarButtonItem = cancelButton
-    }
-    
-    @objc func cancelButtonTapped() {
-        // 前の画面に戻る
-        navigationController?.popViewController(animated: true)
-    }
     
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "保存",
