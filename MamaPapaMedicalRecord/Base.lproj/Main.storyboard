@@ -587,11 +587,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
                                         <rect key="frame" x="75" y="0.0" width="309" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7g-ug-hsm" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                 <userDefinedRuntimeAttributes>
@@ -607,7 +607,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="204.5" y="0.0" width="104.5" height="50"/>
+                                                <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                 <userDefinedRuntimeAttributes>
@@ -645,11 +645,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
                                         <rect key="frame" x="75" y="0.0" width="309" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-6h-LED" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                 <userDefinedRuntimeAttributes>
@@ -665,7 +665,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="204.5" y="0.0" width="104.5" height="50"/>
+                                                <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                 <userDefinedRuntimeAttributes>
