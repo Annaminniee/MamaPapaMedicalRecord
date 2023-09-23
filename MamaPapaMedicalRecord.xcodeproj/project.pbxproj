@@ -10,6 +10,10 @@
 		021F57A2501F4F4C15CE3FAD /* Pods_MamaPapaMedicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0585F532280F72D34723CB4F /* Pods_MamaPapaMedicalRecord.framework */; };
 		3D434163AF6B6127B7F80F39 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0579501AD928B1AC13AED119 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework */; };
 		953ECA5A2ABAC30F00649D20 /* FamilySettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */; };
+		953ECA5C2ABC357000649D20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */; };
+		953ECA5F2ABC35F000649D20 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA5E2ABC35F000649D20 /* FirebaseAuth */; };
+		953ECA612ABC35F000649D20 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA602ABC35F000649D20 /* FirebaseFirestore */; };
+		953ECA632ABC35F000649D20 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA622ABC35F000649D20 /* FirebaseStorage */; };
 		955E16AE2AB7CEA900EF91C2 /* FamilySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */; };
 		955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */; };
 		955E16B62AB91AC000EF91C2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16B42AB91AC000EF91C2 /* ListTableViewCell.swift */; };
@@ -61,6 +65,7 @@
 		75A872DC78CD1504269BCCBD /* Pods-MamaPapaMedicalRecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BEE6CBE3421BE992C079995 /* Pods-MamaPapaMedicalRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.release.xcconfig"; sourceTree = "<group>"; };
 		953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingDataModel.swift; sourceTree = "<group>"; };
+		953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingViewController.swift; sourceTree = "<group>"; };
 		955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilySettingViewController.xib; sourceTree = "<group>"; };
 		955E16B42AB91AC000EF91C2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +104,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				021F57A2501F4F4C15CE3FAD /* Pods_MamaPapaMedicalRecord.framework in Frameworks */,
+				953ECA632ABC35F000649D20 /* FirebaseStorage in Frameworks */,
+				953ECA5F2ABC35F000649D20 /* FirebaseAuth in Frameworks */,
+				953ECA612ABC35F000649D20 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +184,7 @@
 				9596443F2AAB4ADE006E4114 /* Assets.xcassets */,
 				959644412AAB4ADE006E4114 /* LaunchScreen.storyboard */,
 				959644442AAB4ADE006E4114 /* Info.plist */,
+				953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */,
 				959644662AAB52D1006E4114 /* MainTabBarController.swift */,
 				959644682AAB52EC006E4114 /* CoverViewController.swift */,
 				9596446A2AAB5301006E4114 /* MemoViewController.swift */,
@@ -230,6 +239,11 @@
 			dependencies = (
 			);
 			name = MamaPapaMedicalRecord;
+			packageProductDependencies = (
+				953ECA5E2ABC35F000649D20 /* FirebaseAuth */,
+				953ECA602ABC35F000649D20 /* FirebaseFirestore */,
+				953ECA622ABC35F000649D20 /* FirebaseStorage */,
+			);
 			productName = MamaPapaMedicalRecord;
 			productReference = 959644332AAB4ADE006E4114 /* MamaPapaMedicalRecord.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +319,9 @@
 				Base,
 			);
 			mainGroup = 9596442A2AAB4ADE006E4114;
+			packageReferences = (
+				953ECA5D2ABC35F000649D20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 959644342AAB4ADE006E4114 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -322,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */,
+				953ECA5C2ABC357000649D20 /* GoogleService-Info.plist in Resources */,
 				955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
 				959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */,
@@ -816,6 +834,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		953ECA5D2ABC35F000649D20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		953ECA5E2ABC35F000649D20 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953ECA5D2ABC35F000649D20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		953ECA602ABC35F000649D20 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953ECA5D2ABC35F000649D20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		953ECA622ABC35F000649D20 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953ECA5D2ABC35F000649D20 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9596442B2AAB4ADE006E4114 /* Project object */;
 }
