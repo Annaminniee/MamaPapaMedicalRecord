@@ -419,12 +419,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gES-lb-jAB">
-                                                <rect key="frame" x="209" y="8" width="57" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-ro-eLY">
                                                 <rect key="frame" x="166" y="15" width="35" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -432,6 +426,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gES-lb-jAB">
+                                                <rect key="frame" x="209" y="8" width="57" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaG-ul-9fs">
                                                 <rect key="frame" x="274" y="15" width="18" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -600,7 +600,35 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
+                        <outlet property="appetiteLittleButton" destination="qVi-0u-x1K" id="yOv-oF-XKD"/>
+                        <outlet property="appetiteNoButton" destination="ej5-1Z-WvO" id="dPH-aF-dJ9"/>
+                        <outlet property="appetiteNormalButton" destination="pLI-Md-KuK" id="XLb-zW-byv"/>
+                        <outlet property="convulsionsButton" destination="mBi-ff-OJ9" id="B4p-2h-Lcy"/>
+                        <outlet property="coughNoButton" destination="y0S-6S-WJw" id="Sqe-Tu-Ren"/>
+                        <outlet property="coughYesButton" destination="W7g-ug-hsm" id="PBL-2S-3JF"/>
+                        <outlet property="dateTextField" destination="PID-BW-amb" id="Vl7-N0-3hO"/>
+                        <outlet property="diarrheaButton" destination="fJ4-hj-qQb" id="RhV-d0-BLN"/>
+                        <outlet property="feverButton" destination="ZGF-Hb-fH1" id="58G-lR-JZg"/>
+                        <outlet property="hydrationLittleButton" destination="V9f-Zp-Y47" id="4b9-PU-8zQ"/>
+                        <outlet property="hydrationNoButton" destination="zWR-yB-pEe" id="HMd-mN-odj"/>
+                        <outlet property="hydrationYesButton" destination="lod-hx-h6O" id="7WS-xS-eMy"/>
+                        <outlet property="moodBadButton" destination="Kef-ZY-ZDP" id="dpQ-2H-2H0"/>
+                        <outlet property="moodGoodButton" destination="83r-LB-dNN" id="j3y-qi-ALn"/>
+                        <outlet property="moodNormalButton" destination="ORc-q3-fEI" id="fpu-st-hRA"/>
+                        <outlet property="moodTiredButton" destination="OfD-Ck-yso" id="3fc-cx-JwR"/>
+                        <outlet property="otherButton" destination="gbS-Ux-47L" id="fLU-3J-wjO"/>
+                        <outlet property="rashButton" destination="b8d-Uo-ynB" id="Qxo-Fd-23o"/>
+                        <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="XI7-DJ-beA"/>
+                        <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="cAd-at-roU"/>
+                        <outlet property="sleepLittleButton" destination="ryf-5p-KZt" id="gOV-1D-wYg"/>
+                        <outlet property="sleepMinuteButton" destination="gES-lb-jAB" id="N8z-y1-hjk"/>
+                        <outlet property="sleepMuchButton" destination="GNr-hB-8nY" id="Ius-1m-Lqi"/>
+                        <outlet property="sleepNoButton" destination="o3G-In-TUb" id="mO3-CS-7w1"/>
+                        <outlet property="sleepNormalButton" destination="Mno-Me-asl" id="dNO-Ci-aYG"/>
+                        <outlet property="snotNoButton" destination="NuK-Ch-FT3" id="JRC-04-Yib"/>
+                        <outlet property="snotYesButton" destination="rvw-6h-LED" id="QgZ-ON-oza"/>
                         <outlet property="tableView" destination="u1V-HZ-s7S" id="5OI-B8-ZrX"/>
+                        <outlet property="vomitingButton" destination="znL-Gb-0Oy" id="k38-19-6U5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
