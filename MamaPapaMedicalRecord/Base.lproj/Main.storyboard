@@ -86,6 +86,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="feverButtong:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-hj-qQb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="68" y="0.0" width="63.5" height="40"/>
@@ -102,6 +105,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="diarrheaButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="K26-ef-JYm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znL-Gb-0Oy" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="136.5" y="0.0" width="63" height="40"/>
@@ -118,6 +124,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="vomitingButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="TIA-eW-mm6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-ff-OJ9" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="204.5" y="0.0" width="63" height="40"/>
@@ -134,6 +143,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="convulsionButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="9Ai-xh-7KS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-Uo-ynB" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="272.5" y="0.0" width="63.5" height="40"/>
@@ -150,6 +162,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="rashButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VAm-oL-hbP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Ux-47L" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="341" y="0.0" width="63" height="40"/>
@@ -175,6 +190,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="otherButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Ipy-hc-TbC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -215,6 +233,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appetiteNormal:" destination="V7j-6S-bxp" eventType="touchUpInside" id="2Gy-S0-71N"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="93" y="0.0" width="88.5" height="50"/>
@@ -231,6 +252,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appetiteLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="JwH-vJ-UyT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="186.5" y="0.0" width="88" height="50"/>
@@ -247,6 +271,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appetiteNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="ye9-wB-ShO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -289,6 +316,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="hydrationYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="vdI-9W-Kkb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="93" y="0.0" width="88.5" height="50"/>
@@ -305,6 +335,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="hydrationLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="AJR-y7-F7m"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="186.5" y="0.0" width="88" height="50"/>
@@ -321,6 +354,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="hydrationNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="b8s-T5-A9E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -363,6 +399,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moodGoodButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="PS8-II-1xL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="77.5" y="0.0" width="77" height="50"/>
@@ -379,6 +418,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moodNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="giF-7Y-xkY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="154.5" y="0.0" width="77.5" height="50"/>
@@ -395,6 +437,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moodBadButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VLT-dJ-tYt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="232" y="0.0" width="77" height="50"/>
@@ -420,6 +465,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="moodTiredButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Zsy-E6-vQO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -462,6 +510,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sleepMuchButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="XXq-hx-VYk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="77.5" y="0.0" width="77" height="50"/>
@@ -478,6 +529,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sleepNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="hW0-Ch-DMX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="154.5" y="0.0" width="77.5" height="50"/>
@@ -494,6 +548,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sleepLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="L6G-aA-UKr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="232" y="0.0" width="77" height="50"/>
@@ -520,6 +577,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="sleepNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="NHb-8Y-TmU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -605,6 +665,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="coughYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1PL-mY-Jeb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
@@ -621,6 +684,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="coughNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Qwd-nE-oz8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -663,6 +729,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="snotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                 <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
@@ -679,6 +748,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="snotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -756,35 +828,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
-                        <outlet property="appetiteLittleButton" destination="qVi-0u-x1K" id="yOv-oF-XKD"/>
-                        <outlet property="appetiteNoButton" destination="ej5-1Z-WvO" id="dPH-aF-dJ9"/>
-                        <outlet property="appetiteNormalButton" destination="pLI-Md-KuK" id="XLb-zW-byv"/>
-                        <outlet property="convulsionsButton" destination="mBi-ff-OJ9" id="B4p-2h-Lcy"/>
-                        <outlet property="coughNoButton" destination="y0S-6S-WJw" id="Sqe-Tu-Ren"/>
-                        <outlet property="coughYesButton" destination="W7g-ug-hsm" id="PBL-2S-3JF"/>
                         <outlet property="dateTextField" destination="PID-BW-amb" id="Vl7-N0-3hO"/>
-                        <outlet property="diarrheaButton" destination="fJ4-hj-qQb" id="RhV-d0-BLN"/>
-                        <outlet property="feverButton" destination="ZGF-Hb-fH1" id="58G-lR-JZg"/>
-                        <outlet property="hydrationLittleButton" destination="V9f-Zp-Y47" id="4b9-PU-8zQ"/>
-                        <outlet property="hydrationNoButton" destination="zWR-yB-pEe" id="HMd-mN-odj"/>
-                        <outlet property="hydrationYesButton" destination="lod-hx-h6O" id="7WS-xS-eMy"/>
-                        <outlet property="moodBadButton" destination="Kef-ZY-ZDP" id="dpQ-2H-2H0"/>
-                        <outlet property="moodGoodButton" destination="83r-LB-dNN" id="j3y-qi-ALn"/>
-                        <outlet property="moodNormalButton" destination="ORc-q3-fEI" id="fpu-st-hRA"/>
-                        <outlet property="moodTiredButton" destination="OfD-Ck-yso" id="3fc-cx-JwR"/>
-                        <outlet property="otherButton" destination="gbS-Ux-47L" id="fLU-3J-wjO"/>
-                        <outlet property="rashButton" destination="b8d-Uo-ynB" id="Qxo-Fd-23o"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="XI7-DJ-beA"/>
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="cAd-at-roU"/>
-                        <outlet property="sleepLittleButton" destination="ryf-5p-KZt" id="gOV-1D-wYg"/>
                         <outlet property="sleepMinuteButton" destination="gES-lb-jAB" id="N8z-y1-hjk"/>
-                        <outlet property="sleepMuchButton" destination="GNr-hB-8nY" id="Ius-1m-Lqi"/>
-                        <outlet property="sleepNoButton" destination="o3G-In-TUb" id="mO3-CS-7w1"/>
-                        <outlet property="sleepNormalButton" destination="Mno-Me-asl" id="dNO-Ci-aYG"/>
-                        <outlet property="snotNoButton" destination="NuK-Ch-FT3" id="JRC-04-Yib"/>
-                        <outlet property="snotYesButton" destination="rvw-6h-LED" id="QgZ-ON-oza"/>
                         <outlet property="tableView" destination="u1V-HZ-s7S" id="5OI-B8-ZrX"/>
-                        <outlet property="vomitingButton" destination="znL-Gb-0Oy" id="k38-19-6U5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
