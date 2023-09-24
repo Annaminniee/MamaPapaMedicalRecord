@@ -216,10 +216,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-u8-YbH">
-                                        <rect key="frame" x="129.5" y="0.0" width="274.5" height="50"/>
+                                        <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLI-Md-KuK" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                 <userDefinedRuntimeAttributes>
@@ -238,7 +238,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="93" y="0.0" width="88.5" height="50"/>
+                                                <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="少し"/>
                                                 <userDefinedRuntimeAttributes>
@@ -257,7 +257,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="186.5" y="0.0" width="88" height="50"/>
+                                                <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                 <userDefinedRuntimeAttributes>
@@ -282,9 +282,9 @@
                                 <constraints>
                                     <constraint firstItem="5ut-9X-T0H" firstAttribute="leading" secondItem="UUx-Jo-Ziy" secondAttribute="leading" constant="30" id="1cI-9O-kss"/>
                                     <constraint firstAttribute="trailing" secondItem="Xzs-u8-YbH" secondAttribute="trailing" constant="10" id="26y-eR-j5t"/>
-                                    <constraint firstItem="Xzs-u8-YbH" firstAttribute="top" secondItem="UUx-Jo-Ziy" secondAttribute="top" id="THU-7n-cbo"/>
+                                    <constraint firstItem="Xzs-u8-YbH" firstAttribute="top" secondItem="UUx-Jo-Ziy" secondAttribute="top" constant="5" id="THU-7n-cbo"/>
                                     <constraint firstItem="Xzs-u8-YbH" firstAttribute="leading" secondItem="5ut-9X-T0H" secondAttribute="trailing" constant="30" id="Xsi-PY-7WR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xzs-u8-YbH" secondAttribute="bottom" id="hLb-ZK-6E3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xzs-u8-YbH" secondAttribute="bottom" constant="5" id="hLb-ZK-6E3"/>
                                     <constraint firstItem="5ut-9X-T0H" firstAttribute="centerY" secondItem="UUx-Jo-Ziy" secondAttribute="centerY" id="hsp-Op-UH0"/>
                                     <constraint firstAttribute="height" constant="50" id="nUX-pr-xRB"/>
                                 </constraints>
@@ -299,10 +299,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-4a-fl4">
-                                        <rect key="frame" x="129.5" y="0.0" width="274.5" height="50"/>
+                                        <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lod-hx-h6O" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="できた"/>
                                                 <userDefinedRuntimeAttributes>
@@ -321,7 +321,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="93" y="0.0" width="88.5" height="50"/>
+                                                <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="少し"/>
                                                 <userDefinedRuntimeAttributes>
@@ -340,7 +340,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="186.5" y="0.0" width="88" height="50"/>
+                                                <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="できない"/>
                                                 <userDefinedRuntimeAttributes>
@@ -364,11 +364,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="cT3-Wl-DPl" firstAttribute="centerY" secondItem="pQK-vf-36W" secondAttribute="centerY" id="789-xw-7mG"/>
-                                    <constraint firstItem="cRQ-4a-fl4" firstAttribute="top" secondItem="pQK-vf-36W" secondAttribute="top" id="NdT-ag-kXZ"/>
+                                    <constraint firstItem="cRQ-4a-fl4" firstAttribute="top" secondItem="pQK-vf-36W" secondAttribute="top" constant="5" id="NdT-ag-kXZ"/>
                                     <constraint firstAttribute="trailing" secondItem="cRQ-4a-fl4" secondAttribute="trailing" constant="10" id="Vab-mA-ATI"/>
                                     <constraint firstItem="cRQ-4a-fl4" firstAttribute="leading" secondItem="cT3-Wl-DPl" secondAttribute="trailing" constant="30" id="ZsU-Hq-tCY"/>
                                     <constraint firstItem="cT3-Wl-DPl" firstAttribute="leading" secondItem="pQK-vf-36W" secondAttribute="leading" constant="30" id="nnd-ur-IwP"/>
-                                    <constraint firstAttribute="bottom" secondItem="cRQ-4a-fl4" secondAttribute="bottom" id="nzO-lf-NEh"/>
+                                    <constraint firstAttribute="bottom" secondItem="cRQ-4a-fl4" secondAttribute="bottom" constant="5" id="nzO-lf-NEh"/>
                                     <constraint firstAttribute="height" constant="50" id="rR7-vK-xuE"/>
                                 </constraints>
                             </view>
@@ -381,11 +381,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-5I-aJ6">
-                                        <rect key="frame" x="75" y="0.0" width="309" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-5I-aJ6">
+                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83r-LB-dNN" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="良い"/>
                                                 <userDefinedRuntimeAttributes>
@@ -404,7 +404,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="77.5" y="0.0" width="77" height="50"/>
+                                                <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                 <userDefinedRuntimeAttributes>
@@ -423,7 +423,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="154.5" y="0.0" width="77.5" height="50"/>
+                                                <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="悪い"/>
                                                 <userDefinedRuntimeAttributes>
@@ -442,7 +442,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="232" y="0.0" width="77" height="50"/>
+                                                <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -478,8 +478,8 @@
                                     <constraint firstItem="Mbl-5I-aJ6" firstAttribute="leading" secondItem="LyA-qm-oVw" secondAttribute="trailing" constant="10" id="3wf-ub-tc3"/>
                                     <constraint firstAttribute="trailing" secondItem="Mbl-5I-aJ6" secondAttribute="trailing" constant="30" id="UcH-CP-Glg"/>
                                     <constraint firstAttribute="height" constant="50" id="gza-iW-YkY"/>
-                                    <constraint firstItem="Mbl-5I-aJ6" firstAttribute="top" secondItem="8mp-XW-bs2" secondAttribute="top" id="kOS-Ef-E4R"/>
-                                    <constraint firstAttribute="bottom" secondItem="Mbl-5I-aJ6" secondAttribute="bottom" id="kW6-8Y-0CU"/>
+                                    <constraint firstItem="Mbl-5I-aJ6" firstAttribute="top" secondItem="8mp-XW-bs2" secondAttribute="top" constant="5" id="kOS-Ef-E4R"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mbl-5I-aJ6" secondAttribute="bottom" constant="5" id="kW6-8Y-0CU"/>
                                     <constraint firstItem="LyA-qm-oVw" firstAttribute="leading" secondItem="8mp-XW-bs2" secondAttribute="leading" constant="30" id="yCO-Vx-DJT"/>
                                 </constraints>
                             </view>
@@ -492,11 +492,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-20-K63">
-                                        <rect key="frame" x="75" y="0.0" width="309" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-20-K63">
+                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-hB-8nY" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="多い"/>
                                                 <userDefinedRuntimeAttributes>
@@ -515,7 +515,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="77.5" y="0.0" width="77" height="50"/>
+                                                <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                 <userDefinedRuntimeAttributes>
@@ -534,7 +534,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="154.5" y="0.0" width="77.5" height="50"/>
+                                                <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="少ない"/>
                                                 <userDefinedRuntimeAttributes>
@@ -553,7 +553,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="232" y="0.0" width="77" height="50"/>
+                                                <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <attributedString key="attributedTitle">
@@ -586,9 +586,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1kT-20-K63" secondAttribute="bottom" id="HoI-Lj-2Tj"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kT-20-K63" secondAttribute="bottom" constant="5" id="HoI-Lj-2Tj"/>
                                     <constraint firstItem="Cqk-Aq-TJc" firstAttribute="leading" secondItem="SRK-dg-UVW" secondAttribute="leading" constant="30" id="NDu-4p-wGe"/>
-                                    <constraint firstItem="1kT-20-K63" firstAttribute="top" secondItem="SRK-dg-UVW" secondAttribute="top" id="hhS-nH-no9"/>
+                                    <constraint firstItem="1kT-20-K63" firstAttribute="top" secondItem="SRK-dg-UVW" secondAttribute="top" constant="5" id="hhS-nH-no9"/>
                                     <constraint firstAttribute="height" constant="50" id="iPg-sj-e3F"/>
                                     <constraint firstItem="Cqk-Aq-TJc" firstAttribute="centerY" secondItem="SRK-dg-UVW" secondAttribute="centerY" id="ieE-PQ-xP5"/>
                                     <constraint firstAttribute="trailing" secondItem="1kT-20-K63" secondAttribute="trailing" constant="30" id="nLB-Hy-gq9"/>
@@ -647,11 +647,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
-                                        <rect key="frame" x="75" y="0.0" width="309" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
+                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7g-ug-hsm" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                 <userDefinedRuntimeAttributes>
@@ -670,7 +670,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
+                                                <rect key="frame" x="157" y="0.0" width="152" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                 <userDefinedRuntimeAttributes>
@@ -695,11 +695,11 @@
                                 <constraints>
                                     <constraint firstItem="4Om-MB-BlM" firstAttribute="leading" secondItem="SWw-Uc-xUN" secondAttribute="leading" constant="30" id="B6t-fT-gq8"/>
                                     <constraint firstItem="4Om-MB-BlM" firstAttribute="centerY" secondItem="SWw-Uc-xUN" secondAttribute="centerY" id="Bcj-rP-cn9"/>
-                                    <constraint firstItem="FCu-AO-V3s" firstAttribute="top" secondItem="SWw-Uc-xUN" secondAttribute="top" id="Dkm-Lq-I0Z"/>
+                                    <constraint firstItem="FCu-AO-V3s" firstAttribute="top" secondItem="SWw-Uc-xUN" secondAttribute="top" constant="5" id="Dkm-Lq-I0Z"/>
                                     <constraint firstAttribute="height" constant="50" id="GbV-1v-jZQ"/>
                                     <constraint firstItem="FCu-AO-V3s" firstAttribute="leading" secondItem="4Om-MB-BlM" secondAttribute="trailing" constant="10" id="HCO-fj-Dfd"/>
                                     <constraint firstAttribute="trailing" secondItem="FCu-AO-V3s" secondAttribute="trailing" constant="30" id="Ksa-Di-6OK"/>
-                                    <constraint firstAttribute="bottom" secondItem="FCu-AO-V3s" secondAttribute="bottom" id="i6X-i3-5dk"/>
+                                    <constraint firstAttribute="bottom" secondItem="FCu-AO-V3s" secondAttribute="bottom" constant="5" id="i6X-i3-5dk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cta-QT-Bhb">
@@ -711,11 +711,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
-                                        <rect key="frame" x="75" y="0.0" width="309" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
+                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-6h-LED" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                 <userDefinedRuntimeAttributes>
@@ -734,7 +734,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="154.5" y="0.0" width="154.5" height="50"/>
+                                                <rect key="frame" x="157" y="0.0" width="152" height="40"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                 <userDefinedRuntimeAttributes>
@@ -757,8 +757,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="hFl-yg-9om" firstAttribute="top" secondItem="cta-QT-Bhb" secondAttribute="top" id="1Zc-pA-Y7U"/>
-                                    <constraint firstAttribute="bottom" secondItem="hFl-yg-9om" secondAttribute="bottom" id="8FX-1K-aWB"/>
+                                    <constraint firstItem="hFl-yg-9om" firstAttribute="top" secondItem="cta-QT-Bhb" secondAttribute="top" constant="5" id="1Zc-pA-Y7U"/>
+                                    <constraint firstAttribute="bottom" secondItem="hFl-yg-9om" secondAttribute="bottom" constant="5" id="8FX-1K-aWB"/>
                                     <constraint firstAttribute="height" constant="50" id="Cg6-xF-SHN"/>
                                     <constraint firstItem="hFl-yg-9om" firstAttribute="leading" secondItem="zXj-9E-V1I" secondAttribute="trailing" constant="10" id="EFL-es-wxB"/>
                                     <constraint firstItem="zXj-9E-V1I" firstAttribute="leading" secondItem="cta-QT-Bhb" secondAttribute="leading" constant="30" id="nqb-Qx-brT"/>
@@ -828,10 +828,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
-                        <outlet property="dateTextField" destination="PID-BW-amb" id="Vl7-N0-3hO"/>
-                        <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="XI7-DJ-beA"/>
-                        <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="cAd-at-roU"/>
-                        <outlet property="sleepMinuteButton" destination="gES-lb-jAB" id="N8z-y1-hjk"/>
+                        <outlet property="dateTextField" destination="PID-BW-amb" id="66E-p9-etB"/>
+                        <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
+                        <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
+                        <outlet property="sleepMinuteTextField" destination="gES-lb-jAB" id="rWz-dS-1sD"/>
                         <outlet property="tableView" destination="u1V-HZ-s7S" id="5OI-B8-ZrX"/>
                         <outlet property="vomitingButton" destination="znL-Gb-0Oy" id="k38-19-6U5"/>
                     </connections>
