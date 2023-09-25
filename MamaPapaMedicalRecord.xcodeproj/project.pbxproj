@@ -37,6 +37,7 @@
 		959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644702AB1A124006E4114 /* CoverTableViewCell.swift */; };
 		959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959644712AB1A124006E4114 /* CoverTableViewCell.xib */; };
 		959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644742AB28B44006E4114 /* MemoDataModel.swift */; };
+		95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA1DEE2ABE639E0090B64C /* CustomButton.swift */; };
 		EFCA7C573D0105158B74BEEB /* Pods_MamaPapaMedicalRecordTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA9E61FB5ACC3618B54C4C2 /* Pods_MamaPapaMedicalRecordTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		959644702AB1A124006E4114 /* CoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverTableViewCell.swift; sourceTree = "<group>"; };
 		959644712AB1A124006E4114 /* CoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverTableViewCell.xib; sourceTree = "<group>"; };
 		959644742AB28B44006E4114 /* MemoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDataModel.swift; sourceTree = "<group>"; };
+		95DA1DEE2ABE639E0090B64C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A9D748885987CF339C0FF184 /* Pods-MamaPapaMedicalRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.debug.xcconfig"; sourceTree = "<group>"; };
 		B38262B75BDFE2692EC4A5AA /* Pods-MamaPapaMedicalRecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC8C44D3F430A177E8004C39 /* Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */,
 				955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */,
 				953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */,
+				95DA1DEE2ABE639E0090B64C /* CustomButton.swift */,
 			);
 			path = MamaPapaMedicalRecord;
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 				9596442F2AAB4ADE006E4114 /* Sources */,
 				959644302AAB4ADE006E4114 /* Frameworks */,
 				959644312AAB4ADE006E4114 /* Resources */,
-				74A234BB2462A72A45591381 /* [CP] Embed Pods Frameworks */,
+				BE748E94912B25BF19DD0FAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,7 +278,7 @@
 				9596444F2AAB4ADE006E4114 /* Sources */,
 				959644502AAB4ADE006E4114 /* Frameworks */,
 				959644512AAB4ADE006E4114 /* Resources */,
-				97C50B98D12EA018334378B6 /* [CP] Embed Pods Frameworks */,
+				3B4A87E38BF391F70DAB37B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,6 +369,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B4A87E38BF391F70DAB37B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B568A662A4A7A6BFAA74561 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,23 +406,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74A234BB2462A72A45591381 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85E84F600EC0B3F9C41A6518 /* [CP] Check Pods Manifest.lock */ = {
@@ -427,21 +430,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97C50B98D12EA018334378B6 /* [CP] Embed Pods Frameworks */ = {
+		BE748E94912B25BF19DD0FAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F07293BBE6773CAA227A30C9 /* [CP] Check Pods Manifest.lock */ = {
@@ -487,6 +490,7 @@
 				955E16B62AB91AC000EF91C2 /* ListTableViewCell.swift in Sources */,
 				955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */,
 				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
+				95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +676,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,6 +706,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,6 +771,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57PT3R2QQF;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kikuchihara.MamaPapaMedicalRecordUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -784,6 +791,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57PT3R2QQF;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kikuchihara.MamaPapaMedicalRecordUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
