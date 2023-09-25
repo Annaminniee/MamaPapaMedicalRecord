@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		021F57A2501F4F4C15CE3FAD /* Pods_MamaPapaMedicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0585F532280F72D34723CB4F /* Pods_MamaPapaMedicalRecord.framework */; };
 		3D434163AF6B6127B7F80F39 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0579501AD928B1AC13AED119 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework */; };
+		8BC3EC5B2AC1CE4C0023BAB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC5A2AC1CE4C0023BAB6 /* GoogleService-Info.plist */; };
 		950B46202AC151640085C4A6 /* FeverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B461E2AC151640085C4A6 /* FeverViewController.swift */; };
 		950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B461F2AC151640085C4A6 /* FeverViewController.xib */; };
 		950B46242AC151A30085C4A6 /* ConvulsionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46222AC151A30085C4A6 /* ConvulsionsViewController.swift */; };
@@ -24,7 +25,6 @@
 		950B46382AC152660085C4A6 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46362AC152660085C4A6 /* RecordDetailViewController.swift */; };
 		950B46392AC152660085C4A6 /* RecordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B46372AC152660085C4A6 /* RecordDetailViewController.xib */; };
 		953ECA5A2ABAC30F00649D20 /* FamilySettingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */; };
-		953ECA5C2ABC357000649D20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */; };
 		953ECA5F2ABC35F000649D20 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA5E2ABC35F000649D20 /* FirebaseAuth */; };
 		953ECA612ABC35F000649D20 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA602ABC35F000649D20 /* FirebaseFirestore */; };
 		953ECA632ABC35F000649D20 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 953ECA622ABC35F000649D20 /* FirebaseStorage */; };
@@ -78,6 +78,7 @@
 		582E2FBCCFEC9C4FB7937D2D /* Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests/Pods-MamaPapaMedicalRecord-MamaPapaMedicalRecordUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75A872DC78CD1504269BCCBD /* Pods-MamaPapaMedicalRecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BEE6CBE3421BE992C079995 /* Pods-MamaPapaMedicalRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.release.xcconfig"; sourceTree = "<group>"; };
+		8BC3EC5A2AC1CE4C0023BAB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		950B461E2AC151640085C4A6 /* FeverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeverViewController.swift; sourceTree = "<group>"; };
 		950B461F2AC151640085C4A6 /* FeverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeverViewController.xib; sourceTree = "<group>"; };
 		950B46222AC151A30085C4A6 /* ConvulsionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionsViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		950B46362AC152660085C4A6 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		950B46372AC152660085C4A6 /* RecordDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordDetailViewController.xib; sourceTree = "<group>"; };
 		953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingDataModel.swift; sourceTree = "<group>"; };
-		953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		955E16AC2AB7CEA900EF91C2 /* FamilySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilySettingViewController.swift; sourceTree = "<group>"; };
 		955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilySettingViewController.xib; sourceTree = "<group>"; };
 		955E16B42AB91AC000EF91C2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +183,7 @@
 		950B46172AC14FBB0085C4A6 /* Cover Tab */ = {
 			isa = PBXGroup;
 			children = (
+				950B46182AC14FFA0085C4A6 /* Family Setting */,
 				959644682AAB52EC006E4114 /* CoverViewController.swift */,
 			);
 			path = "Cover Tab";
@@ -196,9 +197,9 @@
 				955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */,
 				955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */,
 				953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */,
-				950B461D2AC150CE0085C4A6 /* Calendar */,
 			);
-			path = "Family Setting";
+			name = "Family Setting";
+			path = "../Family Setting";
 			sourceTree = "<group>";
 		};
 		950B46192AC150300085C4A6 /* Memo Tab */ = {
@@ -253,13 +254,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		950B461D2AC150CE0085C4A6 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
 		9596442A2AAB4ADE006E4114 = {
 			isa = PBXGroup;
 			children = (
@@ -291,9 +285,8 @@
 				9596443F2AAB4ADE006E4114 /* Assets.xcassets */,
 				959644412AAB4ADE006E4114 /* LaunchScreen.storyboard */,
 				959644442AAB4ADE006E4114 /* Info.plist */,
-				953ECA5B2ABC357000649D20 /* GoogleService-Info.plist */,
+				8BC3EC5A2AC1CE4C0023BAB6 /* GoogleService-Info.plist */,
 				950B46172AC14FBB0085C4A6 /* Cover Tab */,
-				950B46182AC14FFA0085C4A6 /* Family Setting */,
 				950B46192AC150300085C4A6 /* Memo Tab */,
 				950B461A2AC1505A0085C4A6 /* Record Notes List Tab */,
 				950B461B2AC150770085C4A6 /* Medical Examination Tab */,
@@ -438,7 +431,6 @@
 			files = (
 				950B46252AC151A30085C4A6 /* ConvulsionsViewController.xib in Resources */,
 				955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */,
-				953ECA5C2ABC357000649D20 /* GoogleService-Info.plist in Resources */,
 				950B46352AC152160085C4A6 /* OtherViewController.xib in Resources */,
 				955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
@@ -451,6 +443,7 @@
 				955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */,
 				950B462D2AC151E80085C4A6 /* DiarrheaViewController.xib in Resources */,
 				950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */,
+				8BC3EC5B2AC1CE4C0023BAB6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
