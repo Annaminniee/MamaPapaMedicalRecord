@@ -12,32 +12,72 @@ final class MemoViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var dateTextField: UITextField!
+    @IBOutlet private weak var recordNameTextField: UITextField!
+    @IBOutlet private weak var sleepHourTextField: UITextField!
+    @IBOutlet private weak var sleepMinuteTextField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCancelButtonItem()
         configureSaveButtonItem()
         navigationItem.title = "症状"
     }
     
+    // MARK: - IBActions
+    
+    @IBAction func feverButtong(_ sender: CustomButton) {
+    }
+    @IBAction func diarrheaButton(_ sender: CustomButton) {
+    }
+    @IBAction func vomitingButton(_ sender: CustomButton) {
+    }
+    @IBAction func convulsionButton(_ sender: CustomButton) {
+    }
+    @IBAction func rashButton(_ sender: CustomButton) {
+    }
+    @IBAction func otherButton(_ sender: CustomButton) {
+    }
+    @IBAction func appetiteNormal(_ sender: CustomButton) {
+    }
+    @IBAction func appetiteLittleButton(_ sender: CustomButton) {
+    }
+    @IBAction func appetiteNoButton(_ sender: CustomButton) {
+    }
+    @IBAction func hydrationYesButton(_ sender: CustomButton) {
+    }
+    @IBAction func hydrationLittleButton(_ sender: CustomButton) {
+    }
+    @IBAction func hydrationNoButton(_ sender: CustomButton) {
+    }
+    @IBAction func moodGoodButton(_ sender: CustomButton) {
+    }
+    @IBAction func moodNormalButton(_ sender: CustomButton) {
+    }
+    @IBAction func moodBadButton(_ sender: CustomButton) {
+    }
+    @IBAction func moodTiredButton(_ sender: CustomButton) {
+    }
+    @IBAction func sleepMuchButton(_ sender: CustomButton) {
+    }
+    @IBAction func sleepNormalButton(_ sender: CustomButton) {
+    }
+    @IBAction func sleepLittleButton(_ sender: CustomButton) {
+    }
+    @IBAction func sleepNoButton(_ sender: CustomButton) {
+    }
+    @IBAction func coughYesButton(_ sender: CustomButton) {
+    }
+    @IBAction func coughNoButton(_ sender: CustomButton) {
+    }
+    @IBAction func snotYesButton(_ sender: CustomButton) {
+    }
+    @IBAction func snotNoButton(_ sender: CustomButton) {
+    }
+    
     // MARK: - Other Methods
-    
-    /// 戻るボタンの設定
-    private func configureCancelButtonItem() {
-        let cancelButton = UIBarButtonItem(title: "<戻る",
-                                           style: .plain,
-                                           target: self,
-                                           action: #selector(cancelButtonTapped))
-        navigationItem.leftBarButtonItem = cancelButton
-    }
-    
-    @objc func cancelButtonTapped() {
-        // 前の画面に戻る
-        navigationController?.popViewController(animated: true)
-    }
     
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "保存",
