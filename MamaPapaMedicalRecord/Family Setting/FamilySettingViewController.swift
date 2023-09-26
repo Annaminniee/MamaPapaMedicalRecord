@@ -12,9 +12,14 @@ final class FamilySettingViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let dataModel = FamilySettingDataModel(childName: "",
+                                                   detail: "",
+                                                   family: "",
+                                                   familyLineage: .mama)
     private let sections = ["お子さま一覧", "管理家族一覧"]
-    private let childrenList = [["name": "太郎", "detail": "あああ"], ["name": "二郎", "detail": "いいい"]]
-    private let familyList = [["name": "お父さん", "detail": "かかか"], ["name": "お母さん", "detail": "ううう"]]
+    private var childrenList: [[String: String]] = []
+    private var familyList: [[String: String]] = []
+    private var datePicker: UIDatePicker?
     
     // MARK: - IBOutlets
     
@@ -56,7 +61,20 @@ final class FamilySettingViewController: UIViewController {
         tableView.register(nib2, forCellReuseIdentifier: "AddListTableViewCell")
     }
     
-    let familySettingDataModel = FamilySettingDataModel(name: "", detail: "", list: "")
+    /// テーブルビューを更新
+    private func updateTableViewData() {
+        tableView.reloadData()
+    }
+    
+    /// 追加画面に遷移
+    private func moveToFamilyInputVC(title: String, placeholder: String) {
+        let familyInputVC = FamilyInputViewController()
+        familyInputVC.setData(title: title, placeholder: placeholder)
+        familyInputVC.delegate = self
+        let navi = UINavigationController(rootViewController: familyInputVC)
+        navi.modalPresentationStyle = .formSheet
+        navigationController?.present(navi, animated: true)
+    }
 }
 
 // MARK: - Extentions
@@ -83,12 +101,16 @@ extension FamilySettingViewController: UITableViewDataSource {
         if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
             // 最後の行の場合
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddListTableViewCell", for: indexPath) as! AddListTableViewCell
+            // ハイライトを消す
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.setup(labelText: (indexPath.section == 0) ? "+お子さまを追加する" : "+家族を招待する")
             return cell
         } else {
             // 通常のデータを表示するセル
             let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
             let data = (indexPath.section == 0) ? childrenList[indexPath.row] : familyList[indexPath.row]
+            // ハイライトを消す
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.setup(name: data["name"] ?? "", detail: data["detail"] ?? "")
             return cell
         }
@@ -123,7 +145,18 @@ extension FamilySettingViewController: UITableViewDelegate {
         return 60
     }
     
-    // スワイプした時に表示するアクションの定義
+    /// セルがタップされたときに実行したいアクション
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath) is AddListTableViewCell {
+            if indexPath.section == 0 {
+                moveToFamilyInputVC(title: "お子さまを追加", placeholder: "生年月日を入力")
+            } else {
+                moveToFamilyInputVC(title: "家族を招待", placeholder: "続柄を選択")
+            }
+        }
+    }
+    
+    /// スワイプした時に表示するアクションの定義
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt trailingSwipeActionsConfigurationForRowAtindexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         // 編集処理
@@ -142,5 +175,20 @@ extension FamilySettingViewController: UITableViewDelegate {
         
         // 定義したアクションをセット
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+    }
+}
+
+// MARK: - FamilyInputViewControllerDelegate
+
+extension FamilySettingViewController: FamilyInputViewControllerDelegate {
+    
+    func didSelectChildren(list: [String : String]) {
+        childrenList.append(list)
+        updateTableViewData()
+    }
+    
+    func didSelectFamily(list: [String : String]) {
+        familyList.append(list)
+        updateTableViewData()
     }
 }
