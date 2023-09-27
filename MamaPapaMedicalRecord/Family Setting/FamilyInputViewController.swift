@@ -202,11 +202,12 @@ final class FamilyInputViewController: UIViewController {
         }
         if self.pageTitle == "お子さまを追加" {
             self.delegate?.didSelectChildren()
+            // 前の画面に戻る
+            self.dismiss(animated: true, completion: nil)
         } else {
             self.delegate?.didSelectFamily()
+            showShareView()
         }
-        
-        showShareView()
     }
     
     /// Firestoreのデータを更新
