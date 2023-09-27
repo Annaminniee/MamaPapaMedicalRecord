@@ -833,7 +833,6 @@
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
                         <outlet property="sleepMinuteTextField" destination="gES-lb-jAB" id="rWz-dS-1sD"/>
                         <outlet property="tableView" destination="u1V-HZ-s7S" id="5OI-B8-ZrX"/>
-                        <outlet property="vomitingButton" destination="znL-Gb-0Oy" id="k38-19-6U5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
