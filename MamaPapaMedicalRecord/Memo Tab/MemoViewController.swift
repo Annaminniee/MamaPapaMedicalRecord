@@ -24,6 +24,7 @@ final class MemoViewController: UIViewController {
         super.viewDidLoad()
         configureSaveButtonItem()
         navigationItem.title = "症状"
+        recordNameTextField.delegate = self
     }
     
     // MARK: - IBActions
@@ -76,9 +77,24 @@ final class MemoViewController: UIViewController {
     }
     @IBAction func snotNoButton(_ sender: CustomButton) {
     }
+    @IBAction func changeDate(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy/MM/dd"
+        dateTextField.text = formatter.string(from: sender.date)
+    }
+    @IBAction func sleepHour(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+                formatter.dateFormat = "HH:hh"
+        sleepHourTextField.text = formatter.string(from: sender.date)
+    }
+    @IBAction func sleepMinute(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+                formatter.dateFormat = "HH:mm"
+        sleepMinuteTextField.text = formatter.string(from: sender.date)
+    }
     
     // MARK: - Other Methods
-    
+ 
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "保存",
                                          style: .plain,
@@ -89,5 +105,12 @@ final class MemoViewController: UIViewController {
     
     @objc func saveButtonTapped() {
         // 保存処理
+    }
+}
+
+extension MemoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField, replacementText text: String) -> Bool {
+        recordNameTextField.resignFirstResponder()
+        return true
     }
 }
