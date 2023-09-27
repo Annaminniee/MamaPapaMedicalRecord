@@ -26,6 +26,12 @@ final class FamilyInputViewController: UIViewController {
     private var pageTitle: String = ""
     private var placeholder: String = ""
     private let families: [String] = ["ママ", "パパ", "おばあちゃん", "おじいちゃん", "その他"]
+    private var name: String = ""
+    private var detail: String = ""
+    /// 編集時かどうか
+    private var isEdit: Bool = false
+    /// ドキュメントID
+    private var documentID: String = ""
     
     // MARK: - IBOutlets
     
@@ -43,9 +49,21 @@ final class FamilyInputViewController: UIViewController {
     // MARK: - Other Methods
     
     /// 前の画面から受け取る
-    func setData(title: String, placeholder: String) {
+    func setData(title: String,
+                 placeholder: String,
+                 name: String = "",
+                 detail: String = "",
+                 documentID: String = "",
+                 isEdit: Bool) {
         self.pageTitle = title
         self.placeholder = placeholder
+        
+        if isEdit {
+            self.name = name
+            self.detail = detail
+            self.documentID = documentID
+            self.isEdit = isEdit
+        }
     }
     
     private func configureUI() {
@@ -55,6 +73,11 @@ final class FamilyInputViewController: UIViewController {
         detailTextField.placeholder = placeholder
         configureLeftBarButtonItem()
         configureRightBarButtonItem()
+        
+        if isEdit {
+            nameTextField.text = name
+            detailTextField.text = detail
+        }
     }
     
     /// 「閉じる」ボタンの設定
@@ -102,19 +125,29 @@ final class FamilyInputViewController: UIViewController {
         } else {
             guard let name = nameTextField.text,
                   let detail = detailTextField.text else { return }
+            let childTitle = isEdit ? "お子さまを編集" : "お子さまを追加"
 
-            if pageTitle == "お子さまを追加" {
+            if pageTitle == childTitle {
                 let childData: [String: String] = [
                     "childName": name,
                     "birthday": detail
                 ]
-                saveData(collection: .children, parameters: childData)
+                
+                if isEdit {
+                    updateData(collection: .children, parameters: childData)
+                } else {
+                    saveData(collection: .children, parameters: childData)
+                }
             } else {
                 let familyData: [String: String] = [
                     "familyName": name,
                     "familyLineage": detail
                 ]
-                saveData(collection: .families, parameters: familyData)
+                if isEdit {
+                    updateData(collection: .families, parameters: familyData)
+                } else {
+                    saveData(collection: .families, parameters: familyData)
+                }
             }
         }
     }
@@ -174,7 +207,28 @@ final class FamilyInputViewController: UIViewController {
         }
         // 前の画面に戻る
         self.dismiss(animated: true, completion: nil)
-    }    
+    }
+    
+    /// Firestoreのデータを更新
+    private func updateData(collection: FamilySettingCollection, parameters: [String: String]) {
+        let docRef = db.collection(collection.rawValue).document(documentID)
+        // ドキュメントを更新
+        docRef.updateData(parameters) { (error) in
+            
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+        if self.pageTitle == "お子さまを編集" {
+            self.delegate?.didSelectChildren()
+        } else {
+            self.delegate?.didSelectFamily()
+        }
+        // 前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -182,11 +236,14 @@ final class FamilyInputViewController: UIViewController {
 extension FamilyInputViewController: UITextFieldDelegate {
     /// detailTextFieldがタップされた時
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == detailTextField && pageTitle == "お子さまを追加" {
+        let childTitle = isEdit ? "お子さまを編集" : "お子さまを追加"
+        let familyTitle = isEdit ? "家族を編集" : "家族を招待"
+        
+        if textField == detailTextField && pageTitle == childTitle {
             showDatePickerView()
             // キーボードを表示しない
             return false
-        } else if textField == detailTextField && pageTitle == "家族を招待" {
+        } else if textField == detailTextField && pageTitle == familyTitle {
             showFamilyPickerView()
             // キーボードを表示しない
             return false

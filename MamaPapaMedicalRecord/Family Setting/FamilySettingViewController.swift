@@ -70,7 +70,26 @@ final class FamilySettingViewController: UIViewController {
     /// 追加画面に遷移
     private func moveToFamilyInputVC(title: String, placeholder: String) {
         let familyInputVC = FamilyInputViewController()
-        familyInputVC.setData(title: title, placeholder: placeholder)
+        familyInputVC.setData(title: title, placeholder: placeholder, isEdit: false)
+        familyInputVC.delegate = self
+        let navi = UINavigationController(rootViewController: familyInputVC)
+        navi.modalPresentationStyle = .formSheet
+        navigationController?.present(navi, animated: true)
+    }
+    
+    /// 追加画面に遷移（編集時）
+    private func moveToFamilyInputVCEdit(title: String,
+                                         placeholder: String,
+                                         name: String,
+                                         detail: String,
+                                         documentID: String) {
+        let familyInputVC = FamilyInputViewController()
+        familyInputVC.setData(title: title,
+                              placeholder: placeholder,
+                              name: name,
+                              detail: detail,
+                              documentID: documentID,
+                              isEdit: true)
         familyInputVC.delegate = self
         let navi = UINavigationController(rootViewController: familyInputVC)
         navi.modalPresentationStyle = .formSheet
@@ -80,44 +99,46 @@ final class FamilySettingViewController: UIViewController {
     /// Firestoreからデータを取得
     private func fetchData() {
         /// お子さま一覧を取得
-        db.collection("children").getDocuments { [weak self] (querySnapshot, error) in
-            guard let self = self else { return }
-            if let error = error {
-                print("Error fetching child documents: \(error)")
-            } else {
-                for document in querySnapshot!.documents {
-                    let documentID = document.documentID
-                    if let data = document.data() as? [String: String],
-                       let childName = data["childName"],
-                       let birthday = data["birthday"] {
-                        let child = Child(documentID: documentID, childName: childName, birthday: birthday)
-                        childrenList.append(child)
+        db.collection("children")
+            .getDocuments { [weak self] (querySnapshot, error) in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error fetching child documents: \(error)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let documentID = document.documentID
+                        if let data = document.data() as? [String: String],
+                           let childName = data["childName"],
+                           let birthday = data["birthday"] {
+                            let child = Child(documentID: documentID, childName: childName, birthday: birthday)
+                            childrenList.append(child)
+                        }
                     }
+                    print("Children: \(childrenList)")
+                    tableView.reloadData()
                 }
-                print("Children: \(childrenList)")
-                tableView.reloadData()
-            }
         }
         
         /// 家族一覧を取得
-        db.collection("families").getDocuments { [weak self] (querySnapshot, error) in
-            guard let self = self else { return }
-            if let error = error {
-                print("Error fetching family documents: \(error)")
-            } else {
-                for document in querySnapshot!.documents {
-                    let documentID = document.documentID
-                    if let data = document.data() as? [String: String],
-                       let familyName = data["familyName"],
-                       let familyLineage = data["familyLineage"] {
-                        let family = Family(documentID: documentID, family: familyName, familyLineage: familyLineage)
-                        self.familyList.append(family)
+        db.collection("families")
+            .getDocuments { [weak self] (querySnapshot, error) in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error fetching family documents: \(error)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let documentID = document.documentID
+                        if let data = document.data() as? [String: String],
+                           let familyName = data["familyName"],
+                           let familyLineage = data["familyLineage"] {
+                            let family = Family(documentID: documentID, family: familyName, familyLineage: familyLineage)
+                            self.familyList.append(family)
+                        }
                     }
+                    print("Families: \(familyList)")
+                    tableView.reloadData()
                 }
-                print("Families: \(familyList)")
-                tableView.reloadData()
             }
-        }
     }
     
     /// Firestoreからデータを再取得
@@ -242,11 +263,32 @@ extension FamilySettingViewController: UITableViewDelegate {
     
     /// スワイプした時に表示するアクションの定義
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt trailingSwipeActionsConfigurationForRowAtindexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+        let indexPath = trailingSwipeActionsConfigurationForRowAtindexPath
+
         // 編集処理
-        let editAction = UIContextualAction(style: .normal, title: "編集") {(action, view, completionHandler) in
+        let editAction = UIContextualAction(style: .normal,
+                                            title: "編集") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
             
-            // 実行結果に関わらず記述
+            if indexPath.section == 0 {
+                let childName = childrenList[indexPath.row].childName
+                let birthday = childrenList[indexPath.row].birthday
+                let documentID = childrenList[indexPath.row].documentID
+                self.moveToFamilyInputVCEdit(title: "お子さまを編集",
+                                             placeholder: "生年月日を入力",
+                                             name: childName ?? "",
+                                             detail: birthday ?? "",
+                                             documentID: documentID)
+            } else {
+                let familyName = familyList[indexPath.row].family
+                let familyLineage = familyList[indexPath.row].familyLineage
+                let documentID = familyList[indexPath.row].documentID
+                self.moveToFamilyInputVCEdit(title: "家族を編集",
+                                             placeholder: "続柄を選択",
+                                             name: familyName ?? "",
+                                             detail: familyLineage ?? "",
+                                             documentID: documentID)
+            }
             completionHandler(true)
         }
         
@@ -256,7 +298,7 @@ extension FamilySettingViewController: UITableViewDelegate {
                                                                           view,
                                                                           completionHandler) in
             guard let self = self else { return }
-            self.deleteData(indexPath: trailingSwipeActionsConfigurationForRowAtindexPath)
+            self.deleteData(indexPath: indexPath)
             completionHandler(true)
         }
         
