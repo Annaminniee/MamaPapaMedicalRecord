@@ -205,8 +205,8 @@ final class FamilyInputViewController: UIViewController {
         } else {
             self.delegate?.didSelectFamily()
         }
-        // 前の画面に戻る
-        self.dismiss(animated: true, completion: nil)
+        
+        showShareView()
     }
     
     /// Firestoreのデータを更新
@@ -228,6 +228,29 @@ final class FamilyInputViewController: UIViewController {
         }
         // 前の画面に戻る
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    /// シェア画面を表示
+    private func showShareView() {
+        // TODO: ここにアプリの招待URLを貼る
+        if let url = URL(string: "https://example.com") {
+            let activityViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            
+            // UIActivityViewControllerのcompletionWithItemsHandlerを設定
+            activityViewController.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in
+                if completed {
+                    // 共有アクションが完了した場合の処理
+                    // 前の画面に戻る
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    // 共有アクションがキャンセルされた場合の処理
+                    print("共有がキャンセルされました。")
+                }
+            }
+            
+            // UIActivityViewControllerを表示
+            present(activityViewController, animated: true, completion: nil)
+        }
     }
 }
 
