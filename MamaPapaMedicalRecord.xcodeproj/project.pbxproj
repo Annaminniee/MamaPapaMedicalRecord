@@ -195,8 +195,8 @@
 		950B46172AC14FBB0085C4A6 /* Cover Tab */ = {
 			isa = PBXGroup;
 			children = (
-				950B46182AC14FFA0085C4A6 /* Family Setting */,
 				959644682AAB52EC006E4114 /* CoverViewController.swift */,
+				950B46182AC14FFA0085C4A6 /* Family Setting */,
 			);
 			path = "Cover Tab";
 			sourceTree = "<group>";

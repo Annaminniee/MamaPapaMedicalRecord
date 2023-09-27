@@ -9,19 +9,19 @@ import Firebase
 
 struct FamilySettingDataModel {
     var childName: String
-    var detail: String
+    var birthday: String
     var family: String
     var familyLineage: FamilyLineage
     
-    init(childName: String, detail: String, family: String, familyLineage: FamilyLineage) {
-        self.childName = childName
-        self.detail = detail
-        self.family = family
-        self.familyLineage = familyLineage
+    init(data: [String: Any]) {
+        self.childName = data["childName"] as? String ?? ""
+        self.birthday = data["birthday"] as? String ?? ""
+        self.family = data["family"] as? String ?? ""
+        self.familyLineage = data["lineage"] as? FamilyLineage ?? .mama
     }
 }
 
-enum FamilyLineage: String {
+enum FamilyLineage: String, CaseIterable {
     case mama = "ママ"
     case papa = "パパ"
     case grandma = "おばあちゃん"

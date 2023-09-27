@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol FamilyInputViewControllerDelegate: AnyObject {
     func didSelectChildren(list: [String: String])
@@ -16,13 +17,16 @@ protocol FamilyInputViewControllerDelegate: AnyObject {
 final class FamilyInputViewController: UIViewController {
 
     // MARK: - Properties
+    
+    /// FIRFirestoreインスタンスの作成
+    let db = Firestore.firestore()
         
     weak var delegate: FamilyInputViewControllerDelegate?
     private var list: [String: String] = [:]
     private let datePicker = UIDatePicker()
     private var pageTitle: String = ""
     private var placeholder: String = ""
-    private let familyList = ["ママ", "パパ", "おばあちゃん", "おじいちゃん", "その他"]
+    private let familyList: [String] = ["ママ", "パパ", "おばあちゃん", "おじいちゃん", "その他"]
     
     // MARK: - IBOutlets
     
@@ -104,7 +108,7 @@ final class FamilyInputViewController: UIViewController {
             } else {
                 delegate?.didSelectFamily(list: list)
             }
-            dismiss(animated: true, completion: nil)
+            saveData()
         }
     }
     
@@ -141,6 +145,27 @@ final class FamilyInputViewController: UIViewController {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    /// Firestoreにデータを保存（ドキュメント名指定）
+    private func saveData() {
+        // 保存するデータを整形
+        let userData: [String: Any] = list
+        
+        let timestamp = Timestamp(date: Date())
+        db.collection("users").document("familySettingData").setData(userData) { [weak self] error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                // 保存失敗の場合
+                print("Error adding document: \(error)")
+                
+            } else {
+                // 保存成功の場合
+                // 前の画面に戻る
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
 

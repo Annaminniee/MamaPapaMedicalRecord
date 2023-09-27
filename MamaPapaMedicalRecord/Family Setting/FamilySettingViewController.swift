@@ -6,16 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 /// 家族設定画面
 final class FamilySettingViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let dataModel = FamilySettingDataModel(childName: "",
-                                                   detail: "",
-                                                   family: "",
-                                                   familyLineage: .mama)
+    /// FIRFirestoreインスタンス
+    let db = Firestore.firestore()
+    /// セクションのタイトル
     private let sections = ["お子さま一覧", "管理家族一覧"]
     private var childrenList: [[String: String]] = []
     private var familyList: [[String: String]] = []
@@ -74,6 +74,32 @@ final class FamilySettingViewController: UIViewController {
         let navi = UINavigationController(rootViewController: familyInputVC)
         navi.modalPresentationStyle = .formSheet
         navigationController?.present(navi, animated: true)
+    }
+    
+    /// Firestoreからデータを取得
+    func fetchData() {
+        let userCollection = db.collection("users")
+        userCollection.document("familySettingData").getDocument { [weak self] (document, error) in
+            guard let self = self else { return }
+            // 取得失敗の場合
+            if let error = error {
+                print("データの取得に失敗しました：\(error.localizedDescription)")
+                return
+            }
+            
+            // 取得成功の場合
+            if let document = document, document.exists {
+                // Firestoreのデータを取得
+                guard let data = document.data() else { return }
+                // FirestoreのデータをTaskデータモデルにマッピング
+                let familySetting = FamilySettingDataModel(data: data)
+                
+                
+            } else {
+                // 取得データが空の場合
+                print("ドキュメントが存在しません")
+            }
+        }
     }
 }
 
@@ -189,6 +215,7 @@ extension FamilySettingViewController: FamilyInputViewControllerDelegate {
     
     func didSelectFamily(list: [String : String]) {
         familyList.append(list)
+        print("\(familyList)")
         updateTableViewData()
     }
 }
