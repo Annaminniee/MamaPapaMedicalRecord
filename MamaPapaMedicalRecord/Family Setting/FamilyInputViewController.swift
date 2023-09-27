@@ -9,8 +9,8 @@ import UIKit
 import Firebase
 
 protocol FamilyInputViewControllerDelegate: AnyObject {
-    func didSelectChildren(list: [String: String])
-    func didSelectFamily(list: [String: String])
+    func didSelectChildren()
+    func didSelectFamily()
 }
 
 /// お子さま追加画面／家族追加画面
@@ -19,14 +19,13 @@ final class FamilyInputViewController: UIViewController {
     // MARK: - Properties
     
     /// FIRFirestoreインスタンスの作成
-    let db = Firestore.firestore()
+    private let db = Firestore.firestore()
         
     weak var delegate: FamilyInputViewControllerDelegate?
-    private var list: [String: String] = [:]
     private let datePicker = UIDatePicker()
     private var pageTitle: String = ""
     private var placeholder: String = ""
-    private let familyList: [String] = ["ママ", "パパ", "おばあちゃん", "おじいちゃん", "その他"]
+    private let families: [String] = ["ママ", "パパ", "おばあちゃん", "おじいちゃん", "その他"]
     
     // MARK: - IBOutlets
     
@@ -99,16 +98,24 @@ final class FamilyInputViewController: UIViewController {
     @objc func tapAddButton() {
         if let nameText = nameTextField.text,
            let detailText = detailTextField.text, nameText == "" || detailText == "" {
-            showAlert()
+            showAlert(title: "項目が空です", message: "２つの項目を入力してください。")
         } else {
-            list["name"] = nameTextField.text
-            list["detail"] = detailTextField.text
+            guard let name = nameTextField.text,
+                  let detail = detailTextField.text else { return }
+
             if pageTitle == "お子さまを追加" {
-                delegate?.didSelectChildren(list: list)
+                let childData: [String: String] = [
+                    "childName": name,
+                    "birthday": detail
+                ]
+                saveData(collection: .children, parameters: childData)
             } else {
-                delegate?.didSelectFamily(list: list)
+                let familyData: [String: String] = [
+                    "familyName": name,
+                    "familyLineage": detail
+                ]
+                saveData(collection: .families, parameters: familyData)
             }
-            saveData()
         }
     }
     
@@ -131,7 +138,7 @@ final class FamilyInputViewController: UIViewController {
     private func showFamilyPickerView() {
         let commonPickerVC = CommonPickerViewController()
         commonPickerVC.delegate = self
-        commonPickerVC.setData(items: familyList)
+        commonPickerVC.setData(items: families)
         if let sheet = commonPickerVC.sheetPresentationController {
             sheet.detents = [.medium()]
         }
@@ -139,34 +146,35 @@ final class FamilyInputViewController: UIViewController {
     }
     
     /// アラートを表示
-    private func showAlert() {
-        let alert = UIAlertController(title: "項目が空です",
-                                      message: "２つの項目を入力してください。",
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
     }
     
-    /// Firestoreにデータを保存（ドキュメント名指定）
-    private func saveData() {
-        // 保存するデータを整形
-        let userData: [String: Any] = list
-        
-        let timestamp = Timestamp(date: Date())
-        db.collection("users").document("familySettingData").setData(userData) { [weak self] error in
+    /// Firestoreにデータを保存
+    private func saveData(collection: FamilySettingCollection, parameters: [String: String]) {
+        db.collection(collection.rawValue).addDocument(data: parameters) { [weak self] (error) in
             guard let self = self else { return }
             
             if let error = error {
                 // 保存失敗の場合
                 print("Error adding document: \(error)")
-                
+                self.showAlert(title: "エラーが発生しました", message: "通信状態のよい場所で行ってください")
             } else {
                 // 保存成功の場合
-                // 前の画面に戻る
-                self.dismiss(animated: true, completion: nil)
             }
         }
-    }
+        if self.pageTitle == "お子さまを追加" {
+            self.delegate?.didSelectChildren()
+        } else {
+            self.delegate?.didSelectFamily()
+        }
+        // 前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
+    }    
 }
 
 // MARK: - UITextFieldDelegate

@@ -7,24 +7,19 @@
 
 import Firebase
 
-struct FamilySettingDataModel {
-    var childName: String
-    var birthday: String
-    var family: String
-    var familyLineage: FamilyLineage
-    
-    init(data: [String: Any]) {
-        self.childName = data["childName"] as? String ?? ""
-        self.birthday = data["birthday"] as? String ?? ""
-        self.family = data["family"] as? String ?? ""
-        self.familyLineage = data["lineage"] as? FamilyLineage ?? .mama
-    }
+struct Child {
+    let documentID: String
+    let childName: String?
+    let birthday: String?
 }
 
-enum FamilyLineage: String, CaseIterable {
-    case mama = "ママ"
-    case papa = "パパ"
-    case grandma = "おばあちゃん"
-    case grandpa = "おじいちゃん"
-    case other = "その他"
+struct Family {
+    let documentID: String
+    let family: String?
+    let familyLineage: String?
+}
+
+enum FamilySettingCollection: String {
+    case children = "children"
+    case families = "families"
 }
