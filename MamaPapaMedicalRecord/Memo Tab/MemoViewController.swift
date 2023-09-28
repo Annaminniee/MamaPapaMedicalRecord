@@ -30,103 +30,103 @@ final class MemoViewController: UIViewController {
     // MARK: - IBActions
     
     /// 熱ボタン
-    @IBAction func feverButton(_ sender: CustomButton) {
+    @IBAction private func feverButton(_ sender: CustomButton) {
     }
     
     /// 下痢ボタン
-    @IBAction func diarrheaButton(_ sender: CustomButton) {
+    @IBAction private func diarrheaButton(_ sender: CustomButton) {
     }
     
     /// 嘔吐ボタン
-    @IBAction func vomitingButton(_ sender: CustomButton) {
+    @IBAction private func vomitingButton(_ sender: CustomButton) {
     }
     
     /// 痙攣ボタン
-    @IBAction func convulsionButton(_ sender: CustomButton) {
+    @IBAction private func convulsionButton(_ sender: CustomButton) {
     }
     
     /// 発疹ボタン
-    @IBAction func rashButton(_ sender: CustomButton) {
+    @IBAction private func rashButton(_ sender: CustomButton) {
     }
     
     /// その他ボタン
-    @IBAction func otherButton(_ sender: CustomButton) {
+    @IBAction private func otherButton(_ sender: CustomButton) {
     }
     
     /// 食欲普通ボタン
-    @IBAction func appetiteNormal(_ sender: CustomButton) {
+    @IBAction private func appetiteNormal(_ sender: CustomButton) {
     }
     
     /// 食欲少しボタン
-    @IBAction func appetiteLittleButton(_ sender: CustomButton) {
+    @IBAction private func appetiteLittleButton(_ sender: CustomButton) {
     }
     
     /// 食欲なしボタン
-    @IBAction func appetiteNoButton(_ sender: CustomButton) {
+    @IBAction private func appetiteNoButton(_ sender: CustomButton) {
     }
     
     /// 水分補給できたボタン
-    @IBAction func hydrationYesButton(_ sender: CustomButton) {
+    @IBAction private func hydrationYesButton(_ sender: CustomButton) {
     }
     
     /// 水分補給少しボタン
-    @IBAction func hydrationLittleButton(_ sender: CustomButton) {
+    @IBAction private func hydrationLittleButton(_ sender: CustomButton) {
     }
     
     /// 水分補給できないボタン
-    @IBAction func hydrationNoButton(_ sender: CustomButton) {
+    @IBAction private func hydrationNoButton(_ sender: CustomButton) {
     }
     
     /// 機嫌良いボタン
-    @IBAction func moodGoodButton(_ sender: CustomButton) {
+    @IBAction private func moodGoodButton(_ sender: CustomButton) {
     }
     
     /// 機嫌普通ボタン
-    @IBAction func moodNormalButton(_ sender: CustomButton) {
+    @IBAction private func moodNormalButton(_ sender: CustomButton) {
     }
     
     /// 機嫌悪いボタン
-    @IBAction func moodBadButton(_ sender: CustomButton) {
+    @IBAction private func moodBadButton(_ sender: CustomButton) {
     }
     
     /// 機嫌ぐったりボタン
-    @IBAction func moodTiredButton(_ sender: CustomButton) {
+    @IBAction private func moodTiredButton(_ sender: CustomButton) {
     }
     
     /// 睡眠多いボタン
-    @IBAction func sleepMuchButton(_ sender: CustomButton) {
+    @IBAction private func sleepMuchButton(_ sender: CustomButton) {
     }
     
     /// 睡眠普通ボタン
-    @IBAction func sleepNormalButton(_ sender: CustomButton) {
+    @IBAction private func sleepNormalButton(_ sender: CustomButton) {
     }
     
     /// 睡眠少ないボタン
-    @IBAction func sleepLittleButton(_ sender: CustomButton) {
+    @IBAction private func sleepLittleButton(_ sender: CustomButton) {
     }
     
     /// 睡眠寝てないボタン
-    @IBAction func sleepNoButton(_ sender: CustomButton) {
+    @IBAction private func sleepNoButton(_ sender: CustomButton) {
     }
     
     /// 咳ありボタン
-    @IBAction func coughYesButton(_ sender: CustomButton) {
+    @IBAction private func coughYesButton(_ sender: CustomButton) {
     }
     
     /// 咳なしボタン
-    @IBAction func coughNoButton(_ sender: CustomButton) {
+    @IBAction private func coughNoButton(_ sender: CustomButton) {
     }
     
     /// 鼻水ありボタン
-    @IBAction func snotYesButton(_ sender: CustomButton) {
+    @IBAction private func snotYesButton(_ sender: CustomButton) {
     }
     
     /// 鼻水なしボタン
-    @IBAction func snotNoButton(_ sender: CustomButton) {
+    @IBAction private func snotNoButton(_ sender: CustomButton) {
     }
     
     /// 日にち設定
-    @IBAction func changeDate(_ sender: UIDatePicker) {
+    @IBAction private func changeDate(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
     }
