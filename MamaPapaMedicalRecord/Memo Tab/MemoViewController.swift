@@ -131,18 +131,6 @@ final class MemoViewController: UIViewController {
         formatter.dateFormat = "yyyy/MM/dd"
     }
     
-    /// 睡眠時間（時）設定
-    @IBAction func sleepHour(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:hh"
-    }
-    
-    /// 睡眠時間（分）設定
-    @IBAction func sleepMinute(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-    }
-    
     // MARK: - Other Methods
  
     private func configureSaveButtonItem() {
