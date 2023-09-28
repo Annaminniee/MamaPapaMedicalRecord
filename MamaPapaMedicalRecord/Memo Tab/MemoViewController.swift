@@ -161,7 +161,7 @@ final class MemoViewController: UIViewController {
 // MARK: - UITextFieldDelegate
 
 extension MemoViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField, replacementText text: String) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         recordNameTextField.resignFirstResponder()
         return true
     }
