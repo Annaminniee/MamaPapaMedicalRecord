@@ -125,12 +125,6 @@ final class MemoViewController: UIViewController {
     @IBAction private func snotNoButton(_ sender: CustomButton) {
     }
     
-    /// 日にち設定
-    @IBAction private func changeDate(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-    }
-    
     // MARK: - Other Methods
  
     private func configureSaveButtonItem() {
