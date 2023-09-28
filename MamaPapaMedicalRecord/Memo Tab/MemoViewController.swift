@@ -129,21 +129,18 @@ final class MemoViewController: UIViewController {
     @IBAction func changeDate(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
-        dateTextField.text = formatter.string(from: sender.date)
     }
     
     /// 睡眠時間（時）設定
     @IBAction func sleepHour(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:hh"
-        sleepHourTextField.text = formatter.string(from: sender.date)
     }
     
     /// 睡眠時間（分）設定
     @IBAction func sleepMinute(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
-        sleepMinuteTextField.text = formatter.string(from: sender.date)
     }
     
     // MARK: - Other Methods
