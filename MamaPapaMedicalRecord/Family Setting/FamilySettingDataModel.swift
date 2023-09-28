@@ -5,10 +5,21 @@
 //  Created by 菊地原杏菜 on 2023/09/20.
 //
 
-import UIKit
+import Firebase
 
-struct FamilySettingDataModel {
-    var name: String
-    var detail: String
-    var list: String
+struct Child {
+    let documentID: String
+    let childName: String?
+    let birthday: String?
+}
+
+struct Family {
+    let documentID: String
+    let family: String?
+    let familyLineage: String?
+}
+
+enum FamilySettingCollection: String {
+    case children = "children"
+    case families = "families"
 }
