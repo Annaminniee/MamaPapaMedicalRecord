@@ -101,7 +101,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="feverButtong:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
+                                                    <action selector="feverButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-hj-qQb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
