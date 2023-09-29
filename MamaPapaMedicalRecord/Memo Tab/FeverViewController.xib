@@ -28,13 +28,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gey-CS-Ru5">
-                    <rect key="frame" x="0.0" y="48" width="414" height="52"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <items>
                         <navigationItem title="Title" id="xEV-O2-hj0"/>
                     </items>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="egT-qj-lEF">
-                    <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="150"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBy-2q-U8P">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -54,17 +54,12 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="GdT-6H-FcM"/>
+                            </constraints>
                         </view>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Tzk-7r-Jek"/>
-                    </constraints>
-                </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-al-sPU">
-                    <rect key="frame" x="0.0" y="150" width="414" height="50"/>
-                    <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-tS-ujZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q27-yz-P0p">
                                     <rect key="frame" x="101" y="8" width="57" height="34"/>
@@ -125,71 +120,77 @@
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="S2F-XO-smN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-l1-JPF">
+                            <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解熱剤使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-Q9-4lg">
+                                    <rect key="frame" x="30" y="15" width="87" height="20.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I22-io-weh">
+                                    <rect key="frame" x="127" y="5" width="123" height="34.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4A-hs-Vc7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="59" height="34.5"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="antipyreticAgentYesButton:" destination="-1" eventType="touchUpInside" id="ZlC-5G-Tbd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                            <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="antipyreticAgentNoButton:" destination="-1" eventType="touchUpInside" id="Pdu-3S-kSC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="9mN-Se-0Lf"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="TWm-Zd-QT0"/>
+                        <constraint firstAttribute="height" constant="150" id="Tzk-7r-Jek"/>
+                        <constraint firstAttribute="trailing" secondItem="pBy-2q-U8P" secondAttribute="trailing" id="UiQ-4j-CYv"/>
+                        <constraint firstItem="pBy-2q-U8P" firstAttribute="leading" secondItem="egT-qj-lEF" secondAttribute="leading" id="fae-K4-Ay7"/>
+                        <constraint firstItem="pBy-2q-U8P" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="top" id="fqL-KX-cNj"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-l1-JPF">
-                    <rect key="frame" x="0.0" y="200" width="414" height="50"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解熱剤使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-Q9-4lg">
-                            <rect key="frame" x="30" y="15" width="87" height="20.5"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I22-io-weh">
-                            <rect key="frame" x="127" y="5" width="123" height="34.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4A-hs-Vc7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="antipyreticAgentYesButton:" destination="-1" eventType="touchUpInside" id="ZlC-5G-Tbd"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="antipyreticAgentNoButton:" destination="-1" eventType="touchUpInside" id="Pdu-3S-kSC"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="9mN-Se-0Lf"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ijl-Cs-u2g">
                     <rect key="frame" x="0.0" y="250" width="414" height="50"/>
                     <subviews>
@@ -263,22 +264,16 @@
                 <constraint firstItem="CIt-Ac-Ns0" firstAttribute="top" secondItem="WFa-87-Nax" secondAttribute="bottom" constant="30" id="9Pi-FN-rya"/>
                 <constraint firstItem="sLR-CL-MQT" firstAttribute="top" secondItem="CIt-Ac-Ns0" secondAttribute="bottom" constant="30" id="AUS-IH-hqe"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="Cuq-5F-0gS"/>
-                <constraint firstItem="MbM-al-sPU" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="DL6-y9-c7G"/>
                 <constraint firstItem="CIt-Ac-Ns0" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Emg-iE-Ccb"/>
                 <constraint firstItem="WFa-87-Nax" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="GWc-7J-ayX"/>
-                <constraint firstItem="eAO-l1-JPF" firstAttribute="top" secondItem="MbM-al-sPU" secondAttribute="bottom" id="GtA-rf-Yaf"/>
                 <constraint firstItem="c8c-4d-FCd" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Hb9-SJ-Eur"/>
                 <constraint firstItem="sLR-CL-MQT" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Hse-jo-BM0"/>
-                <constraint firstItem="eAO-l1-JPF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="JGH-bz-Txl"/>
-                <constraint firstItem="MbM-al-sPU" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Ko2-Lj-obC"/>
                 <constraint firstItem="WFa-87-Nax" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="MUD-fc-sc3"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="top" secondItem="gey-CS-Ru5" secondAttribute="bottom" id="PN0-gv-X5X"/>
                 <constraint firstItem="YPB-sy-kTZ" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" constant="20" id="Plm-yP-pwp"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="ZnB-bd-V4w"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="top" secondItem="qbM-YY-9q7" secondAttribute="top" id="fQd-mO-Kzr"/>
                 <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="sLR-CL-MQT" secondAttribute="trailing" constant="30" id="fZO-gY-72H"/>
-                <constraint firstItem="eAO-l1-JPF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="hi4-yM-mcn"/>
-                <constraint firstItem="MbM-al-sPU" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="bottom" id="jdU-r6-EVh"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="kSC-5e-TS4"/>
                 <constraint firstItem="c8c-4d-FCd" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="mdh-ts-Fg9"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="oRD-lY-WFB"/>
@@ -286,7 +281,6 @@
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="ra5-lY-kKA"/>
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="sA3-UE-SAG"/>
                 <constraint firstItem="YPB-sy-kTZ" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="vDR-zm-4Ax"/>
-                <constraint firstItem="Ijl-Cs-u2g" firstAttribute="top" secondItem="eAO-l1-JPF" secondAttribute="bottom" id="z14-1s-SS5"/>
             </constraints>
             <point key="canvasLocation" x="-140.57971014492756" y="668.97321428571422"/>
         </view>
