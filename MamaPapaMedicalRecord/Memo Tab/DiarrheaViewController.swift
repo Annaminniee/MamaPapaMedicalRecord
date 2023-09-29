@@ -7,7 +7,8 @@
 
 import UIKit
 
-class DiarrheaViewController: UIViewController {
+/// 痙攣画面
+final class DiarrheaViewController: UIViewController {
     
     // MARK: - IBOutlets
     
