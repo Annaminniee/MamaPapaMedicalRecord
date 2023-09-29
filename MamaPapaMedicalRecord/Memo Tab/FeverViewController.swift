@@ -7,7 +7,8 @@
 
 import UIKit
 
-class FeverViewController: UIViewController {
+/// メモ画面_熱
+final class FeverViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var recordDateTextField: UITextField!
