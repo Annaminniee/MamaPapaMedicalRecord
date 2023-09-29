@@ -8,9 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiarrheaViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <connections>
-                <outlet property="temperatureTextField" destination="q27-yz-P0p" id="mix-pR-F7F"/>
+                <outlet property="cameraImageView" destination="CIt-Ac-Ns0" id="KFA-mF-RH5"/>
+                <outlet property="dateTextField" destination="Ka0-W0-w2t" id="RiJ-bK-HZz"/>
+                <outlet property="diarrheaMinuteTextField" destination="y6R-wk-ZBG" id="Aeq-hi-Dwc"/>
+                <outlet property="diarrheaSecondTextField" destination="5ud-XX-iFg" id="xat-4e-cDi"/>
+                <outlet property="diarrheaTextField" destination="y6R-wk-ZBG" id="sMI-Mw-dBz"/>
+                <outlet property="imageView" destination="YPB-sy-kTZ" id="b0b-8r-fvC"/>
+                <outlet property="memoTableView" destination="c8c-4d-FCd" id="ONm-ms-lN7"/>
+                <outlet property="photoImageView" destination="WFa-87-Nax" id="8bB-Vs-wrE"/>
+                <outlet property="temperatureTextField" destination="q27-yz-P0p" id="hjD-yu-FOW"/>
+                <outlet property="trashImageView" destination="sLR-CL-MQT" id="ETD-TO-ZdJ"/>
+                <outlet property="view" destination="gxL-s4-Tz1" id="Ffa-IQ-wvn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -126,6 +136,9 @@
                                             <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="consciousnessYesButton:" destination="-1" eventType="touchUpInside" id="qcU-sf-K62"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                     <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
@@ -142,6 +155,9 @@
                                             <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="consciousnessNoButton:" destination="-1" eventType="touchUpInside" id="hz7-sH-XYL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
