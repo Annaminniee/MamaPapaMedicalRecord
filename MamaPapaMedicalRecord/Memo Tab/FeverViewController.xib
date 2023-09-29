@@ -19,6 +19,7 @@
                 <outlet property="recordDateTextField" destination="Ka0-W0-w2t" id="e67-Yf-jeC"/>
                 <outlet property="temperatureTextField" destination="q27-yz-P0p" id="mix-pR-F7F"/>
                 <outlet property="trashImageView" destination="sLR-CL-MQT" id="cBk-TZ-4Hd"/>
+                <outlet property="view" destination="gxL-s4-Tz1" id="45i-0y-zSL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
