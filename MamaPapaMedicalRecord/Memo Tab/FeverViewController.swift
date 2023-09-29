@@ -11,6 +11,7 @@ import UIKit
 final class FeverViewController: UIViewController {
     
     // MARK: - IBOutlets
+    
     @IBOutlet private weak var recordDateTextField: UITextField!
     @IBOutlet private weak var temperatureTextField: UITextField!
     @IBOutlet private weak var memoTableView: UITableView!
