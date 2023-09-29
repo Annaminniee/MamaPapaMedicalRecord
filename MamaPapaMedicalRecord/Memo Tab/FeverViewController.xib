@@ -76,50 +76,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MY-yi-Qei" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="157" y="8" width="34.5" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="+"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWV-1w-cTM" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="191.5" y="8" width="32" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="-"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="lxq-PF-0RG" firstAttribute="centerY" secondItem="VoG-tS-ujZ" secondAttribute="centerY" id="2mX-1e-Y0V"/>
-                                <constraint firstItem="VWV-1w-cTM" firstAttribute="leading" secondItem="3MY-yi-Qei" secondAttribute="trailing" id="3gk-5l-Etk"/>
                                 <constraint firstItem="q27-yz-P0p" firstAttribute="centerY" secondItem="VoG-tS-ujZ" secondAttribute="centerY" id="H2l-Ev-s8h"/>
                                 <constraint firstAttribute="height" constant="50" id="S2F-XO-smN"/>
                                 <constraint firstItem="3kh-aO-9sT" firstAttribute="centerY" secondItem="VoG-tS-ujZ" secondAttribute="centerY" id="WDG-CI-Ojb"/>
-                                <constraint firstItem="VWV-1w-cTM" firstAttribute="centerY" secondItem="VoG-tS-ujZ" secondAttribute="centerY" id="Zne-6o-5Go"/>
                                 <constraint firstItem="3kh-aO-9sT" firstAttribute="leading" secondItem="VoG-tS-ujZ" secondAttribute="leading" constant="30" id="a92-dn-yrB"/>
-                                <constraint firstItem="3MY-yi-Qei" firstAttribute="leading" secondItem="lxq-PF-0RG" secondAttribute="trailing" constant="10" id="h6u-sQ-dLq"/>
-                                <constraint firstItem="3MY-yi-Qei" firstAttribute="centerY" secondItem="VoG-tS-ujZ" secondAttribute="centerY" id="irH-Ip-hDH"/>
                                 <constraint firstItem="q27-yz-P0p" firstAttribute="leading" secondItem="3kh-aO-9sT" secondAttribute="trailing" constant="20" id="pF2-jD-pf2"/>
                                 <constraint firstItem="lxq-PF-0RG" firstAttribute="leading" secondItem="q27-yz-P0p" secondAttribute="trailing" constant="10" id="zHg-S4-X02"/>
                             </constraints>
