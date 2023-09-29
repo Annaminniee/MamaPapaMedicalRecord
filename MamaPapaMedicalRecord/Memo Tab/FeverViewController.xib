@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <connections>
-                <outlet property="antipyreticAgentNo" destination="uDM-s8-CqQ" id="e4d-4O-sKp"/>
-                <outlet property="antipyreticAgentYes" destination="U4A-hs-Vc7" id="pxr-8E-SNq"/>
                 <outlet property="cameraImageView" destination="CIt-Ac-Ns0" id="b5c-CQ-K51"/>
                 <outlet property="imageView" destination="YPB-sy-kTZ" id="ohX-Wh-lwg"/>
                 <outlet property="memoTableView" destination="c8c-4d-FCd" id="tuB-la-GPp"/>
