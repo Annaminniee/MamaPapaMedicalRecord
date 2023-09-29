@@ -10,6 +10,8 @@ import UIKit
 /// メモ画面
 final class MemoViewController: UIViewController {
     
+    var toolBar: UIToolbar!
+    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var dateTextField: UITextField!
@@ -25,6 +27,7 @@ final class MemoViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "症状"
         recordNameTextField.delegate = self
+        setupToolbar()
     }
     
     // MARK: - IBActions
@@ -146,5 +149,33 @@ extension MemoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         recordNameTextField.resignFirstResponder()
         return true
+    }
+    
+    func setupToolbar() {
+            //datepicker上のtoolbarのdoneボタン
+            toolBar = UIToolbar()
+            toolBar.sizeToFit()
+            let toolBarBtn = UIBarButtonItem(title: "DONE", style: .plain, target: self, action: #selector(doneBtn))
+            toolBar.items = [toolBarBtn]
+            dateTextField.inputAccessoryView = toolBar
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePicker.Mode.time
+        textField.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+    }
+
+        //datepickerが選択されたらtextfieldに表示
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat  = "H:mm";
+        dateTextField.text = dateFormatter.string(from: sender.date)
+    }
+
+    //toolbarのdoneボタン
+    @objc func doneBtn(){
+        dateTextField.resignFirstResponder()
     }
 }
