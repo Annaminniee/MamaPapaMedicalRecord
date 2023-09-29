@@ -7,10 +7,31 @@
 
 import UIKit
 
-class VomitingViewController: UIViewController {
+/// 嘔吐画面
+final class VomitingViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    /// 記録日時
+    @IBOutlet private weak var dateTextField: UITextField!
+    
+    /// 体温
+    @IBOutlet private weak var temperatureTextField: UITextField!
+    
+    /// メモ
+    @IBOutlet private weak var memoTextField: UITableView!
+    
+    /// 画像挿入
+    @IBOutlet private weak var imageView: UIImageView!
+    
+    /// 写真挿入
+    @IBOutlet private weak var photoImageView: UIImageView!
+    
+    /// 画像・動画挿入
+    @IBOutlet private weak var cameraImageView: UIImageView!
+    
+    /// 削除
+    @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
     
@@ -22,7 +43,29 @@ class VomitingViewController: UIViewController {
     
     // MARK: - IBActions
     
+    /// 下痢はいボタン
+    @IBAction private func diarrheaYesButton(_ sender: CustomButton) {
+    }
     
+    /// 下痢いいえボタン
+    @IBAction private func diarrheaNoButton(_ sender: CustomButton) {
+    }
+    
+    /// 頭を打ったはいボタン
+    @IBAction private func hitHeadYesButton(_ sender: CustomButton) {
+    }
+    
+    /// 頭を打ったいいえボタン
+    @IBAction private func hitHeadNoButton(_ sender: CustomButton) {
+    }
+    
+    /// 喘息はいボタン
+    @IBAction private func asthmaYesButton(_ sender: CustomButton) {
+    }
+    
+    /// 喘息いいえボタン
+    @IBAction private func asthmaNoButton(_ sender: CustomButton) {
+    }
     
     // MARK: - Other Methods
     
