@@ -13,31 +13,31 @@ final class DiarrheaViewController: UIViewController {
     // MARK: - IBOutlets
     
     /// 記録日時
-    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet private weak var dateTextField: UITextField!
     
     /// 痙攣（分）
-    @IBOutlet weak var diarrheaMinuteTextField: UITextField!
+    @IBOutlet private weak var diarrheaMinuteTextField: UITextField!
     
     /// 痙攣（時間）
-    @IBOutlet weak var diarrheaSecondTextField: UITextField!
+    @IBOutlet private weak var diarrheaSecondTextField: UITextField!
     
     /// 体温
-    @IBOutlet weak var temperatureTextField: UITextField!
+    @IBOutlet private weak var temperatureTextField: UITextField!
     
     /// メモ
-    @IBOutlet weak var memoTableView: UITableView!
+    @IBOutlet private weak var memoTableView: UITableView!
     
     /// 画像挿入
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
     
     /// 写真挿入
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet private weak var photoImageView: UIImageView!
     
     /// カメラ・動画挿入
-    @IBOutlet weak var cameraImageView: UIImageView!
+    @IBOutlet private weak var cameraImageView: UIImageView!
     
     /// 削除
-    @IBOutlet weak var trashImageView: UIImageView!
+    @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
     
@@ -50,11 +50,11 @@ final class DiarrheaViewController: UIViewController {
     // MARK: - IBActions
     
     /// 意識はいボタン
-    @IBAction func consciousnessYesButton(_ sender: CustomButton) {
+    @IBAction private func consciousnessYesButton(_ sender: CustomButton) {
     }
     
     /// 意識いいえボタン
-    @IBAction func consciousnessNoButton(_ sender: CustomButton) {
+    @IBAction private func consciousnessNoButton(_ sender: CustomButton) {
     }
     
     // MARK: - Other Methods
