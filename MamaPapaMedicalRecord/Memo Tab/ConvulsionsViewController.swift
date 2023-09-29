@@ -8,34 +8,34 @@
 import UIKit
 
 final class ConvulsionsViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     
     /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
     
     /// 体温設定
-    @IBOutlet private weak var temperatureTextField: UITextField!
+    @IBOutlet private weak var temperature: UITextField!
     
-    /// 色その他
-    @IBOutlet private weak var colorOtherTextField: UITextField!
+    /// その他設定
+    @IBOutlet private weak var otherTextField: UITextField!
     
-    /// におい
+    /// におい設定
     @IBOutlet private weak var smellTextField: UITextField!
     
     /// メモ設定
     @IBOutlet private weak var memoTableView: UITableView!
     
-    /// 画像設定
+    /// 画像挿入設定
     @IBOutlet private weak var imageView: UIImageView!
     
-    /// 画像挿入設定
+    /// 写真挿入設定
     @IBOutlet private weak var photoImageView: UIImageView!
     
     /// カメラ・動画挿入設定
     @IBOutlet private weak var cameraImageView: UIImageView!
     
-    /// 削除設定
+    /// 削除
     @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
@@ -48,12 +48,28 @@ final class ConvulsionsViewController: UIViewController {
     
     // MARK: - IBActions
     
-    /// 解熱剤使用はいボタン
-    @IBAction private func antipyreticAgentYesButton(_ sender: CustomButton) {
+    /// 形軟便ボタン
+    @IBAction private func softButton(_ sender: CustomButton) {
     }
     
-    /// 解熱剤使用なしボタン
-    @IBAction private func antipyreticAgentNoButton(_ sender: CustomButton) {
+    /// 形泥状ボタン
+    @IBAction private func mudButton(_ sender: CustomButton) {
+    }
+    
+    /// 形水様ボタン
+    @IBAction private func liquidButton(_ sender: CustomButton) {
+    }
+    
+    /// 形黄色ボタン
+    @IBAction private func yellowButton(_ sender: CustomButton) {
+    }
+    
+    /// 形白色ボタン
+    @IBAction private func whiteButton(_ sender: CustomButton) {
+    }
+    
+    /// 形黒色ボタン
+    @IBAction private func blackButton(_ sender: CustomButton) {
     }
     
     // MARK: - Other Methods
@@ -65,6 +81,7 @@ final class ConvulsionsViewController: UIViewController {
                                            target: self,
                                            action: #selector(cancelButtonTapped))
         navigationItem.leftBarButtonItem = cancelButton
+        
     }
     
     @objc func cancelButtonTapped() {
