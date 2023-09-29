@@ -34,26 +34,50 @@ final class MemoViewController: UIViewController {
     
     /// 熱ボタン
     @IBAction private func feverButton(_ sender: CustomButton) {
+        let nextVC = FeverViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// 下痢ボタン
     @IBAction private func diarrheaButton(_ sender: CustomButton) {
+        let nextVC = DiarrheaViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// 嘔吐ボタン
     @IBAction private func vomitingButton(_ sender: CustomButton) {
+        let nextVC = VomitingViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// 痙攣ボタン
     @IBAction private func convulsionButton(_ sender: CustomButton) {
+        let nextVC = ConvulsionsViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// 発疹ボタン
     @IBAction private func rashButton(_ sender: CustomButton) {
+        let nextVC = RashViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// その他ボタン
     @IBAction private func otherButton(_ sender: CustomButton) {
+        let nextVC = OtherViewController()
+        let navi = UINavigationController(rootViewController: nextVC)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     /// 食欲普通ボタン
