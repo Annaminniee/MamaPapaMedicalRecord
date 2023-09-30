@@ -38,6 +38,9 @@
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-yU-8DY">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <locale key="locale" localeIdentifier="ja_JP"/>
+                                                <connections>
+                                                    <action selector="datePickerView:" destination="hug-Sz-2UQ" eventType="valueChanged" id="yIP-M7-Cdf"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -802,6 +805,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
+                        <outlet property="datePicker" destination="5K4-yU-8DY" id="NcO-AE-HKC"/>
                         <outlet property="dateTextField" destination="PID-BW-amb" id="XI9-9M-An5"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
@@ -810,6 +814,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hug-Sz-2UQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="498.55072463768118" y="293.97321428571428"/>
         </scene>
