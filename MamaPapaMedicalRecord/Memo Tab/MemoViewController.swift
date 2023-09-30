@@ -25,47 +25,7 @@ final class MemoViewController: UIViewController {
         super.viewDidLoad()
         configureSaveButtonItem()
         navigationItem.title = "症状"
-        recordNameTextField.delegate = self
-        
-        //日付フィールドの設定
-        dateFormat.dateFormat = "yyyy年MM月dd日"
-        dateTextField.text = dateFormat.string(from: nowDate as Date)
-        self.dateTextField.delegate = self
-        
-        // DatePickerの設定(日付用)
-        inputDatePicker.datePickerMode = UIDatePicker.Mode.date
-        dateTextField.inputView = inputDatePicker
-        
-        // キーボードに表示するツールバーの表示
-        let pickerToolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0))
-        pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        pickerToolBar.barStyle = UIBarStyle.black
-        pickerToolBar.tintColor = UIColor.white
-        pickerToolBar.backgroundColor = UIColor.black
-        
-        //ボタンの設定
-        //右寄せのためのスペース設定
-        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,target: self,action: Selector(""))
-        
-        //完了ボタンを設定
-        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector(("toolBarBtnPush:")))
-        
-        //ツールバーにボタンを表示
-        pickerToolBar.items = [spaceBarBtn,toolBarBtn]
-        dateTextField.inputAccessoryView = pickerToolBar
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
-    func toolBarBtnPush(sender: UIBarButtonItem){
-        var pickerDate = inputDatePicker.date
-        dateTextField.text = dateFormat.string(from: pickerDate)
-        self.view.endEditing(true)
-    }
-    
+  
     // MARK: - IBActions
     
     /// 熱ボタン
