@@ -27,9 +27,6 @@
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gey-CS-Ru5">
                     <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="xEV-O2-hj0"/>
-                    </items>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="egT-qj-lEF">
                     <rect key="frame" x="0.0" y="92" width="414" height="150"/>
