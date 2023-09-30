@@ -26,10 +26,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gey-CS-Ru5">
-                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="48" width="414" height="52"/>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="egT-qj-lEF">
-                    <rect key="frame" x="0.0" y="92" width="414" height="150"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="150"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBy-2q-U8P">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -240,6 +240,7 @@
                 <constraint firstItem="egT-qj-lEF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="oRD-lY-WFB"/>
                 <constraint firstItem="gBU-RA-pLH" firstAttribute="top" secondItem="c8c-4d-FCd" secondAttribute="bottom" id="qRD-MH-jUM"/>
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="ra5-lY-kKA"/>
+                <constraint firstItem="Ijl-Cs-u2g" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="bottom" id="s3h-oC-zj5"/>
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="sA3-UE-SAG"/>
                 <constraint firstItem="YPB-sy-kTZ" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="vDR-zm-4Ax"/>
             </constraints>
