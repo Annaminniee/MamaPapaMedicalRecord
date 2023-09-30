@@ -25,7 +25,29 @@ final class MemoViewController: UIViewController {
         super.viewDidLoad()
         configureSaveButtonItem()
         navigationItem.title = "症状"
-  
+        configureDatePicker()
+    }
+    
+    // MARK: - Other Methods
+    
+    /// 日付ピッカーの設定
+    private func configureDatePicker() {
+        // DatePickerのモードを日付のみに設定
+        datePicker.datePickerMode = .date
+        // DatePickerの初期値を設定（任意）
+        datePicker.date = Date()
+        // DatePickerの値が変更されたときに呼ばれるアクションを設定
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+    }
+    
+    /// DatePickerの値が変更されたときに呼ばれるメソッド
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        // 選択された日付をTextFieldに表示
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" // 日付フォーマットを適宜変更
+        dateTextField.text = dateFormatter.string(from: sender.date)
+    }
+
     // MARK: - IBActions
     
     /// 熱ボタン
