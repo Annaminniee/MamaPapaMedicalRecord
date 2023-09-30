@@ -10,12 +10,6 @@ import UIKit
 /// メモ画面
 final class MemoViewController: UIViewController {
     
-    //変数を宣言する
-    //今日の日付を代入
-    let nowDate = NSDate()
-    let dateFormat = DateFormatter()
-    let inputDatePicker = UIDatePicker()
-    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var dateTextField: UITextField!
