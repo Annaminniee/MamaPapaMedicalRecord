@@ -29,10 +29,6 @@ final class MemoViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func feverButtong(_ sender: CustomButton) {
-                let nextVC = FeverViewController()
-                let navi = UINavigationController(rootViewController: nextVC)
-                navi.modalPresentationStyle = .fullScreen
-                navigationController?.present(navi, animated: true)
     }
     @IBAction func diarrheaButton(_ sender: CustomButton) {
     }

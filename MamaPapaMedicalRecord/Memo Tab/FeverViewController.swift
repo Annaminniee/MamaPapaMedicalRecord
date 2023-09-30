@@ -39,6 +39,7 @@ final class FeverViewController: UIViewController {
         super.viewDidLoad()
         configureSaveButtonItem()
         navigationItem.title = "熱"
+        setDismissKeyboard()
     }
     
     // MARK: - IBActions
@@ -77,5 +78,20 @@ final class FeverViewController: UIViewController {
     
     @objc func saveButtonTapped() {
         // 保存処理
+    }
+}
+
+// MARK: - extensions
+
+extension UIViewController {
+    
+    func setDismissKeyboard() {
+        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGR.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGR)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 }
