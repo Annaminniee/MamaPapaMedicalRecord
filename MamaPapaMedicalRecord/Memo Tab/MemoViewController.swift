@@ -10,11 +10,16 @@ import UIKit
 /// メモ画面
 final class MemoViewController: UIViewController {
     
-    var toolBar: UIToolbar!
+    //変数を宣言する
+    //今日の日付を代入
+    let nowDate = NSDate()
+    let dateFormat = DateFormatter()
+    let inputDatePicker = UIDatePicker()
     
     // MARK: - IBOutlets
     
     @IBOutlet private weak var dateTextField: UITextField!
+    @IBOutlet private weak var datePicker: UIDatePicker!
     @IBOutlet private weak var recordNameTextField: UITextField!
     @IBOutlet private weak var sleepHourTextField: UITextField!
     @IBOutlet private weak var sleepMinuteTextField: UITextField!
@@ -27,7 +32,44 @@ final class MemoViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "症状"
         recordNameTextField.delegate = self
-        setupToolbar()
+        
+        //日付フィールドの設定
+        dateFormat.dateFormat = "yyyy年MM月dd日"
+        dateTextField.text = dateFormat.string(from: nowDate as Date)
+        self.dateTextField.delegate = self
+        
+        // DatePickerの設定(日付用)
+        inputDatePicker.datePickerMode = UIDatePicker.Mode.date
+        dateTextField.inputView = inputDatePicker
+        
+        // キーボードに表示するツールバーの表示
+        let pickerToolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0))
+        pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
+        pickerToolBar.barStyle = UIBarStyle.black
+        pickerToolBar.tintColor = UIColor.white
+        pickerToolBar.backgroundColor = UIColor.black
+        
+        //ボタンの設定
+        //右寄せのためのスペース設定
+        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace,target: self,action: Selector(""))
+        
+        //完了ボタンを設定
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector(("toolBarBtnPush:")))
+        
+        //ツールバーにボタンを表示
+        pickerToolBar.items = [spaceBarBtn,toolBarBtn]
+        dateTextField.inputAccessoryView = pickerToolBar
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
+    func toolBarBtnPush(sender: UIBarButtonItem){
+        var pickerDate = inputDatePicker.date
+        dateTextField.text = dateFormat.string(from: pickerDate)
+        self.view.endEditing(true)
     }
     
     // MARK: - IBActions
@@ -173,33 +215,5 @@ extension MemoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         recordNameTextField.resignFirstResponder()
         return true
-    }
-    
-    func setupToolbar() {
-            //datepicker上のtoolbarのdoneボタン
-            toolBar = UIToolbar()
-            toolBar.sizeToFit()
-            let toolBarBtn = UIBarButtonItem(title: "DONE", style: .plain, target: self, action: #selector(doneBtn))
-            toolBar.items = [toolBarBtn]
-            dateTextField.inputAccessoryView = toolBar
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        let datePickerView:UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePicker.Mode.time
-        textField.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
-    }
-
-        //datepickerが選択されたらtextfieldに表示
-    @objc func datePickerValueChanged(sender:UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat  = "H:mm";
-        dateTextField.text = dateFormatter.string(from: sender.date)
-    }
-
-    //toolbarのdoneボタン
-    @objc func doneBtn(){
-        dateTextField.resignFirstResponder()
     }
 }

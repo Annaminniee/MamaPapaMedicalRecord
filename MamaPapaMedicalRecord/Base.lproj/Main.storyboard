@@ -34,16 +34,10 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="dateTextField:" destination="V7j-6S-bxp" eventType="editingDidEnd" id="yTG-c4-eRg"/>
-                                                </connections>
                                             </textField>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-yU-8DY">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <locale key="locale" localeIdentifier="ja_JP"/>
-                                                <connections>
-                                                    <action selector="changeDate:" destination="V7j-6S-bxp" eventType="valueChanged" id="enb-ot-cqf"/>
-                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -808,7 +802,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
-                        <outlet property="dateTextField" destination="PID-BW-amb" id="66E-p9-etB"/>
+                        <outlet property="dateTextField" destination="PID-BW-amb" id="XI9-9M-An5"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
                         <outlet property="sleepMinuteTextField" destination="gES-lb-jAB" id="rWz-dS-1sD"/>
