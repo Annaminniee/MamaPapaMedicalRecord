@@ -14,22 +14,16 @@ final class FeverViewController: UIViewController {
     
     /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
-    
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
-    
     /// メモ設定
     @IBOutlet private weak var memoTableView: UITableView!
-    
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
-    
     /// 画像挿入設定
     @IBOutlet private weak var photoImageView: UIImageView!
-    
     /// カメラ・動画挿入設定
     @IBOutlet private weak var cameraImageView: UIImageView!
-    
     /// 削除設定
     @IBOutlet private weak var trashImageView: UIImageView!
     
@@ -47,7 +41,6 @@ final class FeverViewController: UIViewController {
     /// 解熱剤使用はいボタン
     @IBAction private func antipyreticAgentYesButton(_ sender: CustomButton) {
     }
-    
     /// 解熱剤使用なしボタン
     @IBAction private func antipyreticAgentNoButton(_ sender: CustomButton) {
     }
