@@ -40,6 +40,8 @@
 		955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */; };
 		955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */; };
 		955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */; };
+		956D63F92AC945D200DCE217 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956D63F72AC945D200DCE217 /* MemoTableViewCell.swift */; };
+		956D63FA2AC945D200DCE217 /* MemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956D63F82AC945D200DCE217 /* MemoTableViewCell.xib */; };
 		959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644362AAB4ADE006E4114 /* AppDelegate.swift */; };
 		959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644382AAB4ADE006E4114 /* SceneDelegate.swift */; };
 		9596443E2AAB4ADE006E4114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9596443C2AAB4ADE006E4114 /* Main.storyboard */; };
@@ -112,6 +114,8 @@
 		955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListTableViewCell.swift; sourceTree = "<group>"; };
 		955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddListTableViewCell.xib; sourceTree = "<group>"; };
+		956D63F72AC945D200DCE217 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		956D63F82AC945D200DCE217 /* MemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoTableViewCell.xib; sourceTree = "<group>"; };
 		959644332AAB4ADE006E4114 /* MamaPapaMedicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaPapaMedicalRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959644362AAB4ADE006E4114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959644382AAB4ADE006E4114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */,
 				8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */,
 				8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */,
+				956D63F72AC945D200DCE217 /* MemoTableViewCell.swift */,
+				956D63F82AC945D200DCE217 /* MemoTableViewCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 				959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */,
 				959644402AAB4ADE006E4114 /* Assets.xcassets in Resources */,
 				9596443E2AAB4ADE006E4114 /* Main.storyboard in Resources */,
+				956D63FA2AC945D200DCE217 /* MemoTableViewCell.xib in Resources */,
 				950B46392AC152660085C4A6 /* RecordDetailViewController.xib in Resources */,
 				950B46292AC151C50085C4A6 /* VomitingViewController.xib in Resources */,
 				955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */,
@@ -612,6 +619,7 @@
 				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
 				8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */,
 				950B46302AC152070085C4A6 /* RashViewController.swift in Sources */,
+				956D63F92AC945D200DCE217 /* MemoTableViewCell.swift in Sources */,
 				95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */,
 				8BC3EC642AC31B8F0023BAB6 /* DatePickerViewController.swift in Sources */,
 				950B46202AC151640085C4A6 /* FeverViewController.swift in Sources */,

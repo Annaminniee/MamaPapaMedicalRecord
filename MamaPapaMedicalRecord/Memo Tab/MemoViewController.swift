@@ -204,3 +204,15 @@ extension MemoViewController: UITextFieldDelegate {
             self.view.endEditing(true)
         }
 }
+
+extension MemoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemoTableViewCell", for: indexPath)as! MemoTableViewCell
+        cell.setup(memo: "あああ")
+        return cell
+    }
+}

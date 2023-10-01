@@ -773,7 +773,7 @@
                                 <rect key="frame" x="0.0" y="642" width="414" height="171"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-Uk-QCu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-Uk-QCu">
                                 <rect key="frame" x="0.0" y="592" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一覧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0k-7M-4uk">
@@ -796,7 +796,9 @@
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="1HD-Fq-B4k"/>
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="3Lm-fa-o4S"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="top" secondItem="nqW-Sn-snY" secondAttribute="top" id="7NR-jv-nel"/>
+                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="leading" secondItem="u1V-HZ-s7S" secondAttribute="leading" id="HBQ-Qz-rFA"/>
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="bottom" secondItem="nqW-Sn-snY" secondAttribute="bottom" id="Ie1-xJ-lZk"/>
+                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="trailing" secondItem="u1V-HZ-s7S" secondAttribute="trailing" id="Qlw-f9-Bzr"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="UY2-vz-YXq"/>
                             <constraint firstItem="DRl-Uk-QCu" firstAttribute="top" secondItem="Jkf-KK-NOH" secondAttribute="bottom" id="cIi-sy-GMa"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="dpc-zt-HCo"/>
