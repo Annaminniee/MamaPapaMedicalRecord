@@ -17,7 +17,7 @@ final class FeverViewController: UIViewController {
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
     /// メモ設定
-    @IBOutlet private weak var memoTableView: UITableView!
+    @IBOutlet weak var memoTextView: UITextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
     /// 画像挿入設定
@@ -49,7 +49,7 @@ final class FeverViewController: UIViewController {
     
     /// 戻るボタンの設定
     private func configureCancelButtonItem() {
-        let cancelButton = UIBarButtonItem(title: "<戻る",
+        let cancelButton = UIBarButtonItem(title: "閉じる",
                                            style: .plain,
                                            target: self,
                                            action: #selector(cancelButtonTapped))
