@@ -208,7 +208,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="photoIcon" title="写真"/>
                     <connections>
-                        <action selector="photoButton:" destination="-1" eventType="touchUpInside" id="dV1-dD-E0U"/>
+                        <action selector="tapPhotoButton:" destination="-1" eventType="touchUpInside" id="y5x-ge-5iw"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n12-2L-aHR">
@@ -220,7 +220,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="cameraIcon" title="カメラ"/>
                     <connections>
-                        <action selector="cameraButton:" destination="-1" eventType="touchUpInside" id="AVU-22-x0z"/>
+                        <action selector="tapCameraButton:" destination="-1" eventType="touchUpInside" id="LCI-aK-f1g"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-e1-oXP">
@@ -232,7 +232,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="trashIcon" title="ゴミ"/>
                     <connections>
-                        <action selector="trashButton:" destination="-1" eventType="touchUpInside" id="EPB-JY-IKZ"/>
+                        <action selector="tapTrashButton:" destination="-1" eventType="touchUpInside" id="usO-QO-5TQ"/>
                     </connections>
                 </button>
             </subviews>

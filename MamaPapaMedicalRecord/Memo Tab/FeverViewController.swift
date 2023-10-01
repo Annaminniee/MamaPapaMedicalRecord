@@ -40,13 +40,13 @@ final class FeverViewController: UIViewController {
     @IBAction private func antipyreticAgentNoButton(_ sender: CustomButton) {
     }
     /// 写真挿入ボタン
-    @IBAction func photoButton(_ sender: UIButton) {
+    @IBAction private func tapPhotoButton(_ sender: UIButton) {
     }
     /// カメラ・動画挿入ボタン
-    @IBAction func cameraButton(_ sender: UIButton) {
+    @IBAction private func tapCameraButton(_ sender: UIButton) {
     }
     /// 削除ボタン
-    @IBAction func trashButton(_ sender: UIButton) {
+    @IBAction private func tapTrashButton(_ sender: UIButton) {
     }
     
     // MARK: - Other Methods
