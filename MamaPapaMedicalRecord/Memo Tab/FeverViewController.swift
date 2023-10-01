@@ -25,6 +25,7 @@ final class FeverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCancelButtonItem()
         configureSaveButtonItem()
         navigationItem.title = "熱"
         setDismissKeyboard()
@@ -61,7 +62,7 @@ final class FeverViewController: UIViewController {
     
     @objc func cancelButtonTapped() {
         // 前の画面に戻る
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     private func configureSaveButtonItem() {
