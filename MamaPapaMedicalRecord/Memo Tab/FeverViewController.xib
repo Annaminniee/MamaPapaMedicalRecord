@@ -10,13 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeverViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <connections>
-                <outlet property="cameraImageView" destination="CIt-Ac-Ns0" id="b5c-CQ-K51"/>
                 <outlet property="imageView" destination="YPB-sy-kTZ" id="ohX-Wh-lwg"/>
                 <outlet property="memoTextView" destination="EHc-iP-hZl" id="y94-lG-ahN"/>
-                <outlet property="photoImageView" destination="WFa-87-Nax" id="L35-4E-9bH"/>
                 <outlet property="recordDateTextField" destination="Ka0-W0-w2t" id="e67-Yf-jeC"/>
                 <outlet property="temperatureTextField" destination="q27-yz-P0p" id="mix-pR-F7F"/>
-                <outlet property="trashImageView" destination="sLR-CL-MQT" id="cBk-TZ-4Hd"/>
                 <outlet property="view" destination="gxL-s4-Tz1" id="45i-0y-zSL"/>
             </connections>
         </placeholder>
@@ -199,54 +196,67 @@
                     <viewLayoutGuide key="safeArea" id="ej5-cb-8dS"/>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPB-sy-kTZ">
-                    <rect key="frame" x="20" y="590" width="289" height="230"/>
+                    <rect key="frame" x="20" y="590" width="294" height="230"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="230" id="DT9-o7-1B1"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-87-Nax">
-                    <rect key="frame" x="334" y="590" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AD-Tt-taX">
+                    <rect key="frame" x="344" y="590" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="55E-GI-1cU"/>
-                        <constraint firstAttribute="height" constant="50" id="EvA-PK-WL4"/>
+                        <constraint firstAttribute="height" constant="50" id="Lhv-DB-C9e"/>
+                        <constraint firstAttribute="width" constant="50" id="gwG-EH-tXV"/>
                     </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CIt-Ac-Ns0">
-                    <rect key="frame" x="334" y="670" width="50" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="photoIcon" title="写真"/>
+                    <connections>
+                        <action selector="photoButton:" destination="-1" eventType="touchUpInside" id="dV1-dD-E0U"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n12-2L-aHR">
+                    <rect key="frame" x="344" y="670" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="eib-ql-S8K"/>
-                        <constraint firstAttribute="height" constant="50" id="gyG-LI-XWr"/>
+                        <constraint firstAttribute="height" constant="50" id="FHm-QV-Uyg"/>
+                        <constraint firstAttribute="width" constant="50" id="j6d-Ww-Em1"/>
                     </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-CL-MQT">
-                    <rect key="frame" x="334" y="750" width="50" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="cameraIcon" title="カメラ"/>
+                    <connections>
+                        <action selector="cameraButton:" destination="-1" eventType="touchUpInside" id="AVU-22-x0z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-e1-oXP">
+                    <rect key="frame" x="344" y="750" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AdF-Ru-NqP"/>
-                        <constraint firstAttribute="width" constant="50" id="oFa-22-vdF"/>
+                        <constraint firstAttribute="height" constant="50" id="Gdk-Ba-j4g"/>
+                        <constraint firstAttribute="width" constant="50" id="cZy-Yo-cEs"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="trashIcon" title="ゴミ"/>
+                    <connections>
+                        <action selector="trashButton:" destination="-1" eventType="touchUpInside" id="EPB-JY-IKZ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qbM-YY-9q7"/>
             <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="CIt-Ac-Ns0" secondAttribute="trailing" constant="30" id="1OJ-og-20f"/>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="WFa-87-Nax" secondAttribute="trailing" constant="30" id="1a0-Bb-eDI"/>
                 <constraint firstItem="EHc-iP-hZl" firstAttribute="top" secondItem="Ijl-Cs-u2g" secondAttribute="bottom" id="420-s0-Tju"/>
-                <constraint firstItem="CIt-Ac-Ns0" firstAttribute="top" secondItem="WFa-87-Nax" secondAttribute="bottom" constant="30" id="9Pi-FN-rya"/>
-                <constraint firstItem="sLR-CL-MQT" firstAttribute="top" secondItem="CIt-Ac-Ns0" secondAttribute="bottom" constant="30" id="AUS-IH-hqe"/>
+                <constraint firstItem="Fwp-e1-oXP" firstAttribute="leading" secondItem="n12-2L-aHR" secondAttribute="leading" id="5GQ-Z2-fBc"/>
+                <constraint firstItem="n12-2L-aHR" firstAttribute="top" secondItem="8AD-Tt-taX" secondAttribute="bottom" constant="30" id="BDF-FQ-zzf"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="Cuq-5F-0gS"/>
-                <constraint firstItem="CIt-Ac-Ns0" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Emg-iE-Ccb"/>
                 <constraint firstItem="EHc-iP-hZl" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="Fhd-PA-Spo"/>
-                <constraint firstItem="WFa-87-Nax" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="GWc-7J-ayX"/>
-                <constraint firstItem="sLR-CL-MQT" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Hse-jo-BM0"/>
-                <constraint firstItem="WFa-87-Nax" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="MUD-fc-sc3"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="top" secondItem="gey-CS-Ru5" secondAttribute="bottom" id="PN0-gv-X5X"/>
                 <constraint firstItem="YPB-sy-kTZ" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" constant="20" id="Plm-yP-pwp"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="ZnB-bd-V4w"/>
+                <constraint firstItem="n12-2L-aHR" firstAttribute="leading" secondItem="8AD-Tt-taX" secondAttribute="leading" id="aO0-2G-GWq"/>
+                <constraint firstItem="8AD-Tt-taX" firstAttribute="trailing" secondItem="gxL-s4-Tz1" secondAttribute="trailingMargin" id="cB0-sG-MBN"/>
+                <constraint firstItem="8AD-Tt-taX" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="eqV-tV-cjm"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="top" secondItem="qbM-YY-9q7" secondAttribute="top" id="fQd-mO-Kzr"/>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="sLR-CL-MQT" secondAttribute="trailing" constant="30" id="fZO-gY-72H"/>
                 <constraint firstItem="gBU-RA-pLH" firstAttribute="top" secondItem="EHc-iP-hZl" secondAttribute="bottom" id="gBp-7c-dCe"/>
+                <constraint firstItem="Fwp-e1-oXP" firstAttribute="top" secondItem="n12-2L-aHR" secondAttribute="bottom" constant="30" id="hg8-UE-Gej"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="kSC-5e-TS4"/>
+                <constraint firstItem="8AD-Tt-taX" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="30" id="lgh-Tu-FP0"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="oRD-lY-WFB"/>
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="ra5-lY-kKA"/>
                 <constraint firstItem="Ijl-Cs-u2g" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="bottom" id="s3h-oC-zj5"/>
@@ -258,6 +268,9 @@
         </view>
     </objects>
     <resources>
+        <image name="cameraIcon" width="25" height="25"/>
+        <image name="photoIcon" width="25" height="25"/>
+        <image name="trashIcon" width="25" height="25"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -20,12 +20,6 @@ final class FeverViewController: UIViewController {
     @IBOutlet weak var memoTextView: UITextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
-    /// 画像挿入設定
-    @IBOutlet private weak var photoImageView: UIImageView!
-    /// カメラ・動画挿入設定
-    @IBOutlet private weak var cameraImageView: UIImageView!
-    /// 削除設定
-    @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
     
@@ -43,6 +37,15 @@ final class FeverViewController: UIViewController {
     }
     /// 解熱剤使用なしボタン
     @IBAction private func antipyreticAgentNoButton(_ sender: CustomButton) {
+    }
+    /// 写真挿入ボタン
+    @IBAction func photoButton(_ sender: UIButton) {
+    }
+    /// カメラ・動画挿入ボタン
+    @IBAction func cameraButton(_ sender: UIButton) {
+    }
+    /// 削除ボタン
+    @IBAction func trashButton(_ sender: UIButton) {
     }
     
     // MARK: - Other Methods
