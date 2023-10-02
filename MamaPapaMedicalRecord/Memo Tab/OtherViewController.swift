@@ -7,12 +7,23 @@
 
 import UIKit
 
-/// その他画面
+/// メモ画面_その他画面
 final class OtherViewController: UIViewController {
-
+    
+    // MARK: - Properties
+    
+    private let datePicker = UIDatePicker()
+    private let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }()
+    
+    
     // MARK: - IBOutlets
-     
-     /// 記録日時設定
+    
+    /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
@@ -20,54 +31,125 @@ final class OtherViewController: UIViewController {
     @IBOutlet private weak var tableView: UITextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
-   
-     // MARK: - View Life-Cycle Methods
-     
-     override func viewDidLoad() {
-         super.viewDidLoad()
-         configureCancelButtonItem()
-         configureSaveButtonItem()
-         navigationItem.title = "その他"
-     }
-     
-     // MARK: - IBActions
-     
-     /// 写真挿入ボタン
+    
+    // MARK: - View Life-Cycle Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureToolbar()
+        configureDatePicker()
+        configureCancelButtonItem()
+        configureSaveButtonItem()
+        navigationItem.title = "その他"
+        setupTapGestureRecognizer()
+    }
+    
+    // MARK: - IBActions
+    
+    /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
     }
-    /// カメラ・動画起動ボタン
+    /// カメラ・動画起動ボタンをタップ
     @IBAction private func tapCameraButton(_ sender: UIButton) {
     }
-    /// 削除ボタン
+    /// 削除ボタンをタップ
     @IBAction private func tapTrashButton(_ sender: UIButton) {
     }
     
-     // MARK: - Other Methods
-     
-     /// 戻るボタンの設定
-     private func configureCancelButtonItem() {
-         let cancelButton = UIBarButtonItem(title: "閉じる",
-                                            style: .plain,
-                                            target: self,
-                                            action: #selector(cancelButtonTapped))
-         navigationItem.leftBarButtonItem = cancelButton
-         
-     }
-     
-     @objc func cancelButtonTapped() {
-         // 前の画面に戻る
-         navigationController?.popViewController(animated: true)
-     }
-     
-     private func configureSaveButtonItem() {
-         let saveButton = UIBarButtonItem(title: "登録",
-                                          style: .plain,
-                                          target: self,
-                                          action: #selector(saveButtonTapped))
-         navigationItem.rightBarButtonItem = saveButton
-     }
-     
-     @objc func saveButtonTapped() {
-         // 保存処理
-     }
- }
+    // MARK: - Other Methods
+    
+    /// 戻るボタンの設定
+    private func configureCancelButtonItem() {
+        let cancelButton = UIBarButtonItem(title: "閉じる",
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = cancelButton
+        
+    }
+    
+    /// 閉じるボタンをタップ
+    @objc func backButtonTapped() {
+        // 前の画面に戻る
+        dismiss(animated: true, completion: nil)
+    }
+    
+    /// 登録ボタンを設定
+    private func configureSaveButtonItem() {
+        let saveButton = UIBarButtonItem(title: "登録",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(saveButtonTapped))
+        navigationItem.rightBarButtonItem = saveButton
+    }
+    
+    /// 登録ボタンをタップ
+    @objc func saveButtonTapped() {
+        // TODO: 保存処理
+    }
+    
+    /// 日付ピッカーの設定
+    private func configureDatePicker() {
+        // UITextFieldのキーボードをDatePickerに設定
+        recordDateTextField.inputView = datePicker
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.addTarget(self,
+                             action: #selector(datePickerValueChanged(_:)),
+                             for: .valueChanged)
+    }
+    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        recordDateTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    /// ツールバーの設定
+    private func configureToolbar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "決定",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(doneButtonTapped))
+        let cancelButton = UIBarButtonItem(title: "キャンセル",
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(toolBarCancelButtonTapped))
+        
+        toolbar.setItems([cancelButton,
+                          UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                          target: nil,
+                                          action: nil),
+                          doneButton],
+                         animated: false)
+        
+        recordDateTextField.inputAccessoryView = toolbar
+    }
+    
+    /// 「決定」をタップ時
+    @objc func doneButtonTapped() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy年MM月d日"
+        recordDateTextField.text = dateFormatter.string(from: datePicker.date)
+        // ピッカーを閉じる
+        recordDateTextField.resignFirstResponder()
+    }
+    
+    /// 「キャンセル」をタップ時
+    @objc func toolBarCancelButtonTapped() {
+        // ピッカーを閉じる
+        recordDateTextField.resignFirstResponder()
+    }
+
+    /// タップジェスチャーリコグナイザをセットアップ
+    private func setupTapGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    /// 画面のどこかをタップしてキーボードを閉じるメソッド
+    @objc private func handleTap() {
+        view.endEditing(true)
+    }
+}
