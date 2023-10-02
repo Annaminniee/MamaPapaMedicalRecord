@@ -1,5 +1,5 @@
 //
-//  VomitingViewController.swift
+//  DiarrheaViewController.swift
 //  MamaPapaMedicalRecord
 //
 //  Created by 菊地原杏菜 on 2023/09/25.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-/// メモ画面_嘔吐画面
-final class VomitingViewController: UIViewController {
+/// メモ画面_下痢
+final class DiarrheaViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -22,13 +22,17 @@ final class VomitingViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    /// 記録日時
+    /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
-    /// 体温
+    /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
+    /// その他設定
+    @IBOutlet private weak var otherTextField: UITextField!
+    /// におい設定
+    @IBOutlet private weak var smellTextField: UITextField!
     /// メモ
     @IBOutlet private weak var textView: UITextView!
-    /// 画像挿入
+    /// 画像挿入設定
     @IBOutlet private weak var imageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
@@ -39,38 +43,44 @@ final class VomitingViewController: UIViewController {
         configureDatePicker()
         configureCancelButtonItem()
         configureSaveButtonItem()
-        navigationItem.title = "嘔吐"
+        navigationItem.title = "下痢"
         setupTapGestureRecognizer()
     }
     
     // MARK: - IBActions
     
-    /// 下痢「はい」ボタンをタップ
-    @IBAction private func tapDiarrheaYesButton(_ sender: CustomButton) {
+    /// 形_軟便ボタンをタップ
+    @IBAction private func tapSoftButton(_ sender: CustomButton) {
     }
-    /// 下痢「なし」ボタンをタップ
-    @IBAction private func tapDiarrheaNoButton(_ sender: CustomButton) {
+    /// 形_泥状ボタンをタップ
+    @IBAction private func tapMudButton(_ sender: CustomButton) {
     }
-    /// 頭を打った「はい」ボタンをタップ
-    @IBAction private func tapHitHeadYesButton(_ sender: CustomButton) {
+    /// 形_水様ボタンをタップ
+    @IBAction private func tapLiquidButton(_ sender: CustomButton) {
     }
-    /// 頭を打った「いいえ」ボタンをタップ
-    @IBAction private func tapHitHeadNoButton(_ sender: CustomButton) {
+    /// 色_黄色ボタンをタップ
+    @IBAction private func tapYellowButton(_ sender: CustomButton) {
     }
-    /// 喘息「あり」ボタンをタップ
-    @IBAction private func tapAsthmaYesButton(_ sender: CustomButton) {
+    /// 色_白色ボタンをタップ
+    @IBAction private func tapWhiteButton(_ sender: CustomButton) {
     }
-    /// 喘息「なし」ボタンをタップ
-    @IBAction private func tapAsthmaNoButton(_ sender: CustomButton) {
+    /// 色_黒色ボタンをタップ
+    @IBAction private func tapBlackButton(_ sender: CustomButton) {
+    }
+    /// 赤い箇所があるボタンをタップ
+    @IBAction private func tapThereAreRedAreasButton(_ sender: Any) {
+    }
+    /// その他ボタンをタップ
+    @IBAction private func tapOtherButton(_ sender: Any) {
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
     }
-    /// カメラ・動画記入ボタンをタップ
-    @IBAction func tapCameraButton(_ sender: UIButton) {
+    /// カメラ・動画起動ボタンをタップ
+    @IBAction private func tapCameraButton(_ sender: UIButton) {
     }
     /// 削除ボタンをタップ
-    @IBAction func tapTrashButton(_ sender: UIButton) {
+    @IBAction private func tapTrashButton(_ sender: UIButton) {
     }
     
     // MARK: - Other Methods
@@ -82,15 +92,14 @@ final class VomitingViewController: UIViewController {
                                            target: self,
                                            action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = cancelButton
+        
     }
     
-    /// 戻るボタンをタップ
     @objc func backButtonTapped() {
         // 前の画面に戻る
         dismiss(animated: true, completion: nil)
     }
     
-    /// 登録ボタンの設定
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "登録",
                                          style: .plain,
@@ -157,7 +166,7 @@ final class VomitingViewController: UIViewController {
         // ピッカーを閉じる
         recordDateTextField.resignFirstResponder()
     }
-    
+
     /// タップジェスチャーリコグナイザをセットアップ
     private func setupTapGestureRecognizer() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -169,4 +178,3 @@ final class VomitingViewController: UIViewController {
         view.endEditing(true)
     }
 }
-
