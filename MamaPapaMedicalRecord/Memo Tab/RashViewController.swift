@@ -14,32 +14,20 @@ final class RashViewController: UIViewController {
     
     /// 記録日時設定
     @IBOutlet private weak var dateTextField: UITextField!
-    
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
-    
-    /// 場所その他設定
+    /// 場所「その他」設定
     @IBOutlet private weak var placeOtherTextField: UITextField!
-    
     /// メモ設定
-    @IBOutlet private weak var memoTableView: UITableView!
-    
+    @IBOutlet private weak var textView: UITextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
-    
-    /// 写真挿入設定
-    @IBOutlet private weak var photoImageView: UIImageView!
-    
-    /// 写真・動画挿入
-    @IBOutlet private weak var cameraImageView: UIImageView!
-    
-    /// 削除
-    @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCancelButtonItem() 
         configureSaveButtonItem()
         navigationItem.title = "発疹"
     }
@@ -47,43 +35,47 @@ final class RashViewController: UIViewController {
     // MARK: - IBActions
     
     /// 場所：頭ボタン
-    @IBAction private func headButton(_ sender: CustomButton) {
+    @IBAction private func tapHeadButton(_ sender: CustomButton) {
     }
-    
     /// 場所：顔ボタン
-    @IBAction private func faceButton(_ sender: CustomButton) {
+    @IBAction private func tapFaceButton(_ sender: CustomButton) {
     }
-    
     /// 場所：首ボタン
-    @IBAction private func neckButton(_ sender: CustomButton) {
+    @IBAction private func tapNeckButton(_ sender: CustomButton) {
     }
-    
     /// 場所：お腹ボタン
-    @IBAction private func stomachButton(_ sender: CustomButton) {
+    @IBAction private func tapStomachButton(_ sender: CustomButton) {
     }
-    
     /// 場所：背中ボタン
-    @IBAction private func backButton(_ sender: CustomButton) {
+    @IBAction private func tapBackButton(_ sender: CustomButton) {
     }
-    
     /// 場所：股ボタン
-    @IBAction private func crotchButton(_ sender: CustomButton) {
+    @IBAction private func tapCrotchButton(_ sender: CustomButton) {
     }
-    
     /// 場所：お尻ボタン
-    @IBAction private func hipButton(_ sender: CustomButton) {
+    @IBAction private func tapHipButton(_ sender: CustomButton) {
     }
-    
     /// 場所：足ボタン
-    @IBAction private func legButton(_ sender: CustomButton) {
+    @IBAction private func tapLegButton(_ sender: CustomButton) {
     }
-    
+    /// 場所：その他ボタン
+    @IBAction func tapOtherButton(_ sender: UIButton) {
+    }
+    /// 画像挿入ボタン
+    @IBAction private func tapPhotoButton(_ sender: UIButton) {
+    }
+    /// カメラ・動画起動ボタン
+    @IBAction private func tapCameraButton(_ sender: UIButton) {
+    }
+    /// 削除ボタン
+    @IBAction private func tapTrashButton(_ sender: UIButton) {
+    }
     
     // MARK: - Other Methods
     
     /// 戻るボタンの設定
     private func configureCancelButtonItem() {
-        let cancelButton = UIBarButtonItem(title: "<戻る",
+        let cancelButton = UIBarButtonItem(title: "閉じる",
                                            style: .plain,
                                            target: self,
                                            action: #selector(cancelButtonTapped))
