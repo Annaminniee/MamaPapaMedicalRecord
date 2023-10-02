@@ -27,6 +27,7 @@ final class MemoViewController: UIViewController {
         navigationItem.title = "症状"
         configureDatePicker()
         setDismissKeyboard()
+        configureTableView()
     }
     
     // MARK: - Other Methods
@@ -48,6 +49,14 @@ final class MemoViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd" // 日付フォーマットを適宜変更
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
+    
+    private func configureTableView() {
+           tableView.dataSource = self
+           tableView.delegate = self
+           //カスタムセル
+           let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
+           tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+       }
 
     // MARK: - IBActions
     
@@ -205,6 +214,8 @@ extension MemoViewController: UITextFieldDelegate {
         }
 }
 
+// MARK: - UITableViewDataSource
+
 extension MemoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -214,5 +225,14 @@ extension MemoViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
         cell.setup(memo: "あああ")
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension MemoViewController: UITableViewDelegate {
+    /// セルの高さを設定するメソッド
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
     }
 }
