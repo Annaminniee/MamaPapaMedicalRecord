@@ -72,7 +72,7 @@ final class RashViewController: UIViewController {
     @IBAction private func tapLegButton(_ sender: CustomButton) {
     }
     /// 場所：その他ボタンをタップ
-    @IBAction func tapOtherButton(_ sender: UIButton) {
+    @IBAction private func tapOtherButton(_ sender: UIButton) {
     }
     /// 画像挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
