@@ -42,11 +42,11 @@ final class FamilySettingViewController: UIViewController {
         let cancelButton = UIBarButtonItem(title: "<戻る",
                                            style: .plain,
                                            target: self,
-                                           action: #selector(cancelButtonTapped))
+                                           action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = cancelButton
     }
     
-    @objc func cancelButtonTapped() {
+    @objc func backButtonTapped() {
         // 前の画面に戻る
         navigationController?.popViewController(animated: true)
     }
