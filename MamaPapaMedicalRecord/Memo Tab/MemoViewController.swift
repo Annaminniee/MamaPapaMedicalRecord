@@ -28,6 +28,7 @@ final class MemoViewController: UIViewController {
         configureDatePicker()
         setDismissKeyboard()
         configureTableView()
+        setupTapGestureRecognizer()
     }
     
     // MARK: - Other Methods
@@ -193,6 +194,17 @@ final class MemoViewController: UIViewController {
     @objc func saveButtonTapped() {
         // 保存処理
     }
+    
+    /// タップジェスチャーリコグナイザをセットアップ
+    private func setupTapGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+         view.addGestureRecognizer(tapGesture)
+    }
+    
+    /// 画面のどこかをタップしてキーボードを閉じるメソッド
+    @objc private func handleTap() {
+        view.endEditing(true)
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -202,16 +214,6 @@ extension MemoViewController: UITextFieldDelegate {
         recordNameTextField.resignFirstResponder()
         return true
     }
-    
-    func setDismissKeyboard() {
-            let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            tapGR.cancelsTouchesInView = false
-            self.view.addGestureRecognizer(tapGR)
-        }
-        
-        @objc func dismissKeyboard() {
-            self.view.endEditing(true)
-        }
 }
 
 // MARK: - UITableViewDataSource
