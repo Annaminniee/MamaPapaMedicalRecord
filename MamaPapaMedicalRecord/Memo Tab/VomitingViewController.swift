@@ -75,7 +75,7 @@ final class VomitingViewController: UIViewController {
     
     // MARK: - Other Methods
     
-    /// 戻るボタンの設定
+    /// 閉じるボタンの設定
     private func configureCancelButtonItem() {
         let cancelButton = UIBarButtonItem(title: "閉じる",
                                            style: .plain,
@@ -84,7 +84,7 @@ final class VomitingViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
     }
     
-    /// 戻るボタンをタップ
+    /// 閉じるボタンをタップ
     @objc func backButtonTapped() {
         // 前の画面に戻る
         dismiss(animated: true, completion: nil)
@@ -99,7 +99,7 @@ final class VomitingViewController: UIViewController {
         navigationItem.rightBarButtonItem = saveButton
     }
     
-    /// 保存ボタンをタップ
+    /// 登録ボタンをタップ
     @objc func saveButtonTapped() {
         // TODO: 保存処理
     }

@@ -67,7 +67,7 @@ final class ConvulsionsViewController: UIViewController {
     
     // MARK: - Other Methods
     
-    /// 戻るボタンの設定
+    /// 閉じるボタンの設定
     private func configureCancelButtonItem() {
         let cancelButton = UIBarButtonItem(title: "閉じる",
                                            style: .plain,
@@ -76,13 +76,13 @@ final class ConvulsionsViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
     }
     
-    /// 戻るボタンをタップ
+    /// 閉じるボタンをタップ
     @objc func backButtonTapped() {
         // 前の画面に戻る
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
-    /// 保存ボタンの設定
+    /// 登録ボタンの設定
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "登録",
                                          style: .plain,
@@ -91,9 +91,9 @@ final class ConvulsionsViewController: UIViewController {
         navigationItem.rightBarButtonItem = saveButton
     }
     
-    /// 保存ボタンをタップ
+    /// 登録ボタンをタップ
     @objc func saveButtonTapped() {
-        // 保存処理
+        // TODO: 保存処理
     }
     
     /// 日付ピッカーの設定
