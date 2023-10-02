@@ -17,17 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jkf-KK-NOH">
-                                <rect key="frame" x="0.0" y="92" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2a-Ep-RzQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PID-BW-amb">
-                                                <rect key="frame" x="140" y="8" width="242" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日にち" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-8f-WHV">
                                                 <rect key="frame" x="30" y="15" width="52" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,10 +29,27 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PID-BW-amb">
+                                                <rect key="frame" x="140" y="8" width="242" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5K4-yU-8DY">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <locale key="locale" localeIdentifier="ja_JP"/>
+                                                <connections>
+                                                    <action selector="datePickerView:" destination="hug-Sz-2UQ" eventType="valueChanged" id="yIP-M7-Cdf"/>
+                                                </connections>
+                                            </datePicker>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="5K4-yU-8DY" firstAttribute="leading" secondItem="U2a-Ep-RzQ" secondAttribute="leading" id="0pF-4X-7M5"/>
+                                            <constraint firstAttribute="bottom" secondItem="5K4-yU-8DY" secondAttribute="bottom" id="8Bi-mB-6Eh"/>
+                                            <constraint firstAttribute="trailing" secondItem="5K4-yU-8DY" secondAttribute="trailing" id="BGq-5e-X4V"/>
                                             <constraint firstAttribute="height" constant="50" id="PZN-HF-Pxu"/>
+                                            <constraint firstItem="5K4-yU-8DY" firstAttribute="top" secondItem="U2a-Ep-RzQ" secondAttribute="top" id="gDY-Js-ddb"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01O-sH-Ohx">
@@ -63,549 +74,544 @@
                                             <constraint firstAttribute="height" constant="50" id="6Dc-u9-Mni"/>
                                         </constraints>
                                     </view>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGl-rd-XlD">
-                                <rect key="frame" x="0.0" y="192" width="414" height="50"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-bw-PyQ">
-                                        <rect key="frame" x="5" y="5" width="404" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGl-rd-XlD">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-Hb-fH1" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="熱"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="feverButtong:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-hj-qQb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="68" y="0.0" width="63.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="下痢"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="diarrheaButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="K26-ef-JYm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znL-Gb-0Oy" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="136.5" y="0.0" width="63" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="嘔吐"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="vomitingButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="TIA-eW-mm6"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-ff-OJ9" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="204.5" y="0.0" width="63" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="痙攣"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="convulsionButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="9Ai-xh-7KS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-Uo-ynB" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="272.5" y="0.0" width="63.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="発疹"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="rashButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VAm-oL-hbP"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Ux-47L" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="341" y="0.0" width="63" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="その他">
-                                                            <attributes>
-                                                                <font key="NSFont" metaFont="cellTitle"/>
-                                                                <font key="NSOriginalFont" metaFont="system"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="otherButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Ipy-hc-TbC"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EBZ-bw-PyQ">
+                                                <rect key="frame" x="5" y="5" width="404" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-Hb-fH1" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="熱"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapFeverButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-hj-qQb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="68" y="0.0" width="63.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="下痢"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapDiarrheaButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="K26-ef-JYm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znL-Gb-0Oy" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="136.5" y="0.0" width="63" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="嘔吐"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapVomitingButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="TIA-eW-mm6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-ff-OJ9" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="204.5" y="0.0" width="63" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="痙攣"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapConvulsionButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="9Ai-xh-7KS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-Uo-ynB" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="272.5" y="0.0" width="63.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="発疹"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapRashButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VAm-oL-hbP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Ux-47L" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="341" y="0.0" width="63" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="その他">
+                                                                    <attributes>
+                                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                                        <font key="NSOriginalFont" metaFont="system"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapOtherButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Ipy-hc-TbC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="EBZ-bw-PyQ" firstAttribute="top" secondItem="MGl-rd-XlD" secondAttribute="top" constant="5" id="8cw-Xg-Kd5"/>
-                                    <constraint firstAttribute="bottom" secondItem="EBZ-bw-PyQ" secondAttribute="bottom" constant="5" id="OyK-Gx-NBB"/>
-                                    <constraint firstAttribute="trailing" secondItem="EBZ-bw-PyQ" secondAttribute="trailing" constant="5" id="XDy-nJ-d75"/>
-                                    <constraint firstAttribute="height" constant="50" id="ZIk-w7-PE0"/>
-                                    <constraint firstItem="EBZ-bw-PyQ" firstAttribute="leading" secondItem="MGl-rd-XlD" secondAttribute="leading" constant="5" id="qoJ-9a-DRP"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-Jo-Ziy">
-                                <rect key="frame" x="0.0" y="242" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食欲　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ut-9X-T0H">
-                                        <rect key="frame" x="30" y="15" width="69.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-u8-YbH">
-                                        <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="EBZ-bw-PyQ" firstAttribute="top" secondItem="MGl-rd-XlD" secondAttribute="top" constant="5" id="8cw-Xg-Kd5"/>
+                                            <constraint firstAttribute="bottom" secondItem="EBZ-bw-PyQ" secondAttribute="bottom" constant="5" id="OyK-Gx-NBB"/>
+                                            <constraint firstAttribute="trailing" secondItem="EBZ-bw-PyQ" secondAttribute="trailing" constant="5" id="XDy-nJ-d75"/>
+                                            <constraint firstAttribute="height" constant="50" id="ZIk-w7-PE0"/>
+                                            <constraint firstItem="EBZ-bw-PyQ" firstAttribute="leading" secondItem="MGl-rd-XlD" secondAttribute="leading" constant="5" id="qoJ-9a-DRP"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-Jo-Ziy">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLI-Md-KuK" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="普通"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="appetiteNormal:" destination="V7j-6S-bxp" eventType="touchUpInside" id="2Gy-S0-71N"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="少し"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="appetiteLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="JwH-vJ-UyT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="appetiteNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="ye9-wB-ShO"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食欲　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ut-9X-T0H">
+                                                <rect key="frame" x="30" y="15" width="69.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xzs-u8-YbH">
+                                                <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLI-Md-KuK" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="普通"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapAppetiteNormal:" destination="V7j-6S-bxp" eventType="touchUpInside" id="2Gy-S0-71N"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="少し"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapAppetiteLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="JwH-vJ-UyT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapAppetiteNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="ye9-wB-ShO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="5ut-9X-T0H" firstAttribute="leading" secondItem="UUx-Jo-Ziy" secondAttribute="leading" constant="30" id="1cI-9O-kss"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xzs-u8-YbH" secondAttribute="trailing" constant="10" id="26y-eR-j5t"/>
-                                    <constraint firstItem="Xzs-u8-YbH" firstAttribute="top" secondItem="UUx-Jo-Ziy" secondAttribute="top" constant="5" id="THU-7n-cbo"/>
-                                    <constraint firstItem="Xzs-u8-YbH" firstAttribute="leading" secondItem="5ut-9X-T0H" secondAttribute="trailing" constant="30" id="Xsi-PY-7WR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xzs-u8-YbH" secondAttribute="bottom" constant="5" id="hLb-ZK-6E3"/>
-                                    <constraint firstItem="5ut-9X-T0H" firstAttribute="centerY" secondItem="UUx-Jo-Ziy" secondAttribute="centerY" id="hsp-Op-UH0"/>
-                                    <constraint firstAttribute="height" constant="50" id="nUX-pr-xRB"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-vf-36W">
-                                <rect key="frame" x="0.0" y="292" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水分補給" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT3-Wl-DPl">
-                                        <rect key="frame" x="30" y="15" width="69.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-4a-fl4">
-                                        <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="5ut-9X-T0H" firstAttribute="leading" secondItem="UUx-Jo-Ziy" secondAttribute="leading" constant="30" id="1cI-9O-kss"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xzs-u8-YbH" secondAttribute="trailing" constant="10" id="26y-eR-j5t"/>
+                                            <constraint firstItem="Xzs-u8-YbH" firstAttribute="top" secondItem="UUx-Jo-Ziy" secondAttribute="top" constant="5" id="THU-7n-cbo"/>
+                                            <constraint firstItem="Xzs-u8-YbH" firstAttribute="leading" secondItem="5ut-9X-T0H" secondAttribute="trailing" constant="30" id="Xsi-PY-7WR"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xzs-u8-YbH" secondAttribute="bottom" constant="5" id="hLb-ZK-6E3"/>
+                                            <constraint firstItem="5ut-9X-T0H" firstAttribute="centerY" secondItem="UUx-Jo-Ziy" secondAttribute="centerY" id="hsp-Op-UH0"/>
+                                            <constraint firstAttribute="height" constant="50" id="nUX-pr-xRB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-vf-36W">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lod-hx-h6O" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="できた"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="hydrationYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="vdI-9W-Kkb"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="少し"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="hydrationLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="AJR-y7-F7m"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="できない"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="hydrationNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="b8s-T5-A9E"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水分補給" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cT3-Wl-DPl">
+                                                <rect key="frame" x="30" y="15" width="69.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-4a-fl4">
+                                                <rect key="frame" x="129.5" y="5" width="274.5" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lod-hx-h6O" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="できた"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapHydrationYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="vdI-9W-Kkb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="少し"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapHydrationLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="AJR-y7-F7m"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="できない"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapHydrationNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="b8s-T5-A9E"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="cT3-Wl-DPl" firstAttribute="centerY" secondItem="pQK-vf-36W" secondAttribute="centerY" id="789-xw-7mG"/>
-                                    <constraint firstItem="cRQ-4a-fl4" firstAttribute="top" secondItem="pQK-vf-36W" secondAttribute="top" constant="5" id="NdT-ag-kXZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="cRQ-4a-fl4" secondAttribute="trailing" constant="10" id="Vab-mA-ATI"/>
-                                    <constraint firstItem="cRQ-4a-fl4" firstAttribute="leading" secondItem="cT3-Wl-DPl" secondAttribute="trailing" constant="30" id="ZsU-Hq-tCY"/>
-                                    <constraint firstItem="cT3-Wl-DPl" firstAttribute="leading" secondItem="pQK-vf-36W" secondAttribute="leading" constant="30" id="nnd-ur-IwP"/>
-                                    <constraint firstAttribute="bottom" secondItem="cRQ-4a-fl4" secondAttribute="bottom" constant="5" id="nzO-lf-NEh"/>
-                                    <constraint firstAttribute="height" constant="50" id="rR7-vK-xuE"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-XW-bs2">
-                                <rect key="frame" x="0.0" y="342" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="機嫌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-qm-oVw">
-                                        <rect key="frame" x="30" y="15" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-5I-aJ6">
-                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cT3-Wl-DPl" firstAttribute="centerY" secondItem="pQK-vf-36W" secondAttribute="centerY" id="789-xw-7mG"/>
+                                            <constraint firstItem="cRQ-4a-fl4" firstAttribute="top" secondItem="pQK-vf-36W" secondAttribute="top" constant="5" id="NdT-ag-kXZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="cRQ-4a-fl4" secondAttribute="trailing" constant="10" id="Vab-mA-ATI"/>
+                                            <constraint firstItem="cRQ-4a-fl4" firstAttribute="leading" secondItem="cT3-Wl-DPl" secondAttribute="trailing" constant="30" id="ZsU-Hq-tCY"/>
+                                            <constraint firstItem="cT3-Wl-DPl" firstAttribute="leading" secondItem="pQK-vf-36W" secondAttribute="leading" constant="30" id="nnd-ur-IwP"/>
+                                            <constraint firstAttribute="bottom" secondItem="cRQ-4a-fl4" secondAttribute="bottom" constant="5" id="nzO-lf-NEh"/>
+                                            <constraint firstAttribute="height" constant="50" id="rR7-vK-xuE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-XW-bs2">
+                                        <rect key="frame" x="0.0" y="250" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83r-LB-dNN" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="良い"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="moodGoodButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="PS8-II-1xL"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="普通"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="moodNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="giF-7Y-xkY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="悪い"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="moodBadButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VLT-dJ-tYt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="ぐったり">
-                                                            <attributes>
-                                                                <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="moodTiredButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Zsy-E6-vQO"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="機嫌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-qm-oVw">
+                                                <rect key="frame" x="30" y="15" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mbl-5I-aJ6">
+                                                <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83r-LB-dNN" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="良い"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapMoodGoodButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="PS8-II-1xL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="普通"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapMoodNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="giF-7Y-xkY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="悪い"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapMoodBadButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VLT-dJ-tYt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="ぐったり">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapMoodTiredButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Zsy-E6-vQO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="LyA-qm-oVw" firstAttribute="centerY" secondItem="8mp-XW-bs2" secondAttribute="centerY" id="0aw-Km-sKr"/>
-                                    <constraint firstItem="Mbl-5I-aJ6" firstAttribute="leading" secondItem="LyA-qm-oVw" secondAttribute="trailing" constant="10" id="3wf-ub-tc3"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mbl-5I-aJ6" secondAttribute="trailing" constant="30" id="UcH-CP-Glg"/>
-                                    <constraint firstAttribute="height" constant="50" id="gza-iW-YkY"/>
-                                    <constraint firstItem="Mbl-5I-aJ6" firstAttribute="top" secondItem="8mp-XW-bs2" secondAttribute="top" constant="5" id="kOS-Ef-E4R"/>
-                                    <constraint firstAttribute="bottom" secondItem="Mbl-5I-aJ6" secondAttribute="bottom" constant="5" id="kW6-8Y-0CU"/>
-                                    <constraint firstItem="LyA-qm-oVw" firstAttribute="leading" secondItem="8mp-XW-bs2" secondAttribute="leading" constant="30" id="yCO-Vx-DJT"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-dg-UVW">
-                                <rect key="frame" x="0.0" y="392" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="睡眠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-Aq-TJc">
-                                        <rect key="frame" x="30" y="15" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-20-K63">
-                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LyA-qm-oVw" firstAttribute="centerY" secondItem="8mp-XW-bs2" secondAttribute="centerY" id="0aw-Km-sKr"/>
+                                            <constraint firstItem="Mbl-5I-aJ6" firstAttribute="leading" secondItem="LyA-qm-oVw" secondAttribute="trailing" constant="10" id="3wf-ub-tc3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mbl-5I-aJ6" secondAttribute="trailing" constant="30" id="UcH-CP-Glg"/>
+                                            <constraint firstAttribute="height" constant="50" id="gza-iW-YkY"/>
+                                            <constraint firstItem="Mbl-5I-aJ6" firstAttribute="top" secondItem="8mp-XW-bs2" secondAttribute="top" constant="5" id="kOS-Ef-E4R"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mbl-5I-aJ6" secondAttribute="bottom" constant="5" id="kW6-8Y-0CU"/>
+                                            <constraint firstItem="LyA-qm-oVw" firstAttribute="leading" secondItem="8mp-XW-bs2" secondAttribute="leading" constant="30" id="yCO-Vx-DJT"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-dg-UVW">
+                                        <rect key="frame" x="0.0" y="300" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-hB-8nY" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="多い"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="sleepMuchButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="XXq-hx-VYk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="普通"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="sleepNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="hW0-Ch-DMX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="少ない"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="sleepLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="L6G-aA-UKr"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="寝てない">
-                                                            <attributes>
-                                                                <font key="NSFont" size="12" name="HiraginoSans-W3"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </buttonConfiguration>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="sleepNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="NHb-8Y-TmU"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="睡眠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqk-Aq-TJc">
+                                                <rect key="frame" x="30" y="15" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-20-K63">
+                                                <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-hB-8nY" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="多い"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSleepMuchButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="XXq-hx-VYk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="普通"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSleepNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="hW0-Ch-DMX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="少ない"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSleepLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="L6G-aA-UKr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="寝てない">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSleepNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="NHb-8Y-TmU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1kT-20-K63" secondAttribute="bottom" constant="5" id="HoI-Lj-2Tj"/>
-                                    <constraint firstItem="Cqk-Aq-TJc" firstAttribute="leading" secondItem="SRK-dg-UVW" secondAttribute="leading" constant="30" id="NDu-4p-wGe"/>
-                                    <constraint firstItem="1kT-20-K63" firstAttribute="top" secondItem="SRK-dg-UVW" secondAttribute="top" constant="5" id="hhS-nH-no9"/>
-                                    <constraint firstAttribute="height" constant="50" id="iPg-sj-e3F"/>
-                                    <constraint firstItem="Cqk-Aq-TJc" firstAttribute="centerY" secondItem="SRK-dg-UVW" secondAttribute="centerY" id="ieE-PQ-xP5"/>
-                                    <constraint firstAttribute="trailing" secondItem="1kT-20-K63" secondAttribute="trailing" constant="30" id="nLB-Hy-gq9"/>
-                                    <constraint firstItem="1kT-20-K63" firstAttribute="leading" secondItem="Cqk-Aq-TJc" secondAttribute="trailing" constant="10" id="rgV-uZ-Jtc"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qnk-Ae-XpH">
-                                <rect key="frame" x="0.0" y="442" width="414" height="50"/>
-                                <subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="1kT-20-K63" secondAttribute="bottom" constant="5" id="HoI-Lj-2Tj"/>
+                                            <constraint firstItem="Cqk-Aq-TJc" firstAttribute="leading" secondItem="SRK-dg-UVW" secondAttribute="leading" constant="30" id="NDu-4p-wGe"/>
+                                            <constraint firstItem="1kT-20-K63" firstAttribute="top" secondItem="SRK-dg-UVW" secondAttribute="top" constant="5" id="hhS-nH-no9"/>
+                                            <constraint firstAttribute="height" constant="50" id="iPg-sj-e3F"/>
+                                            <constraint firstItem="Cqk-Aq-TJc" firstAttribute="centerY" secondItem="SRK-dg-UVW" secondAttribute="centerY" id="ieE-PQ-xP5"/>
+                                            <constraint firstAttribute="trailing" secondItem="1kT-20-K63" secondAttribute="trailing" constant="30" id="nLB-Hy-gq9"/>
+                                            <constraint firstItem="1kT-20-K63" firstAttribute="leading" secondItem="Cqk-Aq-TJc" secondAttribute="trailing" constant="10" id="rgV-uZ-Jtc"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bx3-j9-GsM">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="350" width="414" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uv-Ox-2TV">
                                                 <rect key="frame" x="101" y="8" width="57" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-ro-eLY">
                                                 <rect key="frame" x="166" y="15" width="35" height="21"/>
@@ -618,7 +624,7 @@
                                                 <rect key="frame" x="209" y="8" width="57" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaG-ul-9fs">
                                                 <rect key="frame" x="274" y="15" width="18" height="21"/>
@@ -633,139 +639,140 @@
                                             <constraint firstAttribute="height" constant="50" id="fzN-Vz-N1T"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cta-QT-Bhb">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鼻水" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXj-9E-V1I">
+                                                <rect key="frame" x="30" y="15" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
+                                                <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-6h-LED" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSnotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="157" y="0.0" width="152" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapSnotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="hFl-yg-9om" firstAttribute="top" secondItem="cta-QT-Bhb" secondAttribute="top" constant="5" id="1Zc-pA-Y7U"/>
+                                            <constraint firstAttribute="bottom" secondItem="hFl-yg-9om" secondAttribute="bottom" constant="5" id="8FX-1K-aWB"/>
+                                            <constraint firstAttribute="height" constant="50" id="Cg6-xF-SHN"/>
+                                            <constraint firstItem="hFl-yg-9om" firstAttribute="leading" secondItem="zXj-9E-V1I" secondAttribute="trailing" constant="10" id="EFL-es-wxB"/>
+                                            <constraint firstItem="zXj-9E-V1I" firstAttribute="leading" secondItem="cta-QT-Bhb" secondAttribute="leading" constant="30" id="nqb-Qx-brT"/>
+                                            <constraint firstItem="zXj-9E-V1I" firstAttribute="centerY" secondItem="cta-QT-Bhb" secondAttribute="centerY" id="vXp-Tu-mYP"/>
+                                            <constraint firstAttribute="trailing" secondItem="hFl-yg-9om" secondAttribute="trailing" constant="30" id="wdw-e1-CJP"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWw-Uc-xUN">
+                                        <rect key="frame" x="0.0" y="450" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咳　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Om-MB-BlM">
+                                                <rect key="frame" x="30" y="15" width="35" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
+                                                <rect key="frame" x="75" y="5" width="309" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7g-ug-hsm" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCoughYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1PL-mY-Jeb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                                        <rect key="frame" x="157" y="0.0" width="152" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCoughNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Qwd-nE-oz8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="4Om-MB-BlM" firstAttribute="leading" secondItem="SWw-Uc-xUN" secondAttribute="leading" constant="30" id="B6t-fT-gq8"/>
+                                            <constraint firstItem="4Om-MB-BlM" firstAttribute="centerY" secondItem="SWw-Uc-xUN" secondAttribute="centerY" id="Bcj-rP-cn9"/>
+                                            <constraint firstItem="FCu-AO-V3s" firstAttribute="top" secondItem="SWw-Uc-xUN" secondAttribute="top" constant="5" id="Dkm-Lq-I0Z"/>
+                                            <constraint firstAttribute="height" constant="50" id="GbV-1v-jZQ"/>
+                                            <constraint firstItem="FCu-AO-V3s" firstAttribute="leading" secondItem="4Om-MB-BlM" secondAttribute="trailing" constant="10" id="HCO-fj-Dfd"/>
+                                            <constraint firstAttribute="trailing" secondItem="FCu-AO-V3s" secondAttribute="trailing" constant="30" id="Ksa-Di-6OK"/>
+                                            <constraint firstAttribute="bottom" secondItem="FCu-AO-V3s" secondAttribute="bottom" constant="5" id="i6X-i3-5dk"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="EVl-H7-fsu"/>
-                                </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWw-Uc-xUN">
-                                <rect key="frame" x="0.0" y="492" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="咳　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Om-MB-BlM">
-                                        <rect key="frame" x="30" y="15" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-AO-V3s">
-                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7g-ug-hsm" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="coughYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1PL-mY-Jeb"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="157" y="0.0" width="152" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="coughNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Qwd-nE-oz8"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-HZ-s7S">
+                                <rect key="frame" x="0.0" y="642" width="414" height="171"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="4Om-MB-BlM" firstAttribute="leading" secondItem="SWw-Uc-xUN" secondAttribute="leading" constant="30" id="B6t-fT-gq8"/>
-                                    <constraint firstItem="4Om-MB-BlM" firstAttribute="centerY" secondItem="SWw-Uc-xUN" secondAttribute="centerY" id="Bcj-rP-cn9"/>
-                                    <constraint firstItem="FCu-AO-V3s" firstAttribute="top" secondItem="SWw-Uc-xUN" secondAttribute="top" constant="5" id="Dkm-Lq-I0Z"/>
-                                    <constraint firstAttribute="height" constant="50" id="GbV-1v-jZQ"/>
-                                    <constraint firstItem="FCu-AO-V3s" firstAttribute="leading" secondItem="4Om-MB-BlM" secondAttribute="trailing" constant="10" id="HCO-fj-Dfd"/>
-                                    <constraint firstAttribute="trailing" secondItem="FCu-AO-V3s" secondAttribute="trailing" constant="30" id="Ksa-Di-6OK"/>
-                                    <constraint firstAttribute="bottom" secondItem="FCu-AO-V3s" secondAttribute="bottom" constant="5" id="i6X-i3-5dk"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cta-QT-Bhb">
-                                <rect key="frame" x="0.0" y="542" width="414" height="50"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鼻水" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXj-9E-V1I">
-                                        <rect key="frame" x="30" y="15" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-yg-9om">
-                                        <rect key="frame" x="75" y="5" width="309" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-6h-LED" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="snotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                                <rect key="frame" x="157" y="0.0" width="152" height="40"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="snotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="hFl-yg-9om" firstAttribute="top" secondItem="cta-QT-Bhb" secondAttribute="top" constant="5" id="1Zc-pA-Y7U"/>
-                                    <constraint firstAttribute="bottom" secondItem="hFl-yg-9om" secondAttribute="bottom" constant="5" id="8FX-1K-aWB"/>
-                                    <constraint firstAttribute="height" constant="50" id="Cg6-xF-SHN"/>
-                                    <constraint firstItem="hFl-yg-9om" firstAttribute="leading" secondItem="zXj-9E-V1I" secondAttribute="trailing" constant="10" id="EFL-es-wxB"/>
-                                    <constraint firstItem="zXj-9E-V1I" firstAttribute="leading" secondItem="cta-QT-Bhb" secondAttribute="leading" constant="30" id="nqb-Qx-brT"/>
-                                    <constraint firstItem="zXj-9E-V1I" firstAttribute="centerY" secondItem="cta-QT-Bhb" secondAttribute="centerY" id="vXp-Tu-mYP"/>
-                                    <constraint firstAttribute="trailing" secondItem="hFl-yg-9om" secondAttribute="trailing" constant="30" id="wdw-e1-CJP"/>
-                                </constraints>
-                            </view>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRl-Uk-QCu">
                                 <rect key="frame" x="0.0" y="592" width="414" height="50"/>
                                 <subviews>
@@ -782,53 +789,26 @@
                                     <constraint firstAttribute="height" constant="50" id="wei-wr-fd8"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-HZ-s7S">
-                                <rect key="frame" x="0.0" y="642" width="414" height="171"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nqW-Sn-snY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="1HD-Fq-B4k"/>
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="3Lm-fa-o4S"/>
-                            <constraint firstItem="MGl-rd-XlD" firstAttribute="top" secondItem="Jkf-KK-NOH" secondAttribute="bottom" id="4G4-cI-nO5"/>
-                            <constraint firstItem="SWw-Uc-xUN" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="5p0-wL-zea"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="top" secondItem="nqW-Sn-snY" secondAttribute="top" id="7NR-jv-nel"/>
-                            <constraint firstItem="8mp-XW-bs2" firstAttribute="top" secondItem="pQK-vf-36W" secondAttribute="bottom" id="9Yy-6j-aoF"/>
-                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="AtH-N1-A8g"/>
-                            <constraint firstItem="cta-QT-Bhb" firstAttribute="top" secondItem="SWw-Uc-xUN" secondAttribute="bottom" id="EJL-hS-tJJ"/>
-                            <constraint firstItem="MGl-rd-XlD" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="Fjd-gq-ho3"/>
+                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="leading" secondItem="u1V-HZ-s7S" secondAttribute="leading" id="HBQ-Qz-rFA"/>
                             <constraint firstItem="u1V-HZ-s7S" firstAttribute="bottom" secondItem="nqW-Sn-snY" secondAttribute="bottom" id="Ie1-xJ-lZk"/>
-                            <constraint firstItem="UUx-Jo-Ziy" firstAttribute="top" secondItem="MGl-rd-XlD" secondAttribute="bottom" id="JSL-1a-Qjf"/>
-                            <constraint firstItem="SWw-Uc-xUN" firstAttribute="top" secondItem="Qnk-Ae-XpH" secondAttribute="bottom" id="Jp8-Q7-Yt7"/>
-                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="Ktj-GQ-tXN"/>
-                            <constraint firstItem="8mp-XW-bs2" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="LmO-Th-EKU"/>
-                            <constraint firstItem="8mp-XW-bs2" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="Qia-sE-QJB"/>
-                            <constraint firstItem="UUx-Jo-Ziy" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="TPx-6W-iB9"/>
+                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="trailing" secondItem="u1V-HZ-s7S" secondAttribute="trailing" id="Qlw-f9-Bzr"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="UY2-vz-YXq"/>
-                            <constraint firstItem="pQK-vf-36W" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="V9q-dk-8h7"/>
-                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="top" secondItem="cta-QT-Bhb" secondAttribute="bottom" id="Y7z-E5-NSr"/>
-                            <constraint firstItem="SRK-dg-UVW" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="Yk2-LV-hLE"/>
-                            <constraint firstItem="pQK-vf-36W" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="a2I-5u-A9V"/>
-                            <constraint firstItem="cta-QT-Bhb" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="aqn-sF-XA9"/>
-                            <constraint firstItem="cta-QT-Bhb" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="awI-9u-AHZ"/>
-                            <constraint firstItem="SRK-dg-UVW" firstAttribute="top" secondItem="8mp-XW-bs2" secondAttribute="bottom" id="dLd-ik-kBX"/>
-                            <constraint firstItem="UUx-Jo-Ziy" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="dpW-bc-8um"/>
+                            <constraint firstItem="DRl-Uk-QCu" firstAttribute="top" secondItem="Jkf-KK-NOH" secondAttribute="bottom" id="cIi-sy-GMa"/>
                             <constraint firstItem="Jkf-KK-NOH" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="dpc-zt-HCo"/>
-                            <constraint firstItem="SWw-Uc-xUN" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="e8g-X0-4Pr"/>
-                            <constraint firstItem="MGl-rd-XlD" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="eZS-zh-1kZ"/>
-                            <constraint firstItem="Qnk-Ae-XpH" firstAttribute="top" secondItem="SRK-dg-UVW" secondAttribute="bottom" id="fdn-SN-RWE"/>
-                            <constraint firstItem="Qnk-Ae-XpH" firstAttribute="leading" secondItem="nqW-Sn-snY" secondAttribute="leading" id="h21-7N-Hd6"/>
-                            <constraint firstItem="u1V-HZ-s7S" firstAttribute="top" secondItem="DRl-Uk-QCu" secondAttribute="bottom" id="ivr-Mt-zuw"/>
-                            <constraint firstItem="SRK-dg-UVW" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="krZ-P4-2u4"/>
-                            <constraint firstItem="Qnk-Ae-XpH" firstAttribute="trailing" secondItem="nqW-Sn-snY" secondAttribute="trailing" id="shq-GF-F2O"/>
-                            <constraint firstItem="pQK-vf-36W" firstAttribute="top" secondItem="UUx-Jo-Ziy" secondAttribute="bottom" id="xSm-vP-DWz"/>
+                            <constraint firstItem="u1V-HZ-s7S" firstAttribute="top" secondItem="DRl-Uk-QCu" secondAttribute="bottom" id="n7d-oC-4au"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
-                        <outlet property="dateTextField" destination="PID-BW-amb" id="66E-p9-etB"/>
+                        <outlet property="datePicker" destination="5K4-yU-8DY" id="NcO-AE-HKC"/>
+                        <outlet property="dateTextField" destination="PID-BW-amb" id="XI9-9M-An5"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
                         <outlet property="sleepMinuteTextField" destination="gES-lb-jAB" id="rWz-dS-1sD"/>
@@ -836,6 +816,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hug-Sz-2UQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="498.55072463768118" y="293.97321428571428"/>
         </scene>
