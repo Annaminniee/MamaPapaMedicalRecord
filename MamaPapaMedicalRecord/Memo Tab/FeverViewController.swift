@@ -34,10 +34,10 @@ final class FeverViewController: UIViewController {
     // MARK: - IBActions
     
     /// 解熱剤使用「はい」ボタン
-    @IBAction private func antipyreticAgentYesButton(_ sender: CustomButton) {
+    @IBAction private func tapAntipyreticAgentYesButton(_ sender: CustomButton) {
     }
     /// 解熱剤使用「なし」ボタン
-    @IBAction private func antipyreticAgentNoButton(_ sender: CustomButton) {
+    @IBAction private func tapAntipyreticAgentNoButton(_ sender: CustomButton) {
     }
     /// 写真挿入ボタン
     @IBAction private func tapPhotoButton(_ sender: UIButton) {

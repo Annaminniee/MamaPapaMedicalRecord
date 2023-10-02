@@ -112,7 +112,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="antipyreticAgentYesButton:" destination="-1" eventType="touchUpInside" id="ZlC-5G-Tbd"/>
+                                        <action selector="tapAntipyreticAgentYesButton:" destination="-1" eventType="touchUpInside" id="ZlC-5G-Tbd"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -132,7 +132,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="antipyreticAgentNoButton:" destination="-1" eventType="touchUpInside" id="Pdu-3S-kSC"/>
+                                        <action selector="tapAntipyreticAgentNoButton:" destination="-1" eventType="touchUpInside" id="Pdu-3S-kSC"/>
                                     </connections>
                                 </button>
                             </subviews>
