@@ -26,7 +26,6 @@ final class MemoViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "症状"
         configureDatePicker()
-        setDismissKeyboard()
         configureTableView()
         setupTapGestureRecognizer()
     }
