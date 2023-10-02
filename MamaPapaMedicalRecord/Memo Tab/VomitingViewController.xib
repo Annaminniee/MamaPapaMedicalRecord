@@ -331,8 +331,19 @@
                         <constraint firstItem="pow-Rs-4bc" firstAttribute="centerY" secondItem="d4q-Gi-5z2" secondAttribute="centerY" id="DRs-pf-cQD"/>
                     </constraints>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l12-Zs-hwF">
+                    <rect key="frame" x="0.0" y="348" width="414" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="pTo-1h-2A0"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-ns-1Rr">
-                    <rect key="frame" x="0.0" y="497" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="498" width="414" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS5-5R-cii">
                             <rect key="frame" x="22" y="15" width="35" height="20"/>
@@ -352,7 +363,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIz-u7-giY">
-                    <rect key="frame" x="0.0" y="547" width="414" height="315"/>
+                    <rect key="frame" x="0.0" y="548" width="414" height="314"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-7X-eO3">
                             <rect key="frame" x="20" y="0.0" width="314" height="230"/>
@@ -411,24 +422,14 @@
                         <constraint firstItem="RbS-e5-U2s" firstAttribute="leading" secondItem="QNi-7X-eO3" secondAttribute="trailing" constant="20" id="ueA-bA-08m"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l12-Zs-hwF">
-                    <rect key="frame" x="0.0" y="340" width="414" height="149"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="149" id="s4I-A6-ZHn"/>
-                    </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qbM-YY-9q7"/>
             <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="l12-Zs-hwF" firstAttribute="top" secondItem="d4q-Gi-5z2" secondAttribute="bottom" id="7RQ-1h-SYW"/>
+                <constraint firstItem="aUW-ns-1Rr" firstAttribute="top" secondItem="l12-Zs-hwF" secondAttribute="bottom" id="BqQ-VC-wGx"/>
                 <constraint firstItem="LIz-u7-giY" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="BtT-dV-gic"/>
                 <constraint firstItem="d4q-Gi-5z2" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="Dqt-NB-uHx"/>
-                <constraint firstItem="aUW-ns-1Rr" firstAttribute="top" secondItem="l12-Zs-hwF" secondAttribute="bottom" id="E2e-zk-8Ee"/>
                 <constraint firstItem="l12-Zs-hwF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Ek4-if-Izs"/>
                 <constraint firstItem="d4q-Gi-5z2" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="bottom" id="Hlb-Rm-S7G"/>
                 <constraint firstItem="l12-Zs-hwF" firstAttribute="top" secondItem="d4q-Gi-5z2" secondAttribute="bottom" id="Ndf-pO-IeQ"/>
