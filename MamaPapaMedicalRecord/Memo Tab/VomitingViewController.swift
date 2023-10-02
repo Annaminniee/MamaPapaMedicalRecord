@@ -14,64 +14,57 @@ final class VomitingViewController: UIViewController {
     
     /// 記録日時
     @IBOutlet private weak var dateTextField: UITextField!
-    
     /// 体温
     @IBOutlet private weak var temperatureTextField: UITextField!
-    
     /// メモ
-    @IBOutlet private weak var memoTextField: UITableView!
-    
+    @IBOutlet private weak var textView: UITextView!
     /// 画像挿入
     @IBOutlet private weak var imageView: UIImageView!
-    
-    /// 写真挿入
-    @IBOutlet private weak var photoImageView: UIImageView!
-    
-    /// 画像・動画挿入
-    @IBOutlet private weak var cameraImageView: UIImageView!
-    
-    /// 削除
-    @IBOutlet private weak var trashImageView: UIImageView!
     
     // MARK: - View Life-Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCancelButtonItem()
         configureSaveButtonItem()
         navigationItem.title = "嘔吐"
     }
     
     // MARK: - IBActions
     
-    /// 下痢はいボタン
-    @IBAction private func diarrheaYesButton(_ sender: CustomButton) {
+    /// 下痢「はい」ボタン
+    @IBAction private func tapDiarrheaYesButton(_ sender: CustomButton) {
     }
-    
-    /// 下痢いいえボタン
-    @IBAction private func diarrheaNoButton(_ sender: CustomButton) {
+    /// 下痢「いいえ」ボタン
+    @IBAction private func tapDiarrheaNoButton(_ sender: CustomButton) {
     }
-    
-    /// 頭を打ったはいボタン
-    @IBAction private func hitHeadYesButton(_ sender: CustomButton) {
+    /// 頭を打った「はい」ボタン
+    @IBAction private func tapHitHeadYesButton(_ sender: CustomButton) {
     }
-    
-    /// 頭を打ったいいえボタン
-    @IBAction private func hitHeadNoButton(_ sender: CustomButton) {
+    /// 頭を打った「いいえ」ボタン
+    @IBAction private func tapHitHeadNoButton(_ sender: CustomButton) {
     }
-    
     /// 喘息はいボタン
-    @IBAction private func asthmaYesButton(_ sender: CustomButton) {
+    @IBAction private func tapAsthmaYesButton(_ sender: CustomButton) {
     }
-    
     /// 喘息いいえボタン
-    @IBAction private func asthmaNoButton(_ sender: CustomButton) {
+    @IBAction private func tapAsthmaNoButton(_ sender: CustomButton) {
+    }
+    /// 写真挿入ボタン
+    @IBAction private func tapPhotoButton(_ sender: UIButton) {
+    }
+    /// カメラ・動画記入ボタン
+    @IBAction func tapCameraButton(_ sender: UIButton) {
+    }
+    /// 削除ボタン
+    @IBAction func tapTrashButton(_ sender: UIButton) {
     }
     
     // MARK: - Other Methods
     
     /// 戻るボタンの設定
     private func configureCancelButtonItem() {
-        let cancelButton = UIBarButtonItem(title: "<戻る",
+        let cancelButton = UIBarButtonItem(title: "閉じる",
                                            style: .plain,
                                            target: self,
                                            action: #selector(cancelButtonTapped))

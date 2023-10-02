@@ -10,13 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VomitingViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <connections>
-                <outlet property="cameraImageView" destination="CIt-Ac-Ns0" id="CkB-na-9GF"/>
                 <outlet property="dateTextField" destination="Ka0-W0-w2t" id="y1x-Qc-8rL"/>
                 <outlet property="imageView" destination="YPB-sy-kTZ" id="8hY-tc-2Bf"/>
-                <outlet property="memoTextField" destination="c8c-4d-FCd" id="gAL-qX-7w0"/>
-                <outlet property="photoImageView" destination="WFa-87-Nax" id="kwR-Hf-wTL"/>
                 <outlet property="temperatureTextField" destination="q27-yz-P0p" id="qei-6G-bmM"/>
-                <outlet property="trashImageView" destination="sLR-CL-MQT" id="oiN-a4-WyB"/>
+                <outlet property="textView" destination="l12-Zs-hwF" id="RvI-QV-xoy"/>
                 <outlet property="view" destination="gxL-s4-Tz1" id="MEH-RU-83g"/>
             </connections>
         </placeholder>
@@ -26,13 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gey-CS-Ru5">
-                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="xEV-O2-hj0"/>
-                    </items>
+                    <rect key="frame" x="0.0" y="48" width="414" height="52"/>
                 </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="egT-qj-lEF">
-                    <rect key="frame" x="0.0" y="92" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBy-2q-U8P">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -59,66 +53,66 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-l1-JPF">
-                    <rect key="frame" x="0.0" y="142" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="150" width="414" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下痢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-Q9-4lg">
-                            <rect key="frame" x="30" y="15" width="35" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下痢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-Q9-4lg">
+                            <rect key="frame" x="30" y="15" width="35" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I22-io-weh">
-                            <rect key="frame" x="127" y="5" width="123" height="34.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4A-hs-Vc7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="diarrheaYesButton:" destination="-1" eventType="touchUpInside" id="Xg8-kW-W7z"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="diarrheaNoButton:" destination="-1" eventType="touchUpInside" id="hrX-9X-UAk"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4A-hs-Vc7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="140" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapDiarrheaYesButton:" destination="-1" eventType="touchUpInside" id="l3j-p3-fPe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="229" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapDiarrheaNoButton:" destination="-1" eventType="touchUpInside" id="bZz-va-YX3"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="U4A-hs-Vc7" firstAttribute="leading" secondItem="f4F-Q9-4lg" secondAttribute="trailing" constant="75" id="6jg-fe-LDM"/>
                         <constraint firstAttribute="height" constant="50" id="9mN-Se-0Lf"/>
+                        <constraint firstItem="f4F-Q9-4lg" firstAttribute="centerY" secondItem="eAO-l1-JPF" secondAttribute="centerY" id="ARf-v1-GYA"/>
+                        <constraint firstItem="uDM-s8-CqQ" firstAttribute="centerY" secondItem="eAO-l1-JPF" secondAttribute="centerY" id="QAj-ij-wVl"/>
+                        <constraint firstItem="U4A-hs-Vc7" firstAttribute="centerY" secondItem="eAO-l1-JPF" secondAttribute="centerY" id="ZTq-VY-mhP"/>
+                        <constraint firstItem="f4F-Q9-4lg" firstAttribute="leading" secondItem="eAO-l1-JPF" secondAttribute="leading" constant="30" id="bSh-3y-vZF"/>
+                        <constraint firstItem="uDM-s8-CqQ" firstAttribute="leading" secondItem="U4A-hs-Vc7" secondAttribute="trailing" constant="30" id="sRv-TM-ee1"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoG-tS-ujZ">
-                    <rect key="frame" x="0.0" y="192" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="200" width="414" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q27-yz-P0p">
                             <rect key="frame" x="101" y="8" width="57" height="34"/>
@@ -147,122 +141,121 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-es-CTU">
-                    <rect key="frame" x="0.0" y="242" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="250" width="414" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="頭を打った" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiH-pe-JLO">
-                            <rect key="frame" x="30" y="15" width="87" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="頭を打った" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiH-pe-JLO">
+                            <rect key="frame" x="30" y="15" width="87" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-iK-1u0">
-                            <rect key="frame" x="127" y="5" width="123" height="34.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2j-RI-k1R" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="hitHeadYesButton:" destination="-1" eventType="touchUpInside" id="UyK-8z-5at"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-Nf-oBp" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="hitHeadNoButton:" destination="-1" eventType="touchUpInside" id="Ks7-Ju-Xr0"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2j-RI-k1R" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="140" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapHitHeadYesButton:" destination="-1" eventType="touchUpInside" id="Jvh-Il-M3j"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yc-Nf-oBp" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="229" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapHitHeadNoButton:" destination="-1" eventType="touchUpInside" id="8Su-KR-LrP"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="8yc-Nf-oBp" firstAttribute="leading" secondItem="H2j-RI-k1R" secondAttribute="trailing" constant="30" id="2uK-5b-IXB"/>
                         <constraint firstAttribute="height" constant="50" id="JAK-3L-wGf"/>
+                        <constraint firstItem="8yc-Nf-oBp" firstAttribute="centerY" secondItem="fzU-es-CTU" secondAttribute="centerY" id="QfU-Bp-ieU"/>
+                        <constraint firstItem="H2j-RI-k1R" firstAttribute="centerY" secondItem="fzU-es-CTU" secondAttribute="centerY" id="SZa-Yv-hlL"/>
+                        <constraint firstItem="oiH-pe-JLO" firstAttribute="centerY" secondItem="fzU-es-CTU" secondAttribute="centerY" id="WHM-Sg-DSJ"/>
+                        <constraint firstItem="oiH-pe-JLO" firstAttribute="leading" secondItem="fzU-es-CTU" secondAttribute="leading" constant="30" id="fhp-La-g4U"/>
+                        <constraint firstItem="H2j-RI-k1R" firstAttribute="leading" secondItem="oiH-pe-JLO" secondAttribute="trailing" constant="23" id="h05-dZ-8a4"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-5e-shx">
-                    <rect key="frame" x="0.0" y="292" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="300" width="414" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="喘息の発作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-rG-YE4">
-                            <rect key="frame" x="30" y="15" width="87" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喘息の発作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-rG-YE4">
+                            <rect key="frame" x="30" y="15" width="87" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ydm-zj-Scx">
-                            <rect key="frame" x="127" y="5" width="123" height="34.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-mf-vg7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="あり"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="asthmaYesButton:" destination="-1" eventType="touchUpInside" id="ovj-4e-iq9"/>
-                                        <action selector="asthmaYesButtond:" destination="-1" eventType="touchUpInside" id="6Wc-MV-Ysf"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-N6-vgf" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
-                                    <rect key="frame" x="64" y="0.0" width="59" height="34.5"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="なし"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="asthmaNoButton:" destination="-1" eventType="touchUpInside" id="zE9-Lb-v6C"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-mf-vg7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="140" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="あり"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAsthmaYesButton:" destination="-1" eventType="touchUpInside" id="Avs-rc-llq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-N6-vgf" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                            <rect key="frame" x="229" y="8" width="59" height="34.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="なし"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapAsthmaNoButton:" destination="-1" eventType="touchUpInside" id="aPb-SY-qBB"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="7NM-rG-YE4" firstAttribute="leading" secondItem="wl4-5e-shx" secondAttribute="leading" constant="30" id="XAJ-IJ-ITB"/>
                         <constraint firstAttribute="height" constant="50" id="XSc-6z-QFF"/>
+                        <constraint firstItem="gx1-mf-vg7" firstAttribute="centerY" secondItem="wl4-5e-shx" secondAttribute="centerY" id="XWc-JD-1OY"/>
+                        <constraint firstItem="8tb-N6-vgf" firstAttribute="centerY" secondItem="wl4-5e-shx" secondAttribute="centerY" id="YwZ-wd-NIq"/>
+                        <constraint firstItem="7NM-rG-YE4" firstAttribute="centerY" secondItem="wl4-5e-shx" secondAttribute="centerY" id="enj-bE-Kgu"/>
+                        <constraint firstItem="gx1-mf-vg7" firstAttribute="leading" secondItem="7NM-rG-YE4" secondAttribute="trailing" constant="23" id="ohB-dA-qbh"/>
+                        <constraint firstItem="8tb-N6-vgf" firstAttribute="leading" secondItem="gx1-mf-vg7" secondAttribute="trailing" constant="30" id="sy8-4s-cDE"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" id="Ijl-Cs-u2g">
@@ -278,15 +271,19 @@
                         </label>
                     </subviews>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c8c-4d-FCd">
-                    <rect key="frame" x="0.0" y="392" width="414" height="92"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l12-Zs-hwF">
+                    <rect key="frame" x="0.0" y="392" width="414" height="149"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="92" id="roo-Dz-h2W"/>
+                        <constraint firstAttribute="height" constant="149" id="s4I-A6-ZHn"/>
                     </constraints>
-                </tableView>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <view contentMode="scaleToFill" id="gBU-RA-pLH">
-                    <rect key="frame" x="0.0" y="500" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="541" width="414" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="画像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-Th-vF3">
@@ -300,73 +297,92 @@
                     <viewLayoutGuide key="safeArea" id="ej5-cb-8dS"/>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPB-sy-kTZ">
-                    <rect key="frame" x="20" y="590" width="289" height="230"/>
+                    <rect key="frame" x="20" y="591" width="303" height="230"/>
+                    <color key="backgroundColor" red="0.857421875" green="0.857421875" blue="0.857421875" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="230" id="DT9-o7-1B1"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-87-Nax">
-                    <rect key="frame" x="334" y="590" width="50" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VR-X4-YI6">
+                    <rect key="frame" x="353" y="671" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="55E-GI-1cU"/>
-                        <constraint firstAttribute="height" constant="50" id="EvA-PK-WL4"/>
+                        <constraint firstAttribute="height" constant="50" id="TLe-r0-qO7"/>
+                        <constraint firstAttribute="width" constant="50" id="x7V-MU-EKE"/>
                     </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CIt-Ac-Ns0">
-                    <rect key="frame" x="334" y="670" width="50" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="tapCameraButton:" destination="-1" eventType="touchUpInside" id="JXM-Hv-K9b"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bl-pj-EgJ">
+                    <rect key="frame" x="353" y="751" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="50" id="eib-ql-S8K"/>
-                        <constraint firstAttribute="height" constant="50" id="gyG-LI-XWr"/>
+                        <constraint firstAttribute="width" constant="50" id="0Kf-X4-x7s"/>
+                        <constraint firstAttribute="height" constant="50" id="0QJ-LL-SNR"/>
                     </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-CL-MQT">
-                    <rect key="frame" x="334" y="750" width="50" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="tapTrashButton:" destination="-1" eventType="touchUpInside" id="stx-vE-9in"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi6-Cm-Jou">
+                    <rect key="frame" x="353" y="591" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AdF-Ru-NqP"/>
-                        <constraint firstAttribute="width" constant="50" id="oFa-22-vdF"/>
+                        <constraint firstAttribute="height" constant="50" id="qjE-6v-i1f"/>
+                        <constraint firstAttribute="width" constant="50" id="uj4-7E-KUV"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="tapPhotoButton:" destination="-1" eventType="touchUpInside" id="HWC-Zl-NIL"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="qbM-YY-9q7"/>
             <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="CIt-Ac-Ns0" secondAttribute="trailing" constant="30" id="1OJ-og-20f"/>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="WFa-87-Nax" secondAttribute="trailing" constant="30" id="1a0-Bb-eDI"/>
                 <constraint firstItem="fzU-es-CTU" firstAttribute="top" secondItem="VoG-tS-ujZ" secondAttribute="bottom" id="5pD-Dv-AkG"/>
-                <constraint firstItem="CIt-Ac-Ns0" firstAttribute="top" secondItem="WFa-87-Nax" secondAttribute="bottom" constant="30" id="9Pi-FN-rya"/>
-                <constraint firstItem="sLR-CL-MQT" firstAttribute="top" secondItem="CIt-Ac-Ns0" secondAttribute="bottom" constant="30" id="AUS-IH-hqe"/>
-                <constraint firstItem="CIt-Ac-Ns0" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Emg-iE-Ccb"/>
-                <constraint firstItem="WFa-87-Nax" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="GWc-7J-ayX"/>
-                <constraint firstItem="sLR-CL-MQT" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="25" id="Hse-jo-BM0"/>
+                <constraint firstItem="gBU-RA-pLH" firstAttribute="top" secondItem="l12-Zs-hwF" secondAttribute="bottom" id="6O7-Ff-eUD"/>
+                <constraint firstItem="Hi6-Cm-Jou" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="30" id="CEk-kj-OcR"/>
+                <constraint firstItem="l12-Zs-hwF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Ek4-if-Izs"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Iwk-jR-NSF"/>
-                <constraint firstItem="WFa-87-Nax" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="MUD-fc-sc3"/>
+                <constraint firstItem="Ijl-Cs-u2g" firstAttribute="top" secondItem="wl4-5e-shx" secondAttribute="bottom" id="K6E-xy-hv6"/>
+                <constraint firstItem="3VR-X4-YI6" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="30" id="LmM-7B-pg7"/>
                 <constraint firstItem="eAO-l1-JPF" firstAttribute="top" secondItem="egT-qj-lEF" secondAttribute="bottom" id="Pgb-fu-wnc"/>
-                <constraint firstItem="YPB-sy-kTZ" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" constant="20" id="Plm-yP-pwp"/>
-                <constraint firstItem="c8c-4d-FCd" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="Uz1-Bh-fE9"/>
-                <constraint firstItem="c8c-4d-FCd" firstAttribute="top" secondItem="Ijl-Cs-u2g" secondAttribute="bottom" id="ZM4-0H-P3G"/>
+                <constraint firstItem="YPB-sy-kTZ" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" id="RrK-eI-ADI"/>
+                <constraint firstItem="l12-Zs-hwF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="Twd-zi-IhR"/>
+                <constraint firstItem="3VR-X4-YI6" firstAttribute="top" secondItem="Hi6-Cm-Jou" secondAttribute="bottom" constant="30" id="YHJ-Jx-y64"/>
+                <constraint firstItem="Hi6-Cm-Jou" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" id="bq0-GD-Ay2"/>
+                <constraint firstItem="l12-Zs-hwF" firstAttribute="top" secondItem="Ijl-Cs-u2g" secondAttribute="bottom" id="caz-Ho-pNQ"/>
                 <constraint firstItem="VoG-tS-ujZ" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="d0q-VV-o1m"/>
+                <constraint firstItem="7Bl-pj-EgJ" firstAttribute="leading" secondItem="YPB-sy-kTZ" secondAttribute="trailing" constant="30" id="dMx-St-dTg"/>
                 <constraint firstItem="fzU-es-CTU" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="e5M-Ee-0yH"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="top" secondItem="gey-CS-Ru5" secondAttribute="bottom" id="fNp-iz-SHD"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="top" secondItem="qbM-YY-9q7" secondAttribute="top" id="fQd-mO-Kzr"/>
-                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="sLR-CL-MQT" secondAttribute="trailing" constant="30" id="fZO-gY-72H"/>
+                <constraint firstItem="qbM-YY-9q7" firstAttribute="trailing" secondItem="Hi6-Cm-Jou" secondAttribute="trailing" constant="11" id="fde-iM-Cml"/>
                 <constraint firstItem="wl4-5e-shx" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="gMi-AI-5TJ"/>
                 <constraint firstItem="wl4-5e-shx" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="hkg-C4-X7p"/>
                 <constraint firstItem="gey-CS-Ru5" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="kSC-5e-TS4"/>
-                <constraint firstItem="c8c-4d-FCd" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="kTn-rf-xea"/>
+                <constraint firstItem="YPB-sy-kTZ" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" constant="20" id="mTh-vw-2B5"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="q1j-iB-5cD"/>
                 <constraint firstItem="egT-qj-lEF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="qGb-uW-Vdl"/>
                 <constraint firstItem="wl4-5e-shx" firstAttribute="top" secondItem="fzU-es-CTU" secondAttribute="bottom" id="qZ6-u5-X1N"/>
                 <constraint firstItem="VoG-tS-ujZ" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="tRx-Qx-guZ"/>
-                <constraint firstItem="YPB-sy-kTZ" firstAttribute="top" secondItem="gBU-RA-pLH" secondAttribute="bottom" constant="40" id="vDR-zm-4Ax"/>
                 <constraint firstItem="eAO-l1-JPF" firstAttribute="leading" secondItem="qbM-YY-9q7" secondAttribute="leading" id="vHg-3V-FPT"/>
                 <constraint firstItem="fzU-es-CTU" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="xLg-w4-a0f"/>
                 <constraint firstItem="VoG-tS-ujZ" firstAttribute="top" secondItem="eAO-l1-JPF" secondAttribute="bottom" id="zHV-8M-iep"/>
                 <constraint firstItem="eAO-l1-JPF" firstAttribute="trailing" secondItem="qbM-YY-9q7" secondAttribute="trailing" id="zIa-D3-TEr"/>
+                <constraint firstItem="7Bl-pj-EgJ" firstAttribute="top" secondItem="3VR-X4-YI6" secondAttribute="bottom" constant="30" id="zzS-1y-qel"/>
             </constraints>
             <point key="canvasLocation" x="-140.57971014492756" y="668.97321428571422"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
