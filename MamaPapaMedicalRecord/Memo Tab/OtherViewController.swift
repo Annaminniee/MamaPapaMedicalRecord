@@ -14,43 +14,39 @@ final class OtherViewController: UIViewController {
      
      /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
-    
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
-    
     /// メモ設定
-    @IBOutlet private weak var memoTableView: UITableView!
-    
+    @IBOutlet private weak var tableView: UITextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
-    
-    /// 写真挿入設定
-    @IBOutlet private weak var photoImageView: UIImageView!
-    
-    /// カメラ・動画挿入設定
-    @IBOutlet private weak var cameraImageView: UIImageView!
-    
-    /// 削除
-    @IBOutlet private weak var trashImageView: UIImageView!
-     
+   
      // MARK: - View Life-Cycle Methods
      
      override func viewDidLoad() {
          super.viewDidLoad()
+         configureCancelButtonItem()
          configureSaveButtonItem()
          navigationItem.title = "その他"
      }
      
      // MARK: - IBActions
      
-     /// 形軟便ボタン
-  
-     
+     /// 写真挿入ボタン
+    @IBAction private func tapPhotoButton(_ sender: UIButton) {
+    }
+    /// カメラ・動画起動ボタン
+    @IBAction private func tapCameraButton(_ sender: UIButton) {
+    }
+    /// 削除ボタン
+    @IBAction private func tapTrashButton(_ sender: UIButton) {
+    }
+    
      // MARK: - Other Methods
      
      /// 戻るボタンの設定
      private func configureCancelButtonItem() {
-         let cancelButton = UIBarButtonItem(title: "<戻る",
+         let cancelButton = UIBarButtonItem(title: "閉じる",
                                             style: .plain,
                                             target: self,
                                             action: #selector(cancelButtonTapped))
