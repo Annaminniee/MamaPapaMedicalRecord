@@ -96,7 +96,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="feverButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
+                                                            <action selector="tapFeverButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1dg-4u-THW"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-hj-qQb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -115,7 +115,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="diarrheaButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="K26-ef-JYm"/>
+                                                            <action selector="tapDiarrheaButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="K26-ef-JYm"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znL-Gb-0Oy" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -134,7 +134,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="vomitingButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="TIA-eW-mm6"/>
+                                                            <action selector="tapVomitingButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="TIA-eW-mm6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-ff-OJ9" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -153,7 +153,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="convulsionButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="9Ai-xh-7KS"/>
+                                                            <action selector="tapConvulsionButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="9Ai-xh-7KS"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8d-Uo-ynB" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -172,7 +172,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="rashButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VAm-oL-hbP"/>
+                                                            <action selector="tapRashButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VAm-oL-hbP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-Ux-47L" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -200,7 +200,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="otherButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Ipy-hc-TbC"/>
+                                                            <action selector="tapOtherButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Ipy-hc-TbC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -243,7 +243,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="appetiteNormal:" destination="V7j-6S-bxp" eventType="touchUpInside" id="2Gy-S0-71N"/>
+                                                            <action selector="tapAppetiteNormal:" destination="V7j-6S-bxp" eventType="touchUpInside" id="2Gy-S0-71N"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -262,7 +262,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="appetiteLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="JwH-vJ-UyT"/>
+                                                            <action selector="tapAppetiteLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="JwH-vJ-UyT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -281,7 +281,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="appetiteNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="ye9-wB-ShO"/>
+                                                            <action selector="tapAppetiteNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="ye9-wB-ShO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -326,7 +326,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="hydrationYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="vdI-9W-Kkb"/>
+                                                            <action selector="tapHydrationYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="vdI-9W-Kkb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -345,7 +345,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="hydrationLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="AJR-y7-F7m"/>
+                                                            <action selector="tapHydrationLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="AJR-y7-F7m"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -364,7 +364,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="hydrationNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="b8s-T5-A9E"/>
+                                                            <action selector="tapHydrationNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="b8s-T5-A9E"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -409,7 +409,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="moodGoodButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="PS8-II-1xL"/>
+                                                            <action selector="tapMoodGoodButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="PS8-II-1xL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -428,7 +428,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="moodNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="giF-7Y-xkY"/>
+                                                            <action selector="tapMoodNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="giF-7Y-xkY"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -447,7 +447,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="moodBadButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VLT-dJ-tYt"/>
+                                                            <action selector="tapMoodBadButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="VLT-dJ-tYt"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -475,7 +475,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="moodTiredButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Zsy-E6-vQO"/>
+                                                            <action selector="tapMoodTiredButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Zsy-E6-vQO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -520,7 +520,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="sleepMuchButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="XXq-hx-VYk"/>
+                                                            <action selector="tapSleepMuchButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="XXq-hx-VYk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -539,7 +539,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="sleepNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="hW0-Ch-DMX"/>
+                                                            <action selector="tapSleepNormalButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="hW0-Ch-DMX"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -558,7 +558,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="sleepLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="L6G-aA-UKr"/>
+                                                            <action selector="tapSleepLittleButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="L6G-aA-UKr"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -587,7 +587,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="sleepNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="NHb-8Y-TmU"/>
+                                                            <action selector="tapSleepNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="NHb-8Y-TmU"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -667,7 +667,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="snotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
+                                                            <action selector="tapSnotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -686,7 +686,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="snotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
+                                                            <action selector="tapSnotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -731,7 +731,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="coughYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1PL-mY-Jeb"/>
+                                                            <action selector="tapCoughYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="1PL-mY-Jeb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -750,7 +750,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="coughNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Qwd-nE-oz8"/>
+                                                            <action selector="tapCoughNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Qwd-nE-oz8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
