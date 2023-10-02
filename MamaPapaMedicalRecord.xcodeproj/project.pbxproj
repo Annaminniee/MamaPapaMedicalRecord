@@ -16,8 +16,8 @@
 		950B46252AC151A30085C4A6 /* ConvulsionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B46232AC151A30085C4A6 /* ConvulsionsViewController.xib */; };
 		950B46282AC151C50085C4A6 /* VomitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46262AC151C50085C4A6 /* VomitingViewController.swift */; };
 		950B46292AC151C50085C4A6 /* VomitingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B46272AC151C50085C4A6 /* VomitingViewController.xib */; };
-		950B462C2AC151E80085C4A6 /* DiarrheaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B462A2AC151E80085C4A6 /* DiarrheaViewController.swift */; };
-		950B462D2AC151E80085C4A6 /* DiarrheaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B462B2AC151E80085C4A6 /* DiarrheaViewController.xib */; };
+		950B462C2AC151E80085C4A6 /* Convulsions2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B462A2AC151E80085C4A6 /* Convulsions2ViewController.swift */; };
+		950B462D2AC151E80085C4A6 /* Convulsions2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B462B2AC151E80085C4A6 /* Convulsions2ViewController.xib */; };
 		950B46302AC152070085C4A6 /* RashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B462E2AC152070085C4A6 /* RashViewController.swift */; };
 		950B46312AC152070085C4A6 /* RashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B462F2AC152070085C4A6 /* RashViewController.xib */; };
 		950B46342AC152160085C4A6 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46322AC152160085C4A6 /* OtherViewController.swift */; };
@@ -85,8 +85,8 @@
 		950B46232AC151A30085C4A6 /* ConvulsionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConvulsionsViewController.xib; sourceTree = "<group>"; };
 		950B46262AC151C50085C4A6 /* VomitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VomitingViewController.swift; sourceTree = "<group>"; };
 		950B46272AC151C50085C4A6 /* VomitingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VomitingViewController.xib; sourceTree = "<group>"; };
-		950B462A2AC151E80085C4A6 /* DiarrheaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarrheaViewController.swift; sourceTree = "<group>"; };
-		950B462B2AC151E80085C4A6 /* DiarrheaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiarrheaViewController.xib; sourceTree = "<group>"; };
+		950B462A2AC151E80085C4A6 /* Convulsions2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convulsions2ViewController.swift; sourceTree = "<group>"; };
+		950B462B2AC151E80085C4A6 /* Convulsions2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Convulsions2ViewController.xib; sourceTree = "<group>"; };
 		950B462E2AC152070085C4A6 /* RashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RashViewController.swift; sourceTree = "<group>"; };
 		950B462F2AC152070085C4A6 /* RashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RashViewController.xib; sourceTree = "<group>"; };
 		950B46322AC152160085C4A6 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 				959644662AAB52D1006E4114 /* MainTabBarController.swift */,
 				950B461E2AC151640085C4A6 /* FeverViewController.swift */,
 				950B461F2AC151640085C4A6 /* FeverViewController.xib */,
-				950B462A2AC151E80085C4A6 /* DiarrheaViewController.swift */,
-				950B462B2AC151E80085C4A6 /* DiarrheaViewController.xib */,
+				950B462A2AC151E80085C4A6 /* Convulsions2ViewController.swift */,
+				950B462B2AC151E80085C4A6 /* Convulsions2ViewController.xib */,
 				950B46262AC151C50085C4A6 /* VomitingViewController.swift */,
 				950B46272AC151C50085C4A6 /* VomitingViewController.xib */,
 				950B46222AC151A30085C4A6 /* ConvulsionsViewController.swift */,
@@ -441,7 +441,7 @@
 				950B46392AC152660085C4A6 /* RecordDetailViewController.xib in Resources */,
 				950B46292AC151C50085C4A6 /* VomitingViewController.xib in Resources */,
 				955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */,
-				950B462D2AC151E80085C4A6 /* DiarrheaViewController.xib in Resources */,
+				950B462D2AC151E80085C4A6 /* Convulsions2ViewController.xib in Resources */,
 				950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */,
 				8BC3EC5B2AC1CE4C0023BAB6 /* GoogleService-Info.plist in Resources */,
 			);
@@ -572,7 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950B46382AC152660085C4A6 /* RecordDetailViewController.swift in Sources */,
-				950B462C2AC151E80085C4A6 /* DiarrheaViewController.swift in Sources */,
+				950B462C2AC151E80085C4A6 /* Convulsions2ViewController.swift in Sources */,
 				955E16AE2AB7CEA900EF91C2 /* FamilySettingViewController.swift in Sources */,
 				953ECA5A2ABAC30F00649D20 /* FamilySettingDataModel.swift in Sources */,
 				950B46282AC151C50085C4A6 /* VomitingViewController.swift in Sources */,

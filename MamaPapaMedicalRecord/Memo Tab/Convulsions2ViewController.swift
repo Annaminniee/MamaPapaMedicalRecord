@@ -1,5 +1,5 @@
 //
-//  DiarrheaViewController.swift
+//  Convulsions2ViewController.swift
 //  MamaPapaMedicalRecord
 //
 //  Created by 菊地原杏菜 on 2023/09/25.
@@ -8,16 +8,16 @@
 import UIKit
 
 /// 痙攣画面
-final class DiarrheaViewController: UIViewController {
+final class Convulsions2ViewController: UIViewController {
     
     // MARK: - IBOutlets
     
     /// 記録日時
     @IBOutlet private weak var dateTextField: UITextField!
     /// 痙攣（分）
-    @IBOutlet private weak var diarrheaMinuteTextField: UITextField!
+    @IBOutlet private weak var convulsionsMinuteTextField: UITextField!
     /// 痙攣（時間）
-    @IBOutlet private weak var diarrheaSecondTextField: UITextField!
+    @IBOutlet private weak var convulsionsSecondTextField: UITextField!
     /// 体温
     @IBOutlet private weak var temperatureTextField: UITextField!
     /// メモ
