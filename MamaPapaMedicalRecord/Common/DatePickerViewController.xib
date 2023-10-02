@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="88C-3E-enD" id="D9X-io-NJk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="88C-3E-enD">
+                    <rect key="frame" x="0.0" y="44" width="393" height="303"/>
+                    <locale key="locale" localeIdentifier="ja_JP"/>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVi-Kg-kBK">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-tO-IdR">
+                            <rect key="frame" x="329.33333333333331" y="5" width="58.666666666666686" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="決定"/>
+                            <connections>
+                                <action selector="tapDoneButton:" destination="-1" eventType="touchUpInside" id="mmW-6z-8vg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqK-MY-9Kf">
+                            <rect key="frame" x="5" y="5" width="110.66666666666667" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
+                            <connections>
+                                <action selector="tapCancelButton:" destination="-1" eventType="touchUpInside" id="PnX-bQ-lcM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstItem="IqK-MY-9Kf" firstAttribute="leading" secondItem="iVi-Kg-kBK" secondAttribute="leading" constant="5" id="9Bq-Fy-yvL"/>
+                        <constraint firstAttribute="trailing" secondItem="CTa-tO-IdR" secondAttribute="trailing" constant="5" id="LiF-ja-hoM"/>
+                        <constraint firstItem="IqK-MY-9Kf" firstAttribute="centerY" secondItem="iVi-Kg-kBK" secondAttribute="centerY" id="eWi-vu-0tx"/>
+                        <constraint firstAttribute="height" constant="44" id="fcy-zl-N5W"/>
+                        <constraint firstItem="CTa-tO-IdR" firstAttribute="centerY" secondItem="iVi-Kg-kBK" secondAttribute="centerY" id="s1r-8Y-Y4g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="88C-3E-enD" secondAttribute="bottom" id="8dd-Jq-aAO"/>
+                <constraint firstAttribute="trailing" secondItem="iVi-Kg-kBK" secondAttribute="trailing" id="U6I-zf-Pii"/>
+                <constraint firstItem="iVi-Kg-kBK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UEz-43-DPZ"/>
+                <constraint firstItem="88C-3E-enD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cQV-xS-9i1"/>
+                <constraint firstAttribute="trailing" secondItem="88C-3E-enD" secondAttribute="trailing" id="hOV-RB-WVe"/>
+                <constraint firstItem="iVi-Kg-kBK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kvI-90-6Gu"/>
+                <constraint firstItem="88C-3E-enD" firstAttribute="top" secondItem="iVi-Kg-kBK" secondAttribute="bottom" id="u65-3Q-cRo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-16.030534351145036" y="150.35211267605635"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import Firebase
 
 /// 家族設定画面
 final class FamilySettingViewController: UIViewController {
     
     // MARK: - Properties
     
+    /// FIRFirestoreインスタンス
+    private let db = Firestore.firestore()
+    /// セクションのタイトル
     private let sections = ["お子さま一覧", "管理家族一覧"]
-    private let childrenList = [["name": "太郎", "detail": "あああ"], ["name": "二郎", "detail": "いいい"]]
-    private let familyList = [["name": "お父さん", "detail": "かかか"], ["name": "お母さん", "detail": "ううう"]]
+    private var childrenList: [Child] = []
+    private var familyList: [Family] = []
+    private var datePicker: UIDatePicker?
     
     // MARK: - IBOutlets
     
@@ -27,6 +32,7 @@ final class FamilySettingViewController: UIViewController {
         configureCancelButtonItem()
         configureTableView()
         navigationItem.title = "家族設定"
+        fetchData()
     }
     
     // MARK: - Other Methods
@@ -45,7 +51,7 @@ final class FamilySettingViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         // カスタムセル1
@@ -56,7 +62,118 @@ final class FamilySettingViewController: UIViewController {
         tableView.register(nib2, forCellReuseIdentifier: "AddListTableViewCell")
     }
     
-    let familySettingDataModel = FamilySettingDataModel(name: "", detail: "", list: "")
+    /// テーブルビューを更新
+    private func updateTableViewData() {
+        tableView.reloadData()
+    }
+    
+    /// 追加画面に遷移
+    private func moveToFamilyInputVC(title: String, placeholder: String) {
+        let familyInputVC = FamilyInputViewController()
+        familyInputVC.setData(title: title, placeholder: placeholder, isEdit: false)
+        familyInputVC.delegate = self
+        let navi = UINavigationController(rootViewController: familyInputVC)
+        navi.modalPresentationStyle = .formSheet
+        navigationController?.present(navi, animated: true)
+    }
+    
+    /// 追加画面に遷移（編集時）
+    private func moveToFamilyInputVCEdit(title: String,
+                                         placeholder: String,
+                                         name: String,
+                                         detail: String,
+                                         documentID: String) {
+        let familyInputVC = FamilyInputViewController()
+        familyInputVC.setData(title: title,
+                              placeholder: placeholder,
+                              name: name,
+                              detail: detail,
+                              documentID: documentID,
+                              isEdit: true)
+        familyInputVC.delegate = self
+        let navi = UINavigationController(rootViewController: familyInputVC)
+        navi.modalPresentationStyle = .formSheet
+        navigationController?.present(navi, animated: true)
+    }
+    
+    /// Firestoreからデータを取得
+    private func fetchData() {
+        /// お子さま一覧を取得
+        db.collection("children")
+            .getDocuments { [weak self] (querySnapshot, error) in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error fetching child documents: \(error)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let documentID = document.documentID
+                        if let data = document.data() as? [String: String],
+                           let childName = data["childName"],
+                           let birthday = data["birthday"] {
+                            let child = Child(documentID: documentID, childName: childName, birthday: birthday)
+                            childrenList.append(child)
+                        }
+                    }
+                    print("Children: \(childrenList)")
+                    tableView.reloadData()
+                }
+        }
+        
+        /// 家族一覧を取得
+        db.collection("families")
+            .getDocuments { [weak self] (querySnapshot, error) in
+                guard let self = self else { return }
+                if let error = error {
+                    print("Error fetching family documents: \(error)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let documentID = document.documentID
+                        if let data = document.data() as? [String: String],
+                           let familyName = data["familyName"],
+                           let familyLineage = data["familyLineage"] {
+                            let family = Family(documentID: documentID, family: familyName, familyLineage: familyLineage)
+                            self.familyList.append(family)
+                        }
+                    }
+                    print("Families: \(familyList)")
+                    tableView.reloadData()
+                }
+            }
+    }
+    
+    /// Firestoreからデータを再取得
+    private func updateData() {
+        // 二重になるので一旦削除
+        childrenList.removeAll()
+        familyList.removeAll()
+        
+        fetchData()
+    }
+    
+    /// データを削除
+    private func deleteData(indexPath: IndexPath) {
+        var collection: FamilySettingCollection
+        var documentID = ""
+        if indexPath.section == 0 {
+            collection = .children
+            documentID = childrenList[indexPath.row].documentID
+            childrenList.remove(at: indexPath.row)
+        } else {
+            collection = .families
+            documentID = familyList[indexPath.row].documentID
+            familyList.remove(at: indexPath.row)
+        }
+        
+        let docRef = db.collection(collection.rawValue).document(documentID)
+        docRef.delete { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+        tableView.reloadData()
+    }
 }
 
 // MARK: - Extentions
@@ -83,13 +200,23 @@ extension FamilySettingViewController: UITableViewDataSource {
         if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
             // 最後の行の場合
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddListTableViewCell", for: indexPath) as! AddListTableViewCell
+            // ハイライトを消す
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.setup(labelText: (indexPath.section == 0) ? "+お子さまを追加する" : "+家族を招待する")
             return cell
         } else {
             // 通常のデータを表示するセル
             let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
-            let data = (indexPath.section == 0) ? childrenList[indexPath.row] : familyList[indexPath.row]
-            cell.setup(name: data["name"] ?? "", detail: data["detail"] ?? "")
+            // ハイライトを消す
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            
+            if indexPath.section == 0 {
+                let data = childrenList[indexPath.row]
+                cell.setup(name: data.childName ?? "", detail: data.birthday ?? "")
+            } else {
+                let data = familyList[indexPath.row]
+                cell.setup(name: data.family ?? "", detail: data.familyLineage ?? "")
+            }
             return cell
         }
     }
@@ -123,24 +250,74 @@ extension FamilySettingViewController: UITableViewDelegate {
         return 60
     }
     
-    // スワイプした時に表示するアクションの定義
+    /// セルがタップされたときに実行したいアクション
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView.cellForRow(at: indexPath) is AddListTableViewCell {
+            if indexPath.section == 0 {
+                moveToFamilyInputVC(title: "お子さまを追加", placeholder: "生年月日を入力")
+            } else {
+                moveToFamilyInputVC(title: "家族を招待", placeholder: "続柄を選択")
+            }
+        }
+    }
+    
+    /// スワイプした時に表示するアクションの定義
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt trailingSwipeActionsConfigurationForRowAtindexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+        let indexPath = trailingSwipeActionsConfigurationForRowAtindexPath
+
         // 編集処理
-        let editAction = UIContextualAction(style: .normal, title: "編集") {(action, view, completionHandler) in
+        let editAction = UIContextualAction(style: .normal,
+                                            title: "編集") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { return }
             
-            // 実行結果に関わらず記述
+            if indexPath.section == 0 {
+                let childName = childrenList[indexPath.row].childName
+                let birthday = childrenList[indexPath.row].birthday
+                let documentID = childrenList[indexPath.row].documentID
+                self.moveToFamilyInputVCEdit(title: "お子さまを編集",
+                                             placeholder: "生年月日を入力",
+                                             name: childName ?? "",
+                                             detail: birthday ?? "",
+                                             documentID: documentID)
+            } else {
+                let familyName = familyList[indexPath.row].family
+                let familyLineage = familyList[indexPath.row].familyLineage
+                let documentID = familyList[indexPath.row].documentID
+                self.moveToFamilyInputVCEdit(title: "家族を編集",
+                                             placeholder: "続柄を選択",
+                                             name: familyName ?? "",
+                                             detail: familyLineage ?? "",
+                                             documentID: documentID)
+            }
             completionHandler(true)
         }
         
         // 削除処理
-        let deleteAction = UIContextualAction(style: .destructive, title: "削除") {(action, view, completionHandler) in
-            
-            // 実行結果に関わらず記述
+        let deleteAction = UIContextualAction(style: .destructive,
+                                              title: "削除") { [weak self] (action,
+                                                                          view,
+                                                                          completionHandler) in
+            guard let self = self else { return }
+            self.deleteData(indexPath: indexPath)
             completionHandler(true)
         }
         
         // 定義したアクションをセット
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+    }
+}
+
+// MARK: - FamilyInputViewControllerDelegate
+
+extension FamilySettingViewController: FamilyInputViewControllerDelegate {
+    
+    /// お子さまを追加した時
+    func didSelectChildren() {
+        updateData()
+    }
+    
+    /// 家族を追加した時
+    func didSelectFamily() {
+        updateData()
     }
 }

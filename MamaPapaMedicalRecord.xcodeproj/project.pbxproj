@@ -10,6 +10,12 @@
 		021F57A2501F4F4C15CE3FAD /* Pods_MamaPapaMedicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0585F532280F72D34723CB4F /* Pods_MamaPapaMedicalRecord.framework */; };
 		3D434163AF6B6127B7F80F39 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0579501AD928B1AC13AED119 /* Pods_MamaPapaMedicalRecord_MamaPapaMedicalRecordUITests.framework */; };
 		8BC3EC5B2AC1CE4C0023BAB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC5A2AC1CE4C0023BAB6 /* GoogleService-Info.plist */; };
+		8BC3EC5E2AC1F14F0023BAB6 /* FamilyInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3EC5C2AC1F14F0023BAB6 /* FamilyInputViewController.swift */; };
+		8BC3EC5F2AC1F14F0023BAB6 /* FamilyInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC5D2AC1F14F0023BAB6 /* FamilyInputViewController.xib */; };
+		8BC3EC642AC31B8F0023BAB6 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3EC622AC31B8F0023BAB6 /* DatePickerViewController.swift */; };
+		8BC3EC652AC31B8F0023BAB6 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */; };
+		8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */; };
+		8BC3EC692AC334FF0023BAB6 /* CommonPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */; };
 		950B46202AC151640085C4A6 /* FeverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B461E2AC151640085C4A6 /* FeverViewController.swift */; };
 		950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B461F2AC151640085C4A6 /* FeverViewController.xib */; };
 		950B46242AC151A30085C4A6 /* ConvulsionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46222AC151A30085C4A6 /* ConvulsionsViewController.swift */; };
@@ -79,6 +85,12 @@
 		75A872DC78CD1504269BCCBD /* Pods-MamaPapaMedicalRecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecordTests.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecordTests/Pods-MamaPapaMedicalRecordTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BEE6CBE3421BE992C079995 /* Pods-MamaPapaMedicalRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.release.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.release.xcconfig"; sourceTree = "<group>"; };
 		8BC3EC5A2AC1CE4C0023BAB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BC3EC5C2AC1F14F0023BAB6 /* FamilyInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyInputViewController.swift; sourceTree = "<group>"; };
+		8BC3EC5D2AC1F14F0023BAB6 /* FamilyInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyInputViewController.xib; sourceTree = "<group>"; };
+		8BC3EC622AC31B8F0023BAB6 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPickerViewController.swift; sourceTree = "<group>"; };
+		8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPickerViewController.xib; sourceTree = "<group>"; };
 		950B461E2AC151640085C4A6 /* FeverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeverViewController.swift; sourceTree = "<group>"; };
 		950B461F2AC151640085C4A6 /* FeverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeverViewController.xib; sourceTree = "<group>"; };
 		950B46222AC151A30085C4A6 /* ConvulsionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionsViewController.swift; sourceTree = "<group>"; };
@@ -183,8 +195,8 @@
 		950B46172AC14FBB0085C4A6 /* Cover Tab */ = {
 			isa = PBXGroup;
 			children = (
-				950B46182AC14FFA0085C4A6 /* Family Setting */,
 				959644682AAB52EC006E4114 /* CoverViewController.swift */,
+				950B46182AC14FFA0085C4A6 /* Family Setting */,
 			);
 			path = "Cover Tab";
 			sourceTree = "<group>";
@@ -196,6 +208,8 @@
 				955E16AD2AB7CEA900EF91C2 /* FamilySettingViewController.xib */,
 				955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */,
 				955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */,
+				8BC3EC5C2AC1F14F0023BAB6 /* FamilyInputViewController.swift */,
+				8BC3EC5D2AC1F14F0023BAB6 /* FamilyInputViewController.xib */,
 				953ECA592ABAC30F00649D20 /* FamilySettingDataModel.swift */,
 			);
 			name = "Family Setting";
@@ -250,6 +264,10 @@
 				955E16B42AB91AC000EF91C2 /* ListTableViewCell.swift */,
 				955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */,
 				95DA1DEE2ABE639E0090B64C /* CustomButton.swift */,
+				8BC3EC622AC31B8F0023BAB6 /* DatePickerViewController.swift */,
+				8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */,
+				8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */,
+				8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -432,6 +450,7 @@
 				950B46252AC151A30085C4A6 /* ConvulsionsViewController.xib in Resources */,
 				955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */,
 				950B46352AC152160085C4A6 /* OtherViewController.xib in Resources */,
+				8BC3EC652AC31B8F0023BAB6 /* DatePickerViewController.xib in Resources */,
 				955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
 				950B46312AC152070085C4A6 /* RashViewController.xib in Resources */,
@@ -443,7 +462,9 @@
 				955E16AF2AB7CEA900EF91C2 /* FamilySettingViewController.xib in Resources */,
 				950B462D2AC151E80085C4A6 /* DiarrheaViewController.xib in Resources */,
 				950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */,
+				8BC3EC692AC334FF0023BAB6 /* CommonPickerViewController.xib in Resources */,
 				8BC3EC5B2AC1CE4C0023BAB6 /* GoogleService-Info.plist in Resources */,
+				8BC3EC5F2AC1F14F0023BAB6 /* FamilyInputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,9 +610,12 @@
 				955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */,
 				950B46242AC151A30085C4A6 /* ConvulsionsViewController.swift in Sources */,
 				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
+				8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */,
 				950B46302AC152070085C4A6 /* RashViewController.swift in Sources */,
 				95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */,
+				8BC3EC642AC31B8F0023BAB6 /* DatePickerViewController.swift in Sources */,
 				950B46202AC151640085C4A6 /* FeverViewController.swift in Sources */,
+				8BC3EC5E2AC1F14F0023BAB6 /* FamilyInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
