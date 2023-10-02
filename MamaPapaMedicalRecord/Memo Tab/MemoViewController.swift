@@ -35,6 +35,10 @@ final class MemoViewController: UIViewController {
     @IBAction func vomitingButton(_ sender: CustomButton) {
     }
     @IBAction func convulsionButton(_ sender: CustomButton) {
+        let nextVC = Diarrhea2ViewController()
+                let navi = UINavigationController(rootViewController: nextVC)
+                navi.modalPresentationStyle = .fullScreen
+                navigationController?.present(navi, animated: true)
     }
     @IBAction func rashButton(_ sender: CustomButton) {
     }
