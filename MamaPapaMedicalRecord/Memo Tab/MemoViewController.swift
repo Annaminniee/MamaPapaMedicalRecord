@@ -26,7 +26,8 @@ final class MemoViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "症状"
         configureDatePicker()
-        setDismissKeyboard()
+        configureTableView()
+        setupTapGestureRecognizer()
     }
     
     // MARK: - Other Methods
@@ -48,131 +49,139 @@ final class MemoViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd" // 日付フォーマットを適宜変更
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
-
+    
+    private func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        //カスタムセル
+        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+    }
+    
     // MARK: - IBActions
     
-    /// 熱ボタン
-    @IBAction private func feverButton(_ sender: CustomButton) {
+    /// 熱ボタンをタップ
+    @IBAction private func tapFeverButton(_ sender: CustomButton) {
         let nextVC = FeverViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// 下痢ボタン
-    @IBAction private func diarrheaButton(_ sender: CustomButton) {
+    /// 下痢ボタンをタップ
+    @IBAction private func tapDiarrheaButton(_ sender: CustomButton) {
         let nextVC = DiarrheaViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// 嘔吐ボタン
-    @IBAction private func vomitingButton(_ sender: CustomButton) {
+    /// 嘔吐ボタンをタップ
+    @IBAction private func tapVomitingButton(_ sender: CustomButton) {
         let nextVC = VomitingViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// 痙攣ボタン
-    @IBAction private func convulsionButton(_ sender: CustomButton) {
+    /// 痙攣ボタンをタップ
+    @IBAction private func tapConvulsionButton(_ sender: CustomButton) {
         let nextVC = ConvulsionsViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// 発疹ボタン
-    @IBAction private func rashButton(_ sender: CustomButton) {
+    /// 発疹ボタンをタップ
+    @IBAction private func tapRashButton(_ sender: CustomButton) {
         let nextVC = RashViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// その他ボタン
-    @IBAction private func otherButton(_ sender: CustomButton) {
+    /// その他ボタンをタップ
+    @IBAction private func tapOtherButton(_ sender: CustomButton) {
         let nextVC = OtherViewController()
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
     
-    /// 食欲普通ボタン
-    @IBAction private func appetiteNormal(_ sender: CustomButton) {
+    /// 食欲普通ボタンをタップ
+    @IBAction private func tapAppetiteNormal(_ sender: CustomButton) {
     }
     
-    /// 食欲少しボタン
-    @IBAction private func appetiteLittleButton(_ sender: CustomButton) {
+    /// 食欲少しボタンをタップ
+    @IBAction private func tapAppetiteLittleButton(_ sender: CustomButton) {
     }
     
-    /// 食欲なしボタン
-    @IBAction private func appetiteNoButton(_ sender: CustomButton) {
+    /// 食欲なしボタンをタップ
+    @IBAction private func tapAppetiteNoButton(_ sender: CustomButton) {
     }
     
-    /// 水分補給できたボタン
-    @IBAction private func hydrationYesButton(_ sender: CustomButton) {
+    /// 水分補給できたボタンをタップ
+    @IBAction private func tapHydrationYesButton(_ sender: CustomButton) {
     }
     
-    /// 水分補給少しボタン
-    @IBAction private func hydrationLittleButton(_ sender: CustomButton) {
+    /// 水分補給少しボタンをタップ
+    @IBAction private func tapHydrationLittleButton(_ sender: CustomButton) {
     }
     
-    /// 水分補給できないボタン
-    @IBAction private func hydrationNoButton(_ sender: CustomButton) {
+    /// 水分補給できないボタンをタップ
+    @IBAction private func tapHydrationNoButton(_ sender: CustomButton) {
     }
     
-    /// 機嫌良いボタン
-    @IBAction private func moodGoodButton(_ sender: CustomButton) {
+    /// 機嫌良いボタンをタップ
+    @IBAction private func tapMoodGoodButton(_ sender: CustomButton) {
     }
     
-    /// 機嫌普通ボタン
-    @IBAction private func moodNormalButton(_ sender: CustomButton) {
+    /// 機嫌普通ボタンをタップ
+    @IBAction private func tapMoodNormalButton(_ sender: CustomButton) {
     }
     
-    /// 機嫌悪いボタン
-    @IBAction private func moodBadButton(_ sender: CustomButton) {
+    /// 機嫌悪いボタンをタップ
+    @IBAction private func tapMoodBadButton(_ sender: CustomButton) {
     }
     
-    /// 機嫌ぐったりボタン
-    @IBAction private func moodTiredButton(_ sender: CustomButton) {
+    /// 機嫌ぐったりボタンをタップ
+    @IBAction private func tapMoodTiredButton(_ sender: CustomButton) {
     }
     
-    /// 睡眠多いボタン
-    @IBAction private func sleepMuchButton(_ sender: CustomButton) {
+    /// 睡眠多いボタンをタップ
+    @IBAction private func tapSleepMuchButton(_ sender: CustomButton) {
     }
     
-    /// 睡眠普通ボタン
-    @IBAction private func sleepNormalButton(_ sender: CustomButton) {
+    /// 睡眠普通ボタンをタップ
+    @IBAction private func tapSleepNormalButton(_ sender: CustomButton) {
     }
     
-    /// 睡眠少ないボタン
-    @IBAction private func sleepLittleButton(_ sender: CustomButton) {
+    /// 睡眠少ないボタンをタップ
+    @IBAction private func tapSleepLittleButton(_ sender: CustomButton) {
     }
     
-    /// 睡眠寝てないボタン
-    @IBAction private func sleepNoButton(_ sender: CustomButton) {
+    /// 睡眠寝てないボタンをタップ
+    @IBAction private func tapSleepNoButton(_ sender: CustomButton) {
     }
     
-    /// 咳ありボタン
-    @IBAction private func coughYesButton(_ sender: CustomButton) {
+    /// 咳ありボタンをタップ
+    @IBAction private func tapCoughYesButton(_ sender: CustomButton) {
     }
     
-    /// 咳なしボタン
-    @IBAction private func coughNoButton(_ sender: CustomButton) {
+    /// 咳なしボタンをタップ
+    @IBAction private func tapCoughNoButton(_ sender: CustomButton) {
     }
     
-    /// 鼻水ありボタン
-    @IBAction private func snotYesButton(_ sender: CustomButton) {
+    /// 鼻水ありボタンをタップ
+    @IBAction private func tapSnotYesButton(_ sender: CustomButton) {
     }
     
-    /// 鼻水なしボタン
-    @IBAction private func snotNoButton(_ sender: CustomButton) {
+    /// 鼻水なしボタンをタップ
+    @IBAction private func tapSnotNoButton(_ sender: CustomButton) {
     }
     
     // MARK: - Other Methods
- 
+    
     private func configureSaveButtonItem() {
         let saveButton = UIBarButtonItem(title: "保存",
                                          style: .plain,
@@ -182,7 +191,18 @@ final class MemoViewController: UIViewController {
     }
     
     @objc func saveButtonTapped() {
-        // 保存処理
+        // TODO: 保存処理
+    }
+    
+    /// タップジェスチャーリコグナイザをセットアップ
+    private func setupTapGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    /// 画面のどこかをタップしてキーボードを閉じるメソッド
+    @objc private func handleTap() {
+        view.endEditing(true)
     }
 }
 
@@ -193,14 +213,27 @@ extension MemoViewController: UITextFieldDelegate {
         recordNameTextField.resignFirstResponder()
         return true
     }
+}
+
+// MARK: - UITableViewDataSource
+
+extension MemoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
     
-    func setDismissKeyboard() {
-            let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            tapGR.cancelsTouchesInView = false
-            self.view.addGestureRecognizer(tapGR)
-        }
-        
-        @objc func dismissKeyboard() {
-            self.view.endEditing(true)
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
+        cell.setup(memo: "あああ")
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension MemoViewController: UITableViewDelegate {
+    /// セルの高さを設定するメソッド
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
 }
