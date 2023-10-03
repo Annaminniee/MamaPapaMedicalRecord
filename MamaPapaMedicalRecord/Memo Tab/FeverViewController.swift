@@ -54,18 +54,19 @@ final class FeverViewController: UIViewController {
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
         let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.delegate = self
-        // UIImagePickerController カメラを起動する
-        present(picker, animated: true, completion: nil)
-    }
-    /// カメラ・動画挿入ボタンをタップ
-    @IBAction private func tapCameraButton(_ sender: UIButton) {
-        let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
         present(picker, animated: true)
         self.present(picker, animated: true)
+    }
+    /// カメラ・動画挿入ボタンをタップ
+    @IBAction private func tapCameraButton(_ sender: UIButton) {
+
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        // UIImagePickerController カメラを起動する
+        present(picker, animated: true, completion: nil)
     }
     /// 削除ボタンをタップ
     @IBAction private func tapTrashButton(_ sender: UIButton) {
