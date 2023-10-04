@@ -40,7 +40,7 @@ final class VomitingViewController: UIViewController {
     /// 体温
     @IBOutlet private weak var temperatureTextField: UITextField!
     /// メモ
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var textView: PlaceHolderTextView!
     /// 画像挿入
     @IBOutlet private weak var imageView: UIImageView!
     
@@ -54,6 +54,7 @@ final class VomitingViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "嘔吐"
         setupTapGestureRecognizer()
+        textView.placeHolder = "入力してください"
     }
     
     // MARK: - IBActions
@@ -78,9 +79,19 @@ final class VomitingViewController: UIViewController {
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true)
+        self.present(picker, animated: true)
     }
     /// カメラ・動画記入ボタンをタップ
     @IBAction func tapCameraButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        // UIImagePickerController カメラを起動する
+        present(picker, animated: true, completion: nil)
     }
     /// 削除ボタンをタップ
     @IBAction func tapTrashButton(_ sender: UIButton) {
@@ -123,15 +134,12 @@ final class VomitingViewController: UIViewController {
     
     /// バリデーション
     private func isValidData() {
-        if let recordDate = recordDateTextField.text,
-           let temperature = temperatureTextField.text,
-           let memo = textView.text,
+        if recordDateTextField.text != "",
+           temperatureTextField.text != "",
+           textView.text != "",
            let image = imageView.image {
             // 先に画像をアップロードします
-            uploadImage(recordDate: recordDate,
-                        temperature: temperature,
-                        memo: memo,
-                        image: image)
+            uploadImage(image: image)
         } else {
             showAlert(title: "項目をすべて入力してください", message: "")
         }
@@ -212,10 +220,7 @@ final class VomitingViewController: UIViewController {
     }
     
     /// 画像をアップロード
-    private func uploadImage(recordDate: String,
-                             temperature: String,
-                             memo: String,
-                             image: UIImage) {
+    private func uploadImage(image: UIImage) {
         guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
         let imageFileName = "vomiting.jpg"
         let imagePath = "images/\(userID)/\(imageFileName)"
@@ -228,19 +233,17 @@ final class VomitingViewController: UIViewController {
                 // URL型からString型に変換
                 let imageUrlString = url.absoluteString
                 // アップロードが成功したらデータを保存します
-                self.saveData(recordDate: recordDate,
-                              temperature: temperature,
-                              memo: memo,
-                              imageURL: imageUrlString)
+                self.saveData(imageURL: imageUrlString)
             }
         }
     }
     
     /// Firestoreにデータを保存
-    private func saveData(recordDate: String,
-                          temperature: String,
-                          memo: String,
-                          imageURL: String) {
+    private func saveData(imageURL: String) {
+        
+        guard let recordDate = recordDateTextField.text,
+              let temperature = temperatureTextField.text,
+              let memo = textView.text else { return }
         
         let data: [String: Any] = [
             "recordDate": recordDate,
@@ -264,3 +267,18 @@ final class VomitingViewController: UIViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
+
+extension VomitingViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
+        }
+        self.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
+    }
+}
