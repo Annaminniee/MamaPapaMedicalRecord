@@ -164,3 +164,19 @@ final class FeverViewController: UIViewController {
         view.endEditing(true)
     }
 }
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension FeverViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
+        }
+        self.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
+    }
+}
