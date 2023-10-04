@@ -12,6 +12,10 @@ final class VomitingViewController: UIViewController {
     
     // MARK: - Properties
     
+    /// FirebaseServiceのインスタンス
+    let firebaseService = FirebaseService.shared
+    
+    /// UIDatePickerのインスタンス
     private let datePicker = UIDatePicker()
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -19,6 +23,15 @@ final class VomitingViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    /// ユーザーID
+    private var userID: String = ""
+    /// 下痢の有無
+    private var isVomiting: Bool = false
+    /// 頭を打ったかどうか
+    private var isHitHead: Bool = false
+    /// 喘息の有無
+    private var isAsthma: Bool = false
     
     // MARK: - IBOutlets
     
@@ -75,6 +88,10 @@ final class VomitingViewController: UIViewController {
     
     // MARK: - Other Methods
     
+    func setData(userID: String) {
+        self.userID = userID
+    }
+    
     /// 閉じるボタンの設定
     private func configureCancelButtonItem() {
         let cancelButton = UIBarButtonItem(title: "閉じる",
@@ -101,7 +118,32 @@ final class VomitingViewController: UIViewController {
     
     /// 登録ボタンをタップ
     @objc func saveButtonTapped() {
-        // TODO: 保存処理
+        isValidData()
+    }
+    
+    /// バリデーション
+    private func isValidData() {
+        if let recordDate = recordDateTextField.text,
+           let temperature = temperatureTextField.text,
+           let memo = textView.text,
+           let image = imageView.image {
+            // 先に画像をアップロードします
+            uploadImage(recordDate: recordDate,
+                        temperature: temperature,
+                        memo: memo,
+                        image: image)
+        } else {
+            showAlert(title: "項目をすべて入力してください", message: "")
+        }
+    }
+    
+    /// アラートを表示
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     /// 日付ピッカーの設定
@@ -146,7 +188,7 @@ final class VomitingViewController: UIViewController {
     /// 「決定」をタップ時
     @objc func doneButtonTapped() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy年MM月d日"
+        dateFormatter.dateFormat = "yyyy年MM月d日HH時mm分"
         recordDateTextField.text = dateFormatter.string(from: datePicker.date)
         // ピッカーを閉じる
         recordDateTextField.resignFirstResponder()
@@ -167,6 +209,58 @@ final class VomitingViewController: UIViewController {
     /// 画面のどこかをタップしてキーボードを閉じるメソッド
     @objc private func handleTap() {
         view.endEditing(true)
+    }
+    
+    /// 画像をアップロード
+    private func uploadImage(recordDate: String,
+                             temperature: String,
+                             memo: String,
+                             image: UIImage) {
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
+        let imageFileName = "vomiting.jpg"
+        let imagePath = "images/\(userID)/\(imageFileName)"
+        
+        firebaseService.uploadImageToStorage(imageData: imageData,
+                                             path: imagePath) { (url, error) in
+            if let error = error {
+                print("データの保存エラー: \(error)")
+            } else if let url = url {
+                // URL型からString型に変換
+                let imageUrlString = url.absoluteString
+                // アップロードが成功したらデータを保存します
+                self.saveData(recordDate: recordDate,
+                              temperature: temperature,
+                              memo: memo,
+                              imageURL: imageUrlString)
+            }
+        }
+    }
+    
+    /// Firestoreにデータを保存
+    private func saveData(recordDate: String,
+                          temperature: String,
+                          memo: String,
+                          imageURL: String) {
+        
+        let data: [String: Any] = [
+            "recordDate": recordDate,
+            "isVomiting": isVomiting,
+            "temperature": temperature,
+            "isHitHead": isHitHead,
+            "isAsthma": isAsthma,
+            "memo": memo,
+            "imageURL": imageURL
+        ]
+        
+        firebaseService.saveDataToFirestore(collection: "vomiting", data: data) { error in
+            if let error = error {
+                print("データの保存エラー: \(error)")
+            } else {
+                print("データが正常に保存されました")
+                // 前の画面に戻る
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
 
