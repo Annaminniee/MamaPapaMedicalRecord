@@ -37,8 +37,20 @@ final class VomitingViewController: UIViewController {
     
     /// 記録日時
     @IBOutlet private weak var recordDateTextField: UITextField!
+    /// 下痢「あり」ボタン
+    @IBOutlet private weak var vomitingYesButton: CustomButton!
+    /// 下痢「なし」ボタン
+    @IBOutlet private weak var vomitingNoButton: CustomButton!
     /// 体温
     @IBOutlet private weak var temperatureTextField: UITextField!
+    /// 頭を打った「はい」ボタン
+    @IBOutlet private weak var hitHeadYesButton: CustomButton!
+    /// 頭を打った「いいえ」ボタン
+    @IBOutlet private weak var hitHeadNoButton: CustomButton!
+    /// 喘息の発作「あり」ボタン
+    @IBOutlet private weak var asthmaYesButton: CustomButton!
+    /// 喘息の発作「なし」ボタン
+    @IBOutlet private weak var asthmaNoButton: CustomButton!
     /// メモ
     @IBOutlet private weak var textView: PlaceHolderTextView!
     /// 画像挿入
@@ -61,21 +73,39 @@ final class VomitingViewController: UIViewController {
     
     /// 下痢「はい」ボタンをタップ
     @IBAction private func tapDiarrheaYesButton(_ sender: CustomButton) {
+        vomitingYesButton.backgroundColor = .white
+        vomitingNoButton.backgroundColor = .lightGray
+        isVomiting = true
     }
     /// 下痢「なし」ボタンをタップ
     @IBAction private func tapDiarrheaNoButton(_ sender: CustomButton) {
+        vomitingYesButton.backgroundColor = .lightGray
+        vomitingNoButton.backgroundColor = .white
+        isVomiting = false
     }
     /// 頭を打った「はい」ボタンをタップ
     @IBAction private func tapHitHeadYesButton(_ sender: CustomButton) {
+        hitHeadYesButton.backgroundColor = .white
+        hitHeadNoButton.backgroundColor = .lightGray
+        isHitHead = true
     }
     /// 頭を打った「いいえ」ボタンをタップ
     @IBAction private func tapHitHeadNoButton(_ sender: CustomButton) {
+        hitHeadYesButton.backgroundColor = .lightGray
+        hitHeadNoButton.backgroundColor = .white
+        isHitHead = false
     }
     /// 喘息「あり」ボタンをタップ
     @IBAction private func tapAsthmaYesButton(_ sender: CustomButton) {
+        asthmaYesButton.backgroundColor = .white
+        asthmaNoButton.backgroundColor = .lightGray
+        isAsthma = true
     }
     /// 喘息「なし」ボタンをタップ
     @IBAction private func tapAsthmaNoButton(_ sender: CustomButton) {
+        asthmaYesButton.backgroundColor = .lightGray
+        asthmaNoButton.backgroundColor = .white
+        isAsthma = false
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -229,6 +259,7 @@ final class VomitingViewController: UIViewController {
                                              path: imagePath) { (url, error) in
             if let error = error {
                 print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
             } else if let url = url {
                 // URL型からString型に変換
                 let imageUrlString = url.absoluteString
@@ -258,6 +289,7 @@ final class VomitingViewController: UIViewController {
         firebaseService.saveDataToFirestore(collection: "vomiting", data: data) { error in
             if let error = error {
                 print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
             } else {
                 print("データが正常に保存されました")
                 // 前の画面に戻る
