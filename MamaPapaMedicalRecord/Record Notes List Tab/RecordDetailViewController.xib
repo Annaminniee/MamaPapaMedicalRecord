@@ -22,57 +22,63 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3T-89-B3i">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="mc6-EH-2BU"/>
-                    </constraints>
-                </navigationBar>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="22y-2n-uic">
                     <rect key="frame" x="0.0" y="59" width="393" height="100"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1X-0M-cv2">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="記録対象者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4i-RS-KRJ">
-                                    <rect key="frame" x="22" y="15" width="87" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録対象者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A4i-RS-KRJ">
+                                    <rect key="frame" x="20" y="14.999999999999998" width="86.666666666666671" height="20.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3b-ZD-UO7">
-                                    <rect key="frame" x="130" y="8" width="242" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3b-ZD-UO7">
+                                    <rect key="frame" x="126.66666666666667" y="8" width="246.33333333333331" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="mCd-mJ-6ff"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="S3b-ZD-UO7" firstAttribute="centerY" secondItem="n1X-0M-cv2" secondAttribute="centerY" id="8Ns-07-o9O"/>
+                                <constraint firstItem="S3b-ZD-UO7" firstAttribute="leading" secondItem="A4i-RS-KRJ" secondAttribute="trailing" constant="20" id="EOX-Mk-eAR"/>
+                                <constraint firstItem="A4i-RS-KRJ" firstAttribute="leading" secondItem="n1X-0M-cv2" secondAttribute="leading" constant="20" id="FnD-rB-xHh"/>
+                                <constraint firstItem="A4i-RS-KRJ" firstAttribute="centerY" secondItem="n1X-0M-cv2" secondAttribute="centerY" id="Y9L-so-D1v"/>
                                 <constraint firstAttribute="height" constant="50" id="hcy-Zn-9AG"/>
+                                <constraint firstAttribute="trailing" secondItem="S3b-ZD-UO7" secondAttribute="trailing" constant="20" id="okY-RO-bMm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BF-oK-ujH">
                             <rect key="frame" x="0.0" y="50" width="393" height="50"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="記録期間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-dE-3C9">
-                                    <rect key="frame" x="22" y="15" width="70" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録期間　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pf-dE-3C9">
+                                    <rect key="frame" x="20" y="14.999999999999998" width="86.666666666666671" height="20.333333333333329"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-X9-Sfc">
-                                    <rect key="frame" x="130" y="8" width="242" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQS-X9-Sfc">
+                                    <rect key="frame" x="126.66666666666667" y="8" width="246.33333333333331" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="8Jz-0m-r5K"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="4pf-dE-3C9" firstAttribute="centerY" secondItem="7BF-oK-ujH" secondAttribute="centerY" id="IYt-AC-JbV"/>
                                 <constraint firstAttribute="height" constant="50" id="S8P-Xv-aoF"/>
+                                <constraint firstItem="PQS-X9-Sfc" firstAttribute="centerY" secondItem="7BF-oK-ujH" secondAttribute="centerY" id="Xum-Il-8of"/>
+                                <constraint firstItem="4pf-dE-3C9" firstAttribute="leading" secondItem="7BF-oK-ujH" secondAttribute="leading" constant="20" id="afI-v6-vzM"/>
+                                <constraint firstItem="PQS-X9-Sfc" firstAttribute="leading" secondItem="4pf-dE-3C9" secondAttribute="trailing" constant="20" id="cdN-YJ-GeK"/>
+                                <constraint firstAttribute="trailing" secondItem="PQS-X9-Sfc" secondAttribute="trailing" constant="20" id="yZ4-01-k5o"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -80,9 +86,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ib5-KG-qvC">
                     <rect key="frame" x="0.0" y="159" width="393" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ一覧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5el-Im-BtW">
-                            <rect key="frame" x="22" y="15" width="70" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ一覧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5el-Im-BtW">
+                            <rect key="frame" x="20" y="14.999999999999998" width="69.333333333333329" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -90,7 +95,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="5el-Im-BtW" firstAttribute="leading" secondItem="Ib5-KG-qvC" secondAttribute="leading" constant="20" id="MYz-YE-thz"/>
                         <constraint firstAttribute="height" constant="50" id="U3T-e6-FpL"/>
+                        <constraint firstItem="5el-Im-BtW" firstAttribute="centerY" secondItem="Ib5-KG-qvC" secondAttribute="centerY" id="q5o-g7-TUw"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vmk-3u-Fjk">
@@ -103,9 +110,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeR-Su-Uym">
                     <rect key="frame" x="0.0" y="329" width="393" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="体温グラフ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-ta-JXg">
-                            <rect key="frame" x="22" y="15" width="87" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体温グラフ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-ta-JXg">
+                            <rect key="frame" x="20" y="14.999999999999998" width="86.666666666666671" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -113,6 +119,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="F3x-ta-JXg" firstAttribute="leading" secondItem="UeR-Su-Uym" secondAttribute="leading" constant="20" id="2dU-b3-eTF"/>
+                        <constraint firstItem="F3x-ta-JXg" firstAttribute="centerY" secondItem="UeR-Su-Uym" secondAttribute="centerY" id="ZNO-ci-ACw"/>
                         <constraint firstAttribute="height" constant="50" id="nQK-Y0-REL"/>
                     </constraints>
                 </view>
@@ -126,9 +134,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB6-xA-Hwy">
                     <rect key="frame" x="0.0" y="579" width="393" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="受診記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-MN-9N7">
-                            <rect key="frame" x="22" y="15" width="70" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受診記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-MN-9N7">
+                            <rect key="frame" x="20" y="14.999999999999998" width="69.333333333333329" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -136,6 +143,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="PUd-MN-9N7" firstAttribute="leading" secondItem="hB6-xA-Hwy" secondAttribute="leading" constant="20" id="PLK-eh-SGX"/>
+                        <constraint firstItem="PUd-MN-9N7" firstAttribute="centerY" secondItem="hB6-xA-Hwy" secondAttribute="centerY" id="mth-na-Y9m"/>
                         <constraint firstAttribute="height" constant="50" id="qT4-gI-o3k"/>
                     </constraints>
                 </view>
@@ -157,7 +166,6 @@
                 <constraint firstItem="22y-2n-uic" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WUi-GY-Rfv"/>
                 <constraint firstItem="UeR-Su-Uym" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="X3d-es-qnt"/>
                 <constraint firstItem="hB6-xA-Hwy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xoh-w5-Y6I"/>
-                <constraint firstItem="a3T-89-B3i" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YWt-Cb-47Z"/>
                 <constraint firstItem="UeR-Su-Uym" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZiI-sv-Cr2"/>
                 <constraint firstItem="UeR-Su-Uym" firstAttribute="top" secondItem="vmk-3u-Fjk" secondAttribute="bottom" id="aWy-em-w1d"/>
                 <constraint firstItem="Ib5-KG-qvC" firstAttribute="top" secondItem="22y-2n-uic" secondAttribute="bottom" id="cEL-jG-O3F"/>
@@ -169,8 +177,6 @@
                 <constraint firstItem="Zle-gO-v8k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jLH-3b-H5M"/>
                 <constraint firstItem="Zle-gO-v8k" firstAttribute="top" secondItem="hB6-xA-Hwy" secondAttribute="bottom" id="kOU-Bu-PLv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Zle-gO-v8k" secondAttribute="bottom" id="mv5-pn-WLf"/>
-                <constraint firstItem="a3T-89-B3i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sj2-ie-1bM"/>
-                <constraint firstItem="a3T-89-B3i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ymK-lA-q6s"/>
                 <constraint firstItem="Ib5-KG-qvC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="z2q-rT-6Gf"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
