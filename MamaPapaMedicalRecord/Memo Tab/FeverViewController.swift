@@ -16,7 +16,7 @@ final class FeverViewController: UIViewController {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        formatter.timeStyle = .medium
         return formatter
     }()
     
@@ -103,7 +103,7 @@ final class FeverViewController: UIViewController {
     private func configureDatePicker() {
         // UITextFieldのキーボードをDatePickerに設定
         recordDateTextField.inputView = datePicker
-        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .dateAndTime
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.addTarget(self,
                              action: #selector(datePickerValueChanged(_:)),
@@ -141,7 +141,7 @@ final class FeverViewController: UIViewController {
     /// 「決定」をタップ時
     @objc func doneButtonTapped() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy年MM月d日"
+        dateFormatter.dateFormat = "yyyy年MM月d日HH時mm分"
         recordDateTextField.text = dateFormatter.string(from: datePicker.date)
         // ピッカーを閉じる
         recordDateTextField.resignFirstResponder()

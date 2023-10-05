@@ -20,7 +20,7 @@ final class VomitingViewController: UIViewController {
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        formatter.timeStyle = .medium
         return formatter
     }()
     
@@ -188,7 +188,7 @@ final class VomitingViewController: UIViewController {
     private func configureDatePicker() {
         // UITextFieldのキーボードをDatePickerに設定
         recordDateTextField.inputView = datePicker
-        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .dateAndTime
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.addTarget(self,
                              action: #selector(datePickerValueChanged(_:)),
