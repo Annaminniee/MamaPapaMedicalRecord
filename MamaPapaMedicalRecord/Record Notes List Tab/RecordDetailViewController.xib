@@ -43,7 +43,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="S3b-ZD-UO7" firstAttribute="centerY" secondItem="n1X-0M-cv2" secondAttribute="centerY" id="8Ns-07-o9O"/>
                                 <constraint firstItem="S3b-ZD-UO7" firstAttribute="leading" secondItem="A4i-RS-KRJ" secondAttribute="trailing" constant="20" id="EOX-Mk-eAR"/>
@@ -71,7 +71,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="4pf-dE-3C9" firstAttribute="centerY" secondItem="7BF-oK-ujH" secondAttribute="centerY" id="IYt-AC-JbV"/>
                                 <constraint firstAttribute="height" constant="50" id="S8P-Xv-aoF"/>
@@ -93,7 +93,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="5el-Im-BtW" firstAttribute="leading" secondItem="Ib5-KG-qvC" secondAttribute="leading" constant="20" id="MYz-YE-thz"/>
                         <constraint firstAttribute="height" constant="50" id="U3T-e6-FpL"/>
@@ -141,7 +141,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="PUd-MN-9N7" firstAttribute="leading" secondItem="hB6-xA-Hwy" secondAttribute="leading" constant="20" id="PLK-eh-SGX"/>
                         <constraint firstItem="PUd-MN-9N7" firstAttribute="centerY" secondItem="hB6-xA-Hwy" secondAttribute="centerY" id="mth-na-Y9m"/>
@@ -154,7 +154,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hB6-xA-Hwy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="07D-Q9-bri"/>
                 <constraint firstItem="22y-2n-uic" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bd1-bL-OAD"/>
