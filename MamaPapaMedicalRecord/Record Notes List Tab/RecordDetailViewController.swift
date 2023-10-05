@@ -16,10 +16,8 @@ final class RecordDetailViewController: UIViewController {
     @IBOutlet private weak var recordPersonTextField: UITextField!
     /// 記録期間
     @IBOutlet private weak var recordPeriodTextField: UITextField!
-    /// メモ一覧
-    @IBOutlet private weak var memoTableView: UITableView!
-    /// 受診記録
-    @IBOutlet private weak var consultationTableView: UITableView!
+    /// メモ一覧・受診記録
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
     
