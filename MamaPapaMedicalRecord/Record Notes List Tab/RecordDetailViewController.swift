@@ -46,6 +46,7 @@ final class RecordDetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    /// プリントボタンの設定
     private func configurePrintButtonItem() {
         let printButton = UIBarButtonItem(image: UIImage(named: "printIcon"),
                                           style: .plain,
