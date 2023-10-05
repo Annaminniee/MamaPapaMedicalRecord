@@ -29,10 +29,27 @@ final class FirebaseService {
         }
     }
     
+    /// Firestoreにデータを更新するメソッド
+    func updateDataToFirestore(collection: String,
+                               documentID: String,
+                               data: [String: Any],
+                               completion: @escaping (Error?) -> Void) {
+        db.collection(collection).document(documentID).updateData(data) { error in
+            completion(error)
+        }
+    }
+    
     /// Firestoreからデータを取得するメソッド
     func fetchDataFromFirestore(collection: String, completion: @escaping ([DocumentSnapshot]?, Error?) -> Void) {
         db.collection(collection).getDocuments { (querySnapshot, error) in
             completion(querySnapshot?.documents, error)
+        }
+    }
+    
+    /// Firestoreからデータを削除するメソッド
+    func deleteDataFromFirestore(collection: String, documentID: String, completion: @escaping (Error?) -> Void) {
+        db.collection(collection).document(documentID).delete { error in
+            completion(error)
         }
     }
     
