@@ -40,6 +40,7 @@ final class RecordDetailViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelButton
     }
     
+    /// 戻るボタンの設定
     @objc func backButtonTapped() {
         // 前の画面に戻る
         navigationController?.popViewController(animated: true)
