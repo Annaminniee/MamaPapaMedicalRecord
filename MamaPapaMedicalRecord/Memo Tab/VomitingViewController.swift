@@ -253,7 +253,7 @@ final class VomitingViewController: UIViewController {
     private func uploadImage(image: UIImage) {
         guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
         let imageFileName = "vomiting.jpg"
-        let imagePath = "images/\(userID)/\(imageFileName)"
+        let imagePath = "images/\(imageFileName)"
         
         firebaseService.uploadImageToStorage(imageData: imageData,
                                              path: imagePath) { (url, error) in

@@ -24,7 +24,7 @@ final class FirebaseService {
     
     /// Firestoreにデータを保存するメソッド
     func saveDataToFirestore(collection: String, data: [String: Any], completion: @escaping (Error?) -> Void) {
-        let docRef = db.collection(collection).addDocument(data: data) { error in
+        db.collection(collection).addDocument(data: data) { error in
             completion(error)
         }
     }
