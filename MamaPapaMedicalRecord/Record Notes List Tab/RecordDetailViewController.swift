@@ -19,7 +19,7 @@ final class RecordDetailViewController: UIViewController {
     /// メモ一覧
     @IBOutlet private weak var memoTableView: UITableView!
     /// 受診記録
-    @IBOutlet weak var consultationTableView: UITableView!
+    @IBOutlet private weak var consultationTableView: UITableView!
     
     // MARK: - View Life-Cycle Methods
     
