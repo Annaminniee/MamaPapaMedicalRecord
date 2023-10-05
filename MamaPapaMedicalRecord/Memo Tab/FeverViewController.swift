@@ -61,7 +61,6 @@ final class FeverViewController: UIViewController {
     }
     /// カメラ・動画挿入ボタンをタップ
     @IBAction private func tapCameraButton(_ sender: UIButton) {
-
         let picker = UIImagePickerController()
         picker.sourceType = .camera
         picker.delegate = self
