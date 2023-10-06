@@ -55,7 +55,7 @@ final class RecordDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = printButton
     }
     
-    /// プリント処理の設定
+    /// プリントボタンをタップ
     @objc func printButtonTapped() {
         // TODO: プリント処理
     }
