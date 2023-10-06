@@ -125,6 +125,7 @@ final class VomitingViewController: UIViewController {
     }
     /// 削除ボタンをタップ
     @IBAction func tapTrashButton(_ sender: UIButton) {
+        imageView.image = nil
     }
     
     // MARK: - Other Methods
@@ -256,7 +257,8 @@ final class VomitingViewController: UIViewController {
         let imagePath = "images/\(imageFileName)"
         
         firebaseService.uploadImageToStorage(imageData: imageData,
-                                             path: imagePath) { (url, error) in
+                                             path: imagePath) { [weak self] (url, error) in
+            guard let self = self else { return }
             if let error = error {
                 print("データの保存エラー: \(error)")
                 self.showAlert(title: "保存に失敗しました", message: "")
@@ -286,16 +288,17 @@ final class VomitingViewController: UIViewController {
             "imageURL": imageURL
         ]
         
-        firebaseService.saveDataToFirestore(collection: "vomiting", data: data) { error in
+        firebaseService.saveDataToFirestore(collection: "vomiting", data: data) { [weak self] error in
+            guard let self = self else { return }
             if let error = error {
                 print("データの保存エラー: \(error)")
                 self.showAlert(title: "保存に失敗しました", message: "")
             } else {
                 print("データが正常に保存されました")
-                // 前の画面に戻る
-                self.dismiss(animated: true, completion: nil)
             }
         }
+        // 前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
