@@ -53,9 +53,19 @@ final class FeverViewController: UIViewController {
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true)
+        self.present(picker, animated: true)
     }
     /// カメラ・動画挿入ボタンをタップ
     @IBAction private func tapCameraButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = self
+        // UIImagePickerController カメラを起動する
+        present(picker, animated: true, completion: nil)
     }
     /// 削除ボタンをタップ
     @IBAction private func tapTrashButton(_ sender: UIButton) {
@@ -152,5 +162,21 @@ final class FeverViewController: UIViewController {
     /// 画面のどこかをタップしてキーボードを閉じるメソッド
     @objc private func handleTap() {
         view.endEditing(true)
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension FeverViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
+        }
+        self.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
     }
 }
