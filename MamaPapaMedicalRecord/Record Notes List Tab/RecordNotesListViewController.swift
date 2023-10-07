@@ -21,8 +21,7 @@ final class RecordNotesListViewController: UIViewController {
         navigationItem.title = "記録ノート一覧"
         configureTableView()
     }
-    
-    
+        
     // MARK: - Other Methods
     
     private func configureTableView() {
@@ -33,7 +32,6 @@ final class RecordNotesListViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "RecordNotesListTableViewCell")
     }
 }
-
 
 // MARK: - UITableViewDataSource
 
