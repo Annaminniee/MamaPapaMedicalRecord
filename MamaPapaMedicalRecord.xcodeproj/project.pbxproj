@@ -16,6 +16,9 @@
 		8BC3EC652AC31B8F0023BAB6 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */; };
 		8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */; };
 		8BC3EC692AC334FF0023BAB6 /* CommonPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */; };
+		8BF4E2162ACDFA1300D30650 /* Vomiting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4E2152ACDFA1300D30650 /* Vomiting.swift */; };
+		8BF4E2182ACDFFF800D30650 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4E2172ACDFFF800D30650 /* FirebaseService.swift */; };
+		8BF4E21A2ACE18A000D30650 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF4E2192ACE18A000D30650 /* PlaceHolderTextView.swift */; };
 		950B46202AC151640085C4A6 /* FeverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B461E2AC151640085C4A6 /* FeverViewController.swift */; };
 		950B46212AC151640085C4A6 /* FeverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950B461F2AC151640085C4A6 /* FeverViewController.xib */; };
 		950B46242AC151A30085C4A6 /* DiarrheaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B46222AC151A30085C4A6 /* DiarrheaViewController.swift */; };
@@ -91,6 +94,9 @@
 		8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 		8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPickerViewController.swift; sourceTree = "<group>"; };
 		8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonPickerViewController.xib; sourceTree = "<group>"; };
+		8BF4E2152ACDFA1300D30650 /* Vomiting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vomiting.swift; sourceTree = "<group>"; };
+		8BF4E2172ACDFFF800D30650 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		8BF4E2192ACE18A000D30650 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		950B461E2AC151640085C4A6 /* FeverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeverViewController.swift; sourceTree = "<group>"; };
 		950B461F2AC151640085C4A6 /* FeverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeverViewController.xib; sourceTree = "<group>"; };
 		950B46222AC151A30085C4A6 /* DiarrheaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiarrheaViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8BF4E2142ACDF9F100D30650 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BF4E2152ACDFA1300D30650 /* Vomiting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		950B46172AC14FBB0085C4A6 /* Cover Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +247,7 @@
 				950B462F2AC152070085C4A6 /* RashViewController.xib */,
 				950B46322AC152160085C4A6 /* OtherViewController.swift */,
 				950B46332AC152160085C4A6 /* OtherViewController.xib */,
+				8BF4E2142ACDF9F100D30650 /* Model */,
 			);
 			path = "Memo Tab";
 			sourceTree = "<group>";
@@ -268,6 +283,7 @@
 				8BC3EC632AC31B8F0023BAB6 /* DatePickerViewController.xib */,
 				8BC3EC662AC334FF0023BAB6 /* CommonPickerViewController.swift */,
 				8BC3EC672AC334FF0023BAB6 /* CommonPickerViewController.xib */,
+				8BF4E2192ACE18A000D30650 /* PlaceHolderTextView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,6 +315,7 @@
 			children = (
 				959644362AAB4ADE006E4114 /* AppDelegate.swift */,
 				959644382AAB4ADE006E4114 /* SceneDelegate.swift */,
+				8BF4E2172ACDFFF800D30650 /* FirebaseService.swift */,
 				9596443C2AAB4ADE006E4114 /* Main.storyboard */,
 				9596443F2AAB4ADE006E4114 /* Assets.xcassets */,
 				959644412AAB4ADE006E4114 /* LaunchScreen.storyboard */,
@@ -599,6 +616,7 @@
 				950B46282AC151C50085C4A6 /* VomitingViewController.swift in Sources */,
 				959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */,
 				9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */,
+				8BF4E21A2ACE18A000D30650 /* PlaceHolderTextView.swift in Sources */,
 				959644692AAB52EC006E4114 /* CoverViewController.swift in Sources */,
 				9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */,
 				959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */,
@@ -610,7 +628,9 @@
 				955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */,
 				950B46242AC151A30085C4A6 /* DiarrheaViewController.swift in Sources */,
 				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
+				8BF4E2162ACDFA1300D30650 /* Vomiting.swift in Sources */,
 				8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */,
+				8BF4E2182ACDFFF800D30650 /* FirebaseService.swift in Sources */,
 				950B46302AC152070085C4A6 /* RashViewController.swift in Sources */,
 				95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */,
 				8BC3EC642AC31B8F0023BAB6 /* DatePickerViewController.swift in Sources */,

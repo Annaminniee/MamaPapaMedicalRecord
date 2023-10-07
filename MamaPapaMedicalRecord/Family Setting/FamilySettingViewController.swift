@@ -6,15 +6,14 @@
 //
 
 import UIKit
-import Firebase
 
 /// 家族設定画面
 final class FamilySettingViewController: UIViewController {
     
     // MARK: - Properties
     
-    /// FIRFirestoreインスタンス
-    private let db = Firestore.firestore()
+    /// FirebaseServiceのインスタンス
+    let firebaseService = FirebaseService.shared
     /// セクションのタイトル
     private let sections = ["お子さま一覧", "管理家族一覧"]
     private var childrenList: [Child] = []
@@ -98,47 +97,47 @@ final class FamilySettingViewController: UIViewController {
     
     /// Firestoreからデータを取得
     private func fetchData() {
-        /// お子さま一覧を取得
-        db.collection("children")
-            .getDocuments { [weak self] (querySnapshot, error) in
-                guard let self = self else { return }
-                if let error = error {
-                    print("Error fetching child documents: \(error)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let documentID = document.documentID
-                        if let data = document.data() as? [String: String],
-                           let childName = data["childName"],
-                           let birthday = data["birthday"] {
-                            let child = Child(documentID: documentID, childName: childName, birthday: birthday)
-                            childrenList.append(child)
-                        }
+        // お子さま一覧を取得
+        firebaseService.fetchDataFromFirestore(collection: "children") { [weak self] documents, error in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの取得エラー: \(error)")
+                self.showAlert(title: "取得に失敗しました", message: "")
+            } else if let documents = documents {
+                for document in documents {
+                    let documentID = document.documentID
+                    if let data = document.data() as? [String: String],
+                       let childName = data["childName"],
+                       let birthday = data["birthday"] {
+                        let child = Child(documentID: documentID, childName: childName, birthday: birthday)
+                        self.childrenList.append(child)
                     }
-                    print("Children: \(childrenList)")
-                    tableView.reloadData()
                 }
+                print("Children: \(childrenList)")
+                tableView.reloadData()
+            }
         }
         
-        /// 家族一覧を取得
-        db.collection("families")
-            .getDocuments { [weak self] (querySnapshot, error) in
-                guard let self = self else { return }
-                if let error = error {
-                    print("Error fetching family documents: \(error)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let documentID = document.documentID
-                        if let data = document.data() as? [String: String],
-                           let familyName = data["familyName"],
-                           let familyLineage = data["familyLineage"] {
-                            let family = Family(documentID: documentID, family: familyName, familyLineage: familyLineage)
-                            self.familyList.append(family)
-                        }
+        // 家族一覧を取得
+        firebaseService.fetchDataFromFirestore(collection: "families") { [weak self] documents, error in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの取得エラー: \(error)")
+                self.showAlert(title: "取得に失敗しました", message: "")
+            } else if let documents = documents {
+                for document in documents {
+                    let documentID = document.documentID
+                    if let data = document.data() as? [String: String],
+                       let familyName = data["familyName"],
+                       let familyLineage = data["familyLineage"] {
+                        let family = Family(documentID: documentID, family: familyName, familyLineage: familyLineage)
+                        self.familyList.append(family)
                     }
-                    print("Families: \(familyList)")
-                    tableView.reloadData()
                 }
+                print("Families: \(familyList)")
+                tableView.reloadData()
             }
+        }
     }
     
     /// Firestoreからデータを再取得
@@ -164,15 +163,26 @@ final class FamilySettingViewController: UIViewController {
             familyList.remove(at: indexPath.row)
         }
         
-        let docRef = db.collection(collection.rawValue).document(documentID)
-        docRef.delete { error in
+        firebaseService.deleteDataFromFirestore(collection: collection.rawValue,
+                                                documentID: documentID) { [weak self] error in
+            guard let self = self else { return }
             if let error = error {
-                print("Error updating document: \(error)")
+                print("データの取得エラー: \(error)")
+                self.showAlert(title: "取得に失敗しました", message: "")
             } else {
                 print("Document successfully updated")
             }
         }
         tableView.reloadData()
+    }
+    
+    /// アラートを表示
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

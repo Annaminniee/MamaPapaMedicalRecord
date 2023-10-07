@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 protocol FamilyInputViewControllerDelegate: AnyObject {
     func didSelectChildren()
@@ -18,8 +17,8 @@ final class FamilyInputViewController: UIViewController {
 
     // MARK: - Properties
     
-    /// FIRFirestoreインスタンスの作成
-    private let db = Firestore.firestore()
+    /// FirebaseServiceのインスタンス
+    let firebaseService = FirebaseService.shared
         
     weak var delegate: FamilyInputViewControllerDelegate?
     private let datePicker = UIDatePicker()
@@ -189,12 +188,11 @@ final class FamilyInputViewController: UIViewController {
     
     /// Firestoreにデータを保存
     private func saveData(collection: FamilySettingCollection, parameters: [String: String]) {
-        db.collection(collection.rawValue).addDocument(data: parameters) { [weak self] (error) in
+        firebaseService.saveDataToFirestore(collection: collection.rawValue,
+                                            data: parameters) { [weak self] error in
             guard let self = self else { return }
-            
             if let error = error {
-                // 保存失敗の場合
-                print("Error adding document: \(error)")
+                print("データの保存エラー: \(error)")
                 self.showAlert(title: "エラーが発生しました", message: "通信状態のよい場所で行ってください")
             } else {
                 // 保存成功の場合
@@ -211,13 +209,15 @@ final class FamilyInputViewController: UIViewController {
     
     /// Firestoreのデータを更新
     private func updateData(collection: FamilySettingCollection, parameters: [String: String]) {
-        let docRef = db.collection(collection.rawValue).document(documentID)
-        // ドキュメントを更新
-        docRef.updateData(parameters) { (error) in
+        firebaseService.updateDataToFirestore(collection: collection.rawValue,
+                                              documentID: documentID,
+                                              data: parameters) { error in
             
             if let error = error {
-                print("Error updating document: \(error)")
+                print("データの更新エラー: \(error)")
+                self.showAlert(title: "エラーが発生しました", message: "通信状態のよい場所で行ってください")
             } else {
+                // 保存成功の場合
                 print("Document successfully updated")
             }
         }

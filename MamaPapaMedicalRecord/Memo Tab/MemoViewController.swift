@@ -10,6 +10,10 @@ import UIKit
 /// メモ画面
 final class MemoViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    private var userID: String = ""
+    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var dateTextField: UITextField!
@@ -31,6 +35,10 @@ final class MemoViewController: UIViewController {
     }
     
     // MARK: - Other Methods
+    
+    func setData(userID: String) {
+        self.userID = userID
+    }
     
     /// 日付ピッカーの設定
     private func configureDatePicker() {
@@ -79,6 +87,7 @@ final class MemoViewController: UIViewController {
     /// 嘔吐ボタンをタップ
     @IBAction private func tapVomitingButton(_ sender: CustomButton) {
         let nextVC = VomitingViewController()
+        nextVC.setData(userID: userID)
         let navi = UINavigationController(rootViewController: nextVC)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
