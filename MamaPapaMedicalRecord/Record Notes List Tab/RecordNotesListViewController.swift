@@ -22,17 +22,18 @@ final class RecordNotesListViewController: UIViewController {
         configureTableView()
     }
     
-    private func configureTableView() {
-            tableView.dataSource = self
-            tableView.delegate = self
-            //カスタムセル
-            let nib = UINib(nibName: "RecordNotesListTableViewCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "RecordNotesListTableViewCell")
-        }
-    }
-
+    
     // MARK: - Other Methods
     
+    private func configureTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        //カスタムセル
+        let nib = UINib(nibName: "RecordNotesListTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "RecordNotesListTableViewCell")
+    }
+}
+
 
 // MARK: - UITableViewDataSource
 
