@@ -7,8 +7,6 @@
 
 import UIKit
 
-var recordTitleList: [RecordTitleModel] = []
-
 /// 記録一覧ノートtableviewセル
 final class RecordNotesListViewController: UIViewController {
     
