@@ -9,7 +9,7 @@ import UIKit
 
 var recordTitleList: [RecordTitleModel] = []
 
-/// 記録ノート一覧画面
+/// 記録一覧ノートtableviewセル
 final class RecordNotesListViewController: UIViewController {
     
     // MARK: - IBOutlets
