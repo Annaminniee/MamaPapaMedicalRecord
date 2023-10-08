@@ -57,4 +57,20 @@ extension RecordNotesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 30
     }
+    
+    // スワイプした時に表示するアクションの定義
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        // 削除処理
+        let deleteAction = UIContextualAction(style: .destructive, title: "削除") { (action, view, completionHandler) in
+            //削除処理を記述
+            print("削除がタップされた")
+            
+            // 実行結果に関わらず記述
+            completionHandler(true)
+        }
+        
+        // 定義したアクションをセット
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
