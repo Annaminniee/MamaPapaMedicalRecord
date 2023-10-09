@@ -16,22 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-Hm-UQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkB-bd-m45">
+                        <rect key="frame" x="10" y="0.0" width="76" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="memoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-Hm-UQ2">
+                        <rect key="frame" x="96" y="0.0" width="214" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="F0O-Te-0r5"/>
-                    <constraint firstAttribute="bottom" secondItem="uCI-Hm-UQ2" secondAttribute="bottom" id="GLP-sy-zh2"/>
-                    <constraint firstAttribute="trailing" secondItem="uCI-Hm-UQ2" secondAttribute="trailing" id="OUE-yW-4Jn"/>
-                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SdD-DM-oSI"/>
+                    <constraint firstAttribute="trailing" secondItem="uCI-Hm-UQ2" secondAttribute="trailing" constant="10" id="0WG-dh-0dN"/>
+                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="A7C-bm-a2G"/>
+                    <constraint firstItem="HkB-bd-m45" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TcJ-I0-a7V"/>
+                    <constraint firstItem="HkB-bd-m45" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aOZ-sI-94W"/>
+                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iPb-UB-P7J"/>
+                    <constraint firstItem="HkB-bd-m45" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lcG-w8-SdB"/>
+                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="leading" secondItem="HkB-bd-m45" secondAttribute="trailing" constant="10" id="rwy-Y4-4jA"/>
+                    <constraint firstAttribute="bottom" secondItem="uCI-Hm-UQ2" secondAttribute="bottom" id="sBb-xA-9ZJ"/>
+                    <constraint firstAttribute="bottom" secondItem="HkB-bd-m45" secondAttribute="bottom" id="vYW-TV-V4n"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="HkB-bd-m45" id="CAB-KJ-CB6"/>
                 <outlet property="memoLabel" destination="uCI-Hm-UQ2" id="vk0-4O-6gj"/>
             </connections>
             <point key="canvasLocation" x="100.76335877862596" y="19.718309859154932"/>

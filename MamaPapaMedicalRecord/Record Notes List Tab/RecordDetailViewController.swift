@@ -85,8 +85,8 @@ final class RecordDetailViewController: UIViewController {
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
         // カスタムセル2
-        let nib2 = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib2, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib2 = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
+        tableView.register(nib2, forCellReuseIdentifier: "ConsultationTableViewCell")
     }
 }
 
@@ -113,7 +113,7 @@ extension RecordDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // データを表示するセル
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
-        cell.setup(memo: "あああ")
+        cell.setup(date: "xxx", memo: "あああ")
         return cell
     }
 }
