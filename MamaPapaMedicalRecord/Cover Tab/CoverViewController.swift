@@ -137,7 +137,7 @@ extension CoverViewController: UITableViewDelegate {
         return 30
     }
     
-    // スワイプした時に表示するアクションの定義
+    /// スワイプした時に表示するアクションの定義
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         // 削除処理
