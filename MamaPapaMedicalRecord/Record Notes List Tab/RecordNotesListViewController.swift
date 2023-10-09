@@ -31,10 +31,6 @@ final class RecordNotesListViewController: UIViewController {
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
     }
-    @IBAction func addTapButton(_ sender: UIButton) {
-        let nextVC = RecordDetailViewController()
-                navigationController?.pushViewController(nextVC, animated: true)
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -49,7 +45,7 @@ extension RecordNotesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
-        cell.setup(date: "xxx", memo: "あああ")
+        cell.setup(memo: "あああ")
         return cell
     }
 }
