@@ -120,7 +120,7 @@ extension RecordDetailViewController: UITableViewDataSource {
             return cell
         } else {
             // 通常のデータを表示するセル
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CommonTableViewCell
             cell.setup(memo: "いいいいいいいいいいいいいいいいいいいいいいいいいいい")
             return cell
         }

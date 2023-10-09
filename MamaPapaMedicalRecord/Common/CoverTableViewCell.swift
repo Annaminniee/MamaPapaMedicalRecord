@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CoverTableViewCell: UITableViewCell {
+final class CommonTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var memoLabel: UILabel!
     
