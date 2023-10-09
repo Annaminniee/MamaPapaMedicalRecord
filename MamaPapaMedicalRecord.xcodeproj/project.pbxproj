@@ -43,8 +43,6 @@
 		955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */; };
 		955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */; };
 		955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */; };
-		956D64072AD379CF00DCE217 /* ConsultationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956D64052AD379CF00DCE217 /* ConsultationTableViewCell.swift */; };
-		956D64082AD379CF00DCE217 /* ConsultationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956D64062AD379CF00DCE217 /* ConsultationTableViewCell.xib */; };
 		959644372AAB4ADE006E4114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644362AAB4ADE006E4114 /* AppDelegate.swift */; };
 		959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644382AAB4ADE006E4114 /* SceneDelegate.swift */; };
 		9596443E2AAB4ADE006E4114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9596443C2AAB4ADE006E4114 /* Main.storyboard */; };
@@ -120,8 +118,6 @@
 		955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		955E16B82AB91F9C00EF91C2 /* AddListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListTableViewCell.swift; sourceTree = "<group>"; };
 		955E16B92AB91F9C00EF91C2 /* AddListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddListTableViewCell.xib; sourceTree = "<group>"; };
-		956D64052AD379CF00DCE217 /* ConsultationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationTableViewCell.swift; sourceTree = "<group>"; };
-		956D64062AD379CF00DCE217 /* ConsultationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationTableViewCell.xib; sourceTree = "<group>"; };
 		959644332AAB4ADE006E4114 /* MamaPapaMedicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaPapaMedicalRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959644362AAB4ADE006E4114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959644382AAB4ADE006E4114 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -262,8 +258,6 @@
 				9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */,
 				950B46362AC152660085C4A6 /* RecordDetailViewController.swift */,
 				950B46372AC152660085C4A6 /* RecordDetailViewController.xib */,
-				956D64052AD379CF00DCE217 /* ConsultationTableViewCell.swift */,
-				956D64062AD379CF00DCE217 /* ConsultationTableViewCell.xib */,
 			);
 			path = "Record Notes List Tab";
 			sourceTree = "<group>";
@@ -473,7 +467,6 @@
 				950B46252AC151A30085C4A6 /* DiarrheaViewController.xib in Resources */,
 				955E16BB2AB91F9C00EF91C2 /* AddListTableViewCell.xib in Resources */,
 				950B46352AC152160085C4A6 /* OtherViewController.xib in Resources */,
-				956D64082AD379CF00DCE217 /* ConsultationTableViewCell.xib in Resources */,
 				8BC3EC652AC31B8F0023BAB6 /* DatePickerViewController.xib in Resources */,
 				955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
@@ -628,7 +621,6 @@
 				9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */,
 				959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */,
 				950B46342AC152160085C4A6 /* OtherViewController.swift in Sources */,
-				956D64072AD379CF00DCE217 /* ConsultationTableViewCell.swift in Sources */,
 				9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */,
 				959644672AAB52D1006E4114 /* MainTabBarController.swift in Sources */,
 				959644392AAB4ADE006E4114 /* SceneDelegate.swift in Sources */,

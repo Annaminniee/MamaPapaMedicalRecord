@@ -81,12 +81,9 @@ final class RecordDetailViewController: UIViewController {
     func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        // カスタムセル1
+        // カスタムセル
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
-        // カスタムセル2
-        let nib2 = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
-        tableView.register(nib2, forCellReuseIdentifier: "ConsultationTableViewCell")
     }
 }
 
@@ -113,7 +110,7 @@ extension RecordDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // データを表示するセル
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
-        cell.setup(date: "xxx", memo: "あああ")
+        cell.setup(date: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", memo: "あああああああああああああああああああああああああああああああ")
         return cell
     }
 }
@@ -143,7 +140,7 @@ extension RecordDetailViewController: UITableViewDelegate {
     
     /// セルの高さを設定するメソッド
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+        return UITableView.automaticDimension
     }
     
     /// セルをタップされた時のメソッド
