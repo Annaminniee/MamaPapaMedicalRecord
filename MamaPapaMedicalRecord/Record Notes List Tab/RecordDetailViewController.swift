@@ -84,6 +84,9 @@ final class RecordDetailViewController: UIViewController {
         // カスタムセル
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        // カスタムセル2
+        let nib2 = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
+        tableView.register(nib2, forCellReuseIdentifier: "ConsultationTableViewCell")
     }
 }
 
@@ -108,13 +111,21 @@ extension RecordDetailViewController: UITableViewDataSource {
     
     /// セルを設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         // データを表示するセル
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
-        cell.setup(date: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", memo: "あああああああああああああああああああああああああああああああ")
-        return cell
+        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+            // 最後の行の場合
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! ConsultationTableViewCell
+            cell.setup(consultation: "あああああああああああああああああああああああああああああああ")
+            return cell
+        } else {
+            // 通常のデータを表示するセル
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
+            cell.setup(memo: "いいいいいいいいいいいいいいいいいいいいいいいいいいい")
+            return cell
+        }
     }
 }
-
 // MARK: - UITableViewDelegate
 
 extension RecordDetailViewController: UITableViewDelegate {

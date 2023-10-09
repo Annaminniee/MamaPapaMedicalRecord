@@ -31,6 +31,10 @@ final class RecordNotesListViewController: UIViewController {
         let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
     }
+    @IBAction func addTapButton(_ sender: UIButton) {
+        let nextVC = RecordDetailViewController()
+                navigationController?.pushViewController(nextVC, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource

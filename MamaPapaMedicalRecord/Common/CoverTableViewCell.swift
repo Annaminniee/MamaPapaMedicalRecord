@@ -9,7 +9,6 @@ import UIKit
 
 final class CoverTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var memoLabel: UILabel!
     
     override func awakeFromNib() {
@@ -17,8 +16,7 @@ final class CoverTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setup(date: String, memo: String) {
-        dateLabel.text = date
+    func setup(memo: String) {
         memoLabel.text = memo
     }
     
