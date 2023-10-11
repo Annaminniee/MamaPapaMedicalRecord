@@ -258,7 +258,7 @@ final class ConvulsionsViewController: UIViewController {
             "imageURL": imageURL
         ]
         
-        firebaseService.saveDataToFirestore(collection: "consciousness", data: data) { [weak self] error in
+        firebaseService.saveDataToFirestore(collection: "convulsions", data: data) { [weak self] error in
             guard let self = self else { return }
             if let error = error {
                 print("データの保存エラー: \(error)")
