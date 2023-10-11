@@ -1,5 +1,5 @@
 //
-//  CoverTableViewCell.swift
+//  CommonTableViewCell.swift
 //  MamaPapaMedicalRecord
 //
 //  Created by 菊地原杏菜 on 2023/09/13.

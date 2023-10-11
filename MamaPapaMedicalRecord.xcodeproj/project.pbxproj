@@ -58,8 +58,8 @@
 		9596446B2AAB5301006E4114 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446A2AAB5301006E4114 /* MemoViewController.swift */; };
 		9596446D2AAB531C006E4114 /* RecordNotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */; };
 		9596446F2AAB5335006E4114 /* MedicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */; };
-		959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644702AB1A124006E4114 /* CoverTableViewCell.swift */; };
-		959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959644712AB1A124006E4114 /* CoverTableViewCell.xib */; };
+		959644722AB1A124006E4114 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644702AB1A124006E4114 /* CommonTableViewCell.swift */; };
+		959644732AB1A124006E4114 /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959644712AB1A124006E4114 /* CommonTableViewCell.xib */; };
 		959644752AB28B44006E4114 /* MemoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959644742AB28B44006E4114 /* MemoDataModel.swift */; };
 		95DA1DEF2ABE639E0090B64C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DA1DEE2ABE639E0090B64C /* CustomButton.swift */; };
 		EFCA7C573D0105158B74BEEB /* Pods_MamaPapaMedicalRecordTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA9E61FB5ACC3618B54C4C2 /* Pods_MamaPapaMedicalRecordTests.framework */; };
@@ -139,8 +139,8 @@
 		9596446A2AAB5301006E4114 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		9596446C2AAB531C006E4114 /* RecordNotesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordNotesListViewController.swift; sourceTree = "<group>"; };
 		9596446E2AAB5335006E4114 /* MedicalExaminationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalExaminationViewController.swift; sourceTree = "<group>"; };
-		959644702AB1A124006E4114 /* CoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverTableViewCell.swift; sourceTree = "<group>"; };
-		959644712AB1A124006E4114 /* CoverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverTableViewCell.xib; sourceTree = "<group>"; };
+		959644702AB1A124006E4114 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
+		959644712AB1A124006E4114 /* CommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
 		959644742AB28B44006E4114 /* MemoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDataModel.swift; sourceTree = "<group>"; };
 		95DA1DEE2ABE639E0090B64C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A9D748885987CF339C0FF184 /* Pods-MamaPapaMedicalRecord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MamaPapaMedicalRecord.debug.xcconfig"; path = "Target Support Files/Pods-MamaPapaMedicalRecord/Pods-MamaPapaMedicalRecord.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 		950B461C2AC150990085C4A6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				959644702AB1A124006E4114 /* CoverTableViewCell.swift */,
-				959644712AB1A124006E4114 /* CoverTableViewCell.xib */,
+				959644702AB1A124006E4114 /* CommonTableViewCell.swift */,
+				959644712AB1A124006E4114 /* CommonTableViewCell.xib */,
 				959644742AB28B44006E4114 /* MemoDataModel.swift */,
 				955E16B42AB91AC000EF91C2 /* ListTableViewCell.swift */,
 				955E16B52AB91AC000EF91C2 /* ListTableViewCell.xib */,
@@ -478,7 +478,7 @@
 				955E16B72AB91AC000EF91C2 /* ListTableViewCell.xib in Resources */,
 				959644432AAB4ADE006E4114 /* LaunchScreen.storyboard in Resources */,
 				950B46312AC152070085C4A6 /* RashViewController.xib in Resources */,
-				959644732AB1A124006E4114 /* CoverTableViewCell.xib in Resources */,
+				959644732AB1A124006E4114 /* CommonTableViewCell.xib in Resources */,
 				959644402AAB4ADE006E4114 /* Assets.xcassets in Resources */,
 				9596443E2AAB4ADE006E4114 /* Main.storyboard in Resources */,
 				950B46392AC152660085C4A6 /* RecordDetailViewController.xib in Resources */,
@@ -635,7 +635,7 @@
 				955E16B62AB91AC000EF91C2 /* ListTableViewCell.swift in Sources */,
 				955E16BA2AB91F9C00EF91C2 /* AddListTableViewCell.swift in Sources */,
 				950B46242AC151A30085C4A6 /* DiarrheaViewController.swift in Sources */,
-				959644722AB1A124006E4114 /* CoverTableViewCell.swift in Sources */,
+				959644722AB1A124006E4114 /* CommonTableViewCell.swift in Sources */,
 				8BF4E2162ACDFA1300D30650 /* Vomiting.swift in Sources */,
 				8BC3EC682AC334FF0023BAB6 /* CommonPickerViewController.swift in Sources */,
 				8BF4E2182ACDFFF800D30650 /* FirebaseService.swift in Sources */,
