@@ -38,9 +38,9 @@ final class ConvulsionsViewController: UIViewController {
     /// 痙攣（時間）
     @IBOutlet private weak var convulsionsSecondTextField: UITextField!
     /// 意識「あり」ボタン
-    @IBOutlet weak var consciousnessYesButton: CustomButton!
+    @IBOutlet private weak var consciousnessYesButton: CustomButton!
     /// 意識「なし」ボタン
-    @IBOutlet weak var consciousnessNoButton: CustomButton!
+    @IBOutlet private weak var consciousnessNoButton: CustomButton!
     /// 体温
     @IBOutlet private weak var temperatureTextField: UITextField!
     /// メモ
