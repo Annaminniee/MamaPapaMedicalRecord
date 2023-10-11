@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 ///  記録ノート詳細画面
 final class RecordDetailViewController: UIViewController {
@@ -116,7 +117,7 @@ extension RecordDetailViewController: UITableViewDataSource {
         if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
             // 最後の行の場合
             let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! ConsultationTableViewCell
-            cell.setup(consultation: "あああああああああああああああああああああああああああああああ")
+            cell.setup(consultation: "あああああああああああああああああああああああああああああああ", selectedImage: UIImage())
             return cell
         } else {
             // 通常のデータを表示するセル
