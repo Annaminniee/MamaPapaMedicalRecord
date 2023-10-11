@@ -246,7 +246,7 @@ final class FeverViewController: UIViewController {
             "imageURL": imageURL
         ]
         
-        firebaseService.saveDataToFirestore(collection: "antipyreticAgent", data: data) { [weak self] error in
+        firebaseService.saveDataToFirestore(collection: "fever", data: data) { [weak self] error in
             guard let self = self else { return }
             if let error = error {
                 print("データの保存エラー: \(error)")
