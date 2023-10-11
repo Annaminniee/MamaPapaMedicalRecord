@@ -230,6 +230,7 @@ final class FeverViewController: UIViewController {
             }
         }
     }
+    
     /// Firestoreにデータを保存
     private func saveData(imageURL: String) {
         
