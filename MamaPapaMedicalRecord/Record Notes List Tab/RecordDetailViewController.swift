@@ -83,11 +83,8 @@ final class RecordDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         // カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
-        // カスタムセル2
-        let nib2 = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
-        tableView.register(nib2, forCellReuseIdentifier: "ConsultationTableViewCell")
+        let nib = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ConsultationTableViewCell")
     }
 }
 
@@ -101,8 +98,8 @@ extension RecordDetailViewController: UITableViewDataSource {
     
     /// セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 各セクションの行数を返す。最後の行を含むため+1しています。
-        return (section == 0) ? memoList.count + 1 : consultationList.count + 1
+        // 各セクションの行数を返す。
+        return (section == 0) ? memoList.count : consultationList.count
     }
     
     /// セクションを設定
@@ -114,17 +111,9 @@ extension RecordDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // データを表示するセル
-        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
-            // 最後の行の場合
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! ConsultationTableViewCell
-            cell.setup(consultation: "あああああああああああああああああああああああああああああああ", selectedImage: UIImage())
-            return cell
-        } else {
-            // 通常のデータを表示するセル
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CommonTableViewCell
-            cell.setup(memo: "いいいいいいいいいいいいいいいいいいいいいいいいいいい")
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! ConsultationTableViewCell
+        cell.setup(consultation: "ああああああああああああああああああああああああああああ", selectedImage: UIImage())
+        return cell
     }
 }
 // MARK: - UITableViewDelegate

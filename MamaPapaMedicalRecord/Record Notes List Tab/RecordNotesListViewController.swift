@@ -36,8 +36,8 @@ final class RecordNotesListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         //カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib = UINib(nibName: "CommonTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CommonTableViewCell")
     }
 }
 
@@ -61,7 +61,7 @@ extension RecordNotesListViewController: UITableViewDataSource {
     /// 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CommonTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonTableViewCell", for: indexPath)as! CommonTableViewCell
         cell.setup(memo: "あああ")
         return cell
     }

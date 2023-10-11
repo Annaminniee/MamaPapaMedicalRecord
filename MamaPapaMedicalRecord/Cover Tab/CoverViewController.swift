@@ -110,8 +110,8 @@ final class CoverViewController: UIViewController {
         memoListTableView.delegate = self
         memoListTableView.tableFooterView = UIView()
         // カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        memoListTableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib = UINib(nibName: "CommonTableViewCell", bundle: nil)
+        memoListTableView.register(nib, forCellReuseIdentifier: "CommonTableViewCell")
     }
     
     let memoDataModel = MemoDataModel(id: "", data: ["": ""])
@@ -125,7 +125,7 @@ extension CoverViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CommonTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonTableViewCell", for: indexPath)as! CommonTableViewCell
         cell.setup(memo: "あああ")
         return cell
     }
