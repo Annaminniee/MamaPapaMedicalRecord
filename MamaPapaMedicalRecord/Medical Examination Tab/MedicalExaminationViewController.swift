@@ -27,6 +27,8 @@ final class MedicalExaminationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureSaveButtonItem()
+        navigationItem.title = "受診"
     }
     
     // MARK: - IBActions
@@ -41,5 +43,16 @@ final class MedicalExaminationViewController: UIViewController {
     @IBAction private func tapTrashButton(_ sender: UIButton) {
     }
     
+    // MARK: - Other Methods
+    private func configureSaveButtonItem() {
+        let saveButton = UIBarButtonItem(title: "登録",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(saveButtonTapped))
+        navigationItem.rightBarButtonItem = saveButton
+    }
+    
+    @objc func saveButtonTapped() {
+        // TODO: 保存処理
+    }
 }
-
