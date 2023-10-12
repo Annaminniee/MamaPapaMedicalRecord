@@ -27,9 +27,36 @@ final class DiarrheaViewController: UIViewController {
     /// ユーザーID
     private var userID: String = ""
     /// 形
-    private var isShape: Bool = false
+    private var stoolShape: StoolShape?
     /// 色
-    private var isColor: Bool = false
+    private var stoolColor: StoolColor?
+    
+    struct Diarrhea {
+        var stoolShape: StoolShape     // 便の形状
+        var stoolColor: StoolColor     // 便の色
+        
+        
+        init(data: [String: Any]) {
+            self.stoolShape = data["stoolShape"] as? StoolShape ?? .softStool
+            self.stoolColor = data["stoolcolor"] as? StoolColor ?? .yellow
+        }
+    }
+    
+    /// 便の形状
+    enum StoolShape: String {
+        case softStool = "軟便"
+        case muddyStool = "泥状便"
+        case wateryStool = "水様便"
+    }
+    
+    /// 便の色
+    enum StoolColor: String {
+        case yellow = "黄色/茶色"
+        case white = "白っぽい"
+        case black = "黒い"
+        case red = "赤い所がある"
+        case other = "その他"
+    }
     
     // MARK: - IBOutlets
     
@@ -82,21 +109,21 @@ final class DiarrheaViewController: UIViewController {
         softStoolButton.backgroundColor = .white
         muddyStoolButton.backgroundColor = .lightGray
         wateryStoolButton.backgroundColor = .lightGray
-        isShape = true
+        self.stoolShape = . softStool
     }
     /// 形_泥状ボタンをタップ
     @IBAction private func tapMudButton(_ sender: CustomButton) {
         softStoolButton.backgroundColor = .lightGray
         muddyStoolButton.backgroundColor = .white
         wateryStoolButton.backgroundColor = .lightGray
-        isShape = true
+        self.stoolShape = . muddyStool
     }
     /// 形_水様ボタンをタップ
     @IBAction private func tapLiquidButton(_ sender: CustomButton) {
         softStoolButton.backgroundColor = .lightGray
         muddyStoolButton.backgroundColor = .lightGray
         wateryStoolButton.backgroundColor = .white
-        isShape = true
+        self.stoolShape = . wateryStool
     }
     /// 色_黄色ボタンをタップ
     @IBAction private func tapYellowButton(_ sender: CustomButton) {
@@ -105,7 +132,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isColor = true
+        self.stoolColor = . yellow
     }
     /// 色_白色ボタンをタップ
     @IBAction private func tapWhiteButton(_ sender: CustomButton) {
@@ -114,7 +141,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isColor = true
+        self.stoolColor = . white
     }
     /// 色_黒色ボタンをタップ
     @IBAction private func tapBlackButton(_ sender: CustomButton) {
@@ -123,7 +150,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .white
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isColor = true
+        self.stoolColor = . black
     }
     /// 赤い箇所があるボタンをタップ
     @IBAction private func tapThereAreRedAreasButton(_ sender: Any) {
@@ -132,7 +159,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .white
         otherButton.backgroundColor = .lightGray
-        isColor = true
+        self.stoolColor = . red
     }
     /// その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: Any) {
@@ -141,7 +168,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .white
-        isColor = true
+        self.stoolColor = . other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -316,8 +343,8 @@ final class DiarrheaViewController: UIViewController {
         let data: [String: Any] = [
             "recordDate": recordDate,
             "temperature": temperature,
-            "isShape": isShape,
-            "isColor": isColor,
+            "stoolShape": stoolShape ?? .softStool,
+            "stoolColor": stoolColor ?? .yellow,
             "other": other,
             "smell": smell,
             "memo": memo,
