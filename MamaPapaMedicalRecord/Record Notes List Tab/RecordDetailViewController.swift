@@ -14,8 +14,8 @@ final class RecordDetailViewController: UIViewController {
     // MARK: - Properties
        
     private let sections = ["メモ一覧", "受診記録"]
-    private let memoList = ["あああ", "いいいい", "うううう"]
-    private let consultationList = ["カカカカ", "キキキ"]
+    private let memoList = ["あああああああああああああああああああああああああああ", "いいいい", "うううう"]
+    private let consultationList = ["カカカカカカカカカカカカカカカカカカカカカカカカカカカ", "キキキ"]
     
     // MARK: - IBOutlets
     
