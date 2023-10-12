@@ -13,9 +13,9 @@ final class RecordDetailViewController: UIViewController {
     
     // MARK: - Properties
        
-       private let sections = ["メモ一覧", "受診記録"]
-       private let memoList = "memo"
-       private let consultationList = "detail"
+    private let sections = ["メモ一覧", "受診記録"]
+    private let memoList = ["あああ", "いいいい", "うううう"]
+    private let consultationList = ["カカカカ", "キキキ"]
     
     // MARK: - IBOutlets
     
@@ -83,8 +83,8 @@ final class RecordDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         // カスタムセル
-        let nib = UINib(nibName: "ConsultationTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ConsultationTableViewCell")
+        let nib = UINib(nibName: "RecordDetailTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "RecordDetailTableViewCell")
     }
 }
 
@@ -111,11 +111,16 @@ extension RecordDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // データを表示するセル
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! RecordDetailTableViewCell
-        cell.setup(consultation: "ああああああああああああああああああああああああああああ", selectedImage: UIImage())
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordDetailTableViewCell", for: indexPath) as! RecordDetailTableViewCell
+        if indexPath.section == 0 {
+            cell.setup(consultation: memoList[indexPath.row], selectedImage: UIImage())
+        } else {
+            cell.setup(consultation: consultationList[indexPath.row], selectedImage: UIImage())
+        }
         return cell
     }
 }
+
 // MARK: - UITableViewDelegate
 
 extension RecordDetailViewController: UITableViewDelegate {
