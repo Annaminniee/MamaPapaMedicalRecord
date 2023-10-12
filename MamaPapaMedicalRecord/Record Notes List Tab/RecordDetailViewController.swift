@@ -111,7 +111,7 @@ extension RecordDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // データを表示するセル
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! ConsultationTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConsultationTableViewCell", for: indexPath) as! RecordDetailTableViewCell
         cell.setup(consultation: "ああああああああああああああああああああああああああああ", selectedImage: UIImage())
         return cell
     }
