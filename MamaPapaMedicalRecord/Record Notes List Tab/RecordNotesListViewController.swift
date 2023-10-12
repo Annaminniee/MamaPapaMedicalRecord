@@ -49,7 +49,7 @@ extension RecordNotesListViewController: UITableViewDataSource {
         return 3
     }
     
-    ///  画面遷移を返すメソッド
+    /// セルをタップした時のメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
