@@ -12,8 +12,8 @@
             <connections>
                 <outlet property="imageView" destination="q0h-LT-j4x" id="01n-d1-wVI"/>
                 <outlet property="recordDateTextField" destination="Ka0-W0-w2t" id="8HN-Ee-jf4"/>
-                <outlet property="tableView" destination="p5K-og-ls6" id="VEk-o1-YlW"/>
                 <outlet property="temperatureTextField" destination="q27-yz-P0p" id="LOt-Zg-eZV"/>
+                <outlet property="textView" destination="p5K-og-ls6" id="VEk-o1-YlW"/>
                 <outlet property="view" destination="gxL-s4-Tz1" id="GfW-vd-pfl"/>
             </connections>
         </placeholder>
@@ -125,13 +125,12 @@
                         <constraint firstAttribute="height" constant="50" id="zbw-5n-XxJ"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p5K-og-ls6">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p5K-og-ls6" customClass="PlaceHolderTextView" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="198" width="414" height="150"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="LnS-1w-16f"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
