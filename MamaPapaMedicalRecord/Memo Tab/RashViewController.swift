@@ -27,7 +27,27 @@ final class RashViewController: UIViewController {
     /// ユーザーID
     private var userID: String = ""
     /// 発疹
-    private var isPlace: Bool = false
+    private var site: Site?
+    
+    struct Rash {
+        var site: Site // 場所
+        
+        init(data: [String: Any]) {
+            self.site = data["site"] as? Site ?? .head
+        }
+    }
+    ////  発疹の場所
+    enum Site: String {
+        case head = "頭"
+        case face = "顔"
+        case neck = "首"
+        case stomach = "お腹"
+        case back = "背中"
+        case crotch = "股"
+        case hip = "お尻"
+        case leg = "足"
+        case other = "その他"
+    }
     
     // MARK: - IBOutlets
     
@@ -86,7 +106,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .head
     }
     /// 場所：顔ボタンをタップ
     @IBAction private func tapFaceButton(_ sender: CustomButton) {
@@ -99,7 +119,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .face
     }
     /// 場所：首ボタンをタップ
     @IBAction private func tapNeckButton(_ sender: CustomButton) {
@@ -112,7 +132,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .neck
     }
     /// 場所：お腹ボタンをタップ
     @IBAction private func tapStomachButton(_ sender: CustomButton) {
@@ -125,7 +145,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .stomach
     }
     /// 場所：背中ボタンをタップ
     @IBAction private func tapBackButton(_ sender: CustomButton) {
@@ -138,7 +158,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .back
     }
     /// 場所：股ボタンをタップ
     @IBAction private func tapCrotchButton(_ sender: CustomButton) {
@@ -151,7 +171,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .crotch
     }
     /// 場所：お尻ボタンをタップ
     @IBAction private func tapHipButton(_ sender: CustomButton) {
@@ -164,7 +184,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .white
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .hip
     }
     /// 場所：足ボタンをタップ
     @IBAction private func tapLegButton(_ sender: CustomButton) {
@@ -177,7 +197,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .white
         otherButton.backgroundColor = .lightGray
-        isPlace = true
+        self.site = .leg
     }
     /// 場所：その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: UIButton) {
@@ -190,7 +210,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .white
-        isPlace = true
+        self.site = .other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -368,7 +388,7 @@ final class RashViewController: UIViewController {
         let data: [String: Any] = [
             "recordDate": recordDate,
             "temperature": temperature,
-            "isPlace": isPlace,
+            "site": Site.self,
             "other": other,
             "memo": memo,
             "imageURL": imageURL
