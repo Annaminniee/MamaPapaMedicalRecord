@@ -29,26 +29,6 @@ final class RashViewController: UIViewController {
     /// 発疹
     private var site: Site?
     
-    struct Rash {
-        var site: Site // 場所
-        
-        init(data: [String: Any]) {
-            self.site = data["site"] as? Site ?? .head
-        }
-    }
-    ////  発疹の場所
-    enum Site: String {
-        case head = "頭"
-        case face = "顔"
-        case neck = "首"
-        case stomach = "お腹"
-        case back = "背中"
-        case crotch = "股"
-        case hip = "お尻"
-        case leg = "足"
-        case other = "その他"
-    }
-    
     // MARK: - IBOutlets
     
     /// 記録日時設定
