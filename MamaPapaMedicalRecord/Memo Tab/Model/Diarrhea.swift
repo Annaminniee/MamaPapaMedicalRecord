@@ -15,6 +15,8 @@ struct Diarrhea {
     var stoolShape: StoolShape
     /// 便の色
     var stoolColor: StoolColor
+    /// 色「その他」記入欄
+    var other: String
     /// におい
     var smell: String
     /// メモ
