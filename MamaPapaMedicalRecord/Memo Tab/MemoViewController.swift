@@ -64,9 +64,9 @@ final class MemoViewController: UIViewController {
     /// 機嫌「良い」ボタン
     @IBOutlet private weak var moodGoodButton: CustomButton!
     /// 機嫌「普通」ボタン
-    @IBOutlet private weak var moodBadButton: CustomButton!
-    /// 機嫌「悪い」ボタン
     @IBOutlet private weak var moodNormalButton: CustomButton!
+    /// 機嫌「悪い」ボタン
+    @IBOutlet private weak var moodBadButton: CustomButton!
     /// 機嫌「ぐったり」ボタン
     @IBOutlet private weak var moodLimpButton: CustomButton!
     /// 睡眠「多い」ボタン

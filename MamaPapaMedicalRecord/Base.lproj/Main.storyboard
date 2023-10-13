@@ -182,8 +182,8 @@
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="その他">
                                                                     <attributes>
-                                                                        <font key="NSFont" metaFont="cellTitle"/>
-                                                                        <font key="NSOriginalFont" metaFont="system"/>
+                                                                        <font key="NSFont" size="11" name=".HiraKakuInterface-W3"/>
+                                                                        <font key="NSOriginalFont" metaFont="cellTitle"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
@@ -229,6 +229,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLI-Md-KuK" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                         <userDefinedRuntimeAttributes>
@@ -248,6 +249,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-0u-x1K" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="少し"/>
                                                         <userDefinedRuntimeAttributes>
@@ -267,6 +269,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-1Z-WvO" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                         <userDefinedRuntimeAttributes>
@@ -312,6 +315,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lod-hx-h6O" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="できた"/>
                                                         <userDefinedRuntimeAttributes>
@@ -331,6 +335,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9f-Zp-Y47" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="93" y="0.0" width="88.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="少し"/>
                                                         <userDefinedRuntimeAttributes>
@@ -350,8 +355,18 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-yB-pEe" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="186.5" y="0.0" width="88" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="できない"/>
+                                                        <buttonConfiguration key="configuration" style="plain">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="できない">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="10" name="HiraginoSans-W3"/>
+                                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -395,6 +410,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83r-LB-dNN" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="良い"/>
                                                         <userDefinedRuntimeAttributes>
@@ -414,6 +430,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-q3-fEI" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                         <userDefinedRuntimeAttributes>
@@ -433,6 +450,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-ZY-ZDP" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="悪い"/>
                                                         <userDefinedRuntimeAttributes>
@@ -452,12 +470,13 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-Ck-yso" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="ぐったり">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                                        <font key="NSFont" size="12" name="HiraginoSans-W3"/>
                                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -506,6 +525,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-hB-8nY" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="多い"/>
                                                         <userDefinedRuntimeAttributes>
@@ -525,6 +545,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-Me-asl" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="78.5" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="普通"/>
                                                         <userDefinedRuntimeAttributes>
@@ -544,6 +565,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryf-5p-KZt" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="157" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="少ない"/>
                                                         <userDefinedRuntimeAttributes>
@@ -563,12 +585,13 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-In-TUb" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="235.5" y="0.0" width="73.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="寝てない">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                                                        <font key="NSFont" size="11" name="HiraginoSans-W3"/>
                                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
@@ -653,6 +676,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-6h-LED" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                         <userDefinedRuntimeAttributes>
@@ -672,6 +696,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="157" y="0.0" width="152" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                         <userDefinedRuntimeAttributes>
@@ -717,6 +742,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7g-ug-hsm" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="あり"/>
                                                         <userDefinedRuntimeAttributes>
@@ -736,6 +762,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0S-6S-WJw" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                                         <rect key="frame" x="157" y="0.0" width="152" height="40"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="なし"/>
                                                         <userDefinedRuntimeAttributes>
@@ -820,10 +847,10 @@
                         <outlet property="hydrationDoneButton" destination="lod-hx-h6O" id="Dru-Zz-Iaw"/>
                         <outlet property="hydrationLittleButton" destination="V9f-Zp-Y47" id="rNX-S2-VuI"/>
                         <outlet property="hydrationNotDoneButton" destination="zWR-yB-pEe" id="4TM-5D-boM"/>
-                        <outlet property="moodBadButton" destination="ORc-q3-fEI" id="llf-ZV-QM0"/>
+                        <outlet property="moodBadButton" destination="Kef-ZY-ZDP" id="PpK-dw-1Cu"/>
                         <outlet property="moodGoodButton" destination="83r-LB-dNN" id="6hb-7Y-KCv"/>
                         <outlet property="moodLimpButton" destination="OfD-Ck-yso" id="jFg-ea-17M"/>
-                        <outlet property="moodNormalButton" destination="Kef-ZY-ZDP" id="GEw-hm-i7r"/>
+                        <outlet property="moodNormalButton" destination="ORc-q3-fEI" id="6rA-7O-mLo"/>
                         <outlet property="otherButton" destination="gbS-Ux-47L" id="2Fs-yu-zHx"/>
                         <outlet property="rashButton" destination="b8d-Uo-ynB" id="C3H-Qo-EZ2"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
