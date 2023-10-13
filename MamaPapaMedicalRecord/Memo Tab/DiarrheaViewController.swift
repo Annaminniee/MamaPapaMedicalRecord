@@ -31,33 +31,6 @@ final class DiarrheaViewController: UIViewController {
     /// 色
     private var stoolColor: StoolColor?
     
-    struct Diarrhea {
-        var stoolShape: StoolShape     // 便の形状
-        var stoolColor: StoolColor     // 便の色
-        
-        
-        init(data: [String: Any]) {
-            self.stoolShape = data["stoolShape"] as? StoolShape ?? .softStool
-            self.stoolColor = data["stoolcolor"] as? StoolColor ?? .yellow
-        }
-    }
-    
-    /// 便の形状
-    enum StoolShape: String {
-        case softStool = "軟便"
-        case muddyStool = "泥状便"
-        case wateryStool = "水様便"
-    }
-    
-    /// 便の色
-    enum StoolColor: String {
-        case yellow = "黄色/茶色"
-        case white = "白っぽい"
-        case black = "黒い"
-        case red = "赤い所がある"
-        case other = "その他"
-    }
-    
     // MARK: - IBOutlets
     
     /// 記録日時設定
