@@ -24,7 +24,7 @@ struct MemoDataModel {
         self.id = id
         self.recordDate = data["record_date"] as? Date ?? Date()
         self.temperature = data["temperature"] as? String ?? ""
-        self.appetite = data["appetite"] as? Appetite ?? .usually
+        self.appetite = data["appetite"] as? Appetite ?? .usual
         self.hydration = data["hydration"] as? Hydration ?? .done
         self.mood = data["mood"] as? Mood ?? .normal
         self.sleepQuantity = data["sleep_quantity"] as? SleepQuantity ?? .usual
@@ -37,7 +37,7 @@ struct MemoDataModel {
 
 /// 食欲の種別
 enum Appetite: String {
-    case usually =  "普通"
+    case usual =  "普通"
     case little = "少し"
     case none = "なし"
 }
@@ -52,7 +52,7 @@ enum Hydration: String {
 /// 機嫌の種別
 enum Mood: String {
     case good = "良い"
-    case Bad = "悪い"
+    case bad = "悪い"
     case normal = "普通"
     case limp = "ぐったり"
 }

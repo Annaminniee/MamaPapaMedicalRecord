@@ -667,7 +667,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="tapSnotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="kX3-hf-pY5"/>
+                                                            <action selector="tapSnotYesButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="E0h-Ki-Z3l"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-Ch-FT3" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -686,7 +686,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="tapSnotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="p4Y-Ia-pTK"/>
+                                                            <action selector="tapSnotNoButton:" destination="V7j-6S-bxp" eventType="touchUpInside" id="Te9-fT-gvg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -807,12 +807,36 @@
                     </view>
                     <navigationItem key="navigationItem" id="TF9-qT-aku"/>
                     <connections>
+                        <outlet property="appetiteLittleButton" destination="qVi-0u-x1K" id="nCq-hf-kne"/>
+                        <outlet property="appetiteNoneButton" destination="ej5-1Z-WvO" id="3Pn-xD-RR0"/>
+                        <outlet property="appetiteUsualButton" destination="pLI-Md-KuK" id="34V-44-I24"/>
+                        <outlet property="convulsionsButton" destination="mBi-ff-OJ9" id="jSo-wF-4Ff"/>
+                        <outlet property="coughNoButton" destination="y0S-6S-WJw" id="Z86-a4-bMa"/>
+                        <outlet property="coughYesButton" destination="W7g-ug-hsm" id="Kwj-t7-uEz"/>
                         <outlet property="datePicker" destination="5K4-yU-8DY" id="NcO-AE-HKC"/>
                         <outlet property="dateTextField" destination="PID-BW-amb" id="XI9-9M-An5"/>
+                        <outlet property="diarrheaButton" destination="fJ4-hj-qQb" id="e0N-rY-DKd"/>
+                        <outlet property="feverButton" destination="ZGF-Hb-fH1" id="Onv-Yq-jPR"/>
+                        <outlet property="hydrationDoneButton" destination="lod-hx-h6O" id="Dru-Zz-Iaw"/>
+                        <outlet property="hydrationLittleButton" destination="V9f-Zp-Y47" id="rNX-S2-VuI"/>
+                        <outlet property="hydrationNotDoneButton" destination="zWR-yB-pEe" id="4TM-5D-boM"/>
+                        <outlet property="moodBadButton" destination="ORc-q3-fEI" id="llf-ZV-QM0"/>
+                        <outlet property="moodGoodButton" destination="83r-LB-dNN" id="6hb-7Y-KCv"/>
+                        <outlet property="moodLimpButton" destination="OfD-Ck-yso" id="jFg-ea-17M"/>
+                        <outlet property="moodNormalButton" destination="Kef-ZY-ZDP" id="GEw-hm-i7r"/>
+                        <outlet property="otherButton" destination="gbS-Ux-47L" id="2Fs-yu-zHx"/>
+                        <outlet property="rashButton" destination="b8d-Uo-ynB" id="C3H-Qo-EZ2"/>
                         <outlet property="recordNameTextField" destination="DC9-hn-3ZT" id="JSR-NU-gGF"/>
                         <outlet property="sleepHourTextField" destination="9uv-Ox-2TV" id="xsc-KP-iFY"/>
                         <outlet property="sleepMinuteTextField" destination="gES-lb-jAB" id="rWz-dS-1sD"/>
+                        <outlet property="sleepNotSleepingButton" destination="o3G-In-TUb" id="D6R-Qt-II4"/>
+                        <outlet property="sleepNumerousButton" destination="GNr-hB-8nY" id="Gg2-Gr-pYM"/>
+                        <outlet property="sleepUsualButton" destination="Mno-Me-asl" id="3yD-NB-QDz"/>
+                        <outlet property="sleeplessButton" destination="ryf-5p-KZt" id="txS-br-0eo"/>
+                        <outlet property="snotNoButton" destination="NuK-Ch-FT3" id="eqr-nn-OHb"/>
+                        <outlet property="snotYesButton" destination="rvw-6h-LED" id="eGg-CC-4wo"/>
                         <outlet property="tableView" destination="u1V-HZ-s7S" id="5OI-B8-ZrX"/>
+                        <outlet property="vomitingButton" destination="znL-Gb-0Oy" id="mDr-1R-09e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvF-rK-Ylb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
