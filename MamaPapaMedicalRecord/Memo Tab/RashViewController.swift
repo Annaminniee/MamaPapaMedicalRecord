@@ -27,7 +27,7 @@ final class RashViewController: UIViewController {
     /// ユーザーID
     private var userID: String = ""
     /// 発疹
-    private var sitetype: SiteType?
+    private var siteType: SiteType?
     
     // MARK: - IBOutlets
     
@@ -86,7 +86,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .head
+        self.siteType = .head
     }
     /// 場所：顔ボタンをタップ
     @IBAction private func tapFaceButton(_ sender: CustomButton) {
@@ -99,7 +99,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .face
+        self.siteType = .face
     }
     /// 場所：首ボタンをタップ
     @IBAction private func tapNeckButton(_ sender: CustomButton) {
@@ -112,7 +112,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .neck
+        self.siteType = .neck
     }
     /// 場所：お腹ボタンをタップ
     @IBAction private func tapStomachButton(_ sender: CustomButton) {
@@ -125,7 +125,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .stomach
+        self.siteType = .stomach
     }
     /// 場所：背中ボタンをタップ
     @IBAction private func tapBackButton(_ sender: CustomButton) {
@@ -138,7 +138,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .back
+        self.siteType = .back
     }
     /// 場所：股ボタンをタップ
     @IBAction private func tapCrotchButton(_ sender: CustomButton) {
@@ -151,7 +151,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .crotch
+        self.siteType = .crotch
     }
     /// 場所：お尻ボタンをタップ
     @IBAction private func tapHipButton(_ sender: CustomButton) {
@@ -164,7 +164,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .white
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .hip
+        self.siteType = .hip
     }
     /// 場所：足ボタンをタップ
     @IBAction private func tapLegButton(_ sender: CustomButton) {
@@ -177,7 +177,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .white
         otherButton.backgroundColor = .lightGray
-        self.sitetype = .leg
+        self.siteType = .leg
     }
     /// 場所：その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: UIButton) {
@@ -190,7 +190,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .white
-        self.sitetype = .other
+        self.siteType = .other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -362,13 +362,14 @@ final class RashViewController: UIViewController {
         
         guard let recordDate = recordDateTextField.text,
               let temperature = temperatureTextField.text,
+              let siteType = siteType.self,
               let other = otherTextField,
               let memo = textView.text else { return }
         
         let data: [String: Any] = [
             "recordDate": recordDate,
             "temperature": temperature,
-            "siteType": SiteType.self,
+            "siteType": siteType,
             "other": other,
             "memo": memo,
             "imageURL": imageURL
