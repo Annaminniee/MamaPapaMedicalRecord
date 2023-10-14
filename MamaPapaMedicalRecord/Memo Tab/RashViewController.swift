@@ -362,7 +362,7 @@ final class RashViewController: UIViewController {
         
         guard let recordDate = recordDateTextField.text,
               let temperature = temperatureTextField.text,
-              let siteType = siteType.self,
+              let siteType = siteType,
               let other = otherTextField,
               let memo = textView.text else { return }
         
