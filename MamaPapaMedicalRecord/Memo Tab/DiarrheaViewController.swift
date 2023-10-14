@@ -82,21 +82,21 @@ final class DiarrheaViewController: UIViewController {
         softStoolButton.backgroundColor = .white
         muddyStoolButton.backgroundColor = .lightGray
         wateryStoolButton.backgroundColor = .lightGray
-        self.stoolShape = . softStool
+        self.stoolShape = .softStool
     }
     /// 形_泥状ボタンをタップ
     @IBAction private func tapMudButton(_ sender: CustomButton) {
         softStoolButton.backgroundColor = .lightGray
         muddyStoolButton.backgroundColor = .white
         wateryStoolButton.backgroundColor = .lightGray
-        self.stoolShape = . muddyStool
+        self.stoolShape = .muddyStool
     }
     /// 形_水様ボタンをタップ
     @IBAction private func tapLiquidButton(_ sender: CustomButton) {
         softStoolButton.backgroundColor = .lightGray
         muddyStoolButton.backgroundColor = .lightGray
         wateryStoolButton.backgroundColor = .white
-        self.stoolShape = . wateryStool
+        self.stoolShape = .wateryStool
     }
     /// 色_黄色ボタンをタップ
     @IBAction private func tapYellowButton(_ sender: CustomButton) {
@@ -105,7 +105,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.stoolColor = . yellow
+        self.stoolColor = .yellow
     }
     /// 色_白色ボタンをタップ
     @IBAction private func tapWhiteButton(_ sender: CustomButton) {
@@ -114,7 +114,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.stoolColor = . white
+        self.stoolColor = .white
     }
     /// 色_黒色ボタンをタップ
     @IBAction private func tapBlackButton(_ sender: CustomButton) {
@@ -123,7 +123,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .white
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.stoolColor = . black
+        self.stoolColor = .black
     }
     /// 赤い箇所があるボタンをタップ
     @IBAction private func tapThereAreRedAreasButton(_ sender: Any) {
@@ -132,7 +132,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .white
         otherButton.backgroundColor = .lightGray
-        self.stoolColor = . red
+        self.stoolColor = .red
     }
     /// その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: Any) {
@@ -141,7 +141,7 @@ final class DiarrheaViewController: UIViewController {
         blackButton.backgroundColor = .lightGray
         redButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .white
-        self.stoolColor = . other
+        self.stoolColor = .other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
