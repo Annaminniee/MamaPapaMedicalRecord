@@ -21,7 +21,7 @@ struct Rash {
     var imageURL: String
 }
 
-////  発疹の場所
+///  発疹の場所
 enum Site: String {
     case head = "頭"
     case face = "顔"
