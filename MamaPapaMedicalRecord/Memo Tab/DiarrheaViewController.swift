@@ -309,6 +309,8 @@ final class DiarrheaViewController: UIViewController {
         
         guard let recordDate = recordDateTextField.text,
               let temperature = temperatureTextField.text,
+              let stoolShape = stoolShape.self,
+              let stoolColor = stoolColor.self,
               let other = otherTextField.text,
               let smell = smellTextField.text,
               let memo = textView.text else { return }
@@ -316,8 +318,8 @@ final class DiarrheaViewController: UIViewController {
         let data: [String: Any] = [
             "recordDate": recordDate,
             "temperature": temperature,
-            "stoolShape": stoolShape ?? .softStool,
-            "stoolColor": stoolColor ?? .yellow,
+            "stoolShape": stoolShape,
+            "stoolColor": stoolColor,
             "other": other,
             "smell": smell,
             "memo": memo,
