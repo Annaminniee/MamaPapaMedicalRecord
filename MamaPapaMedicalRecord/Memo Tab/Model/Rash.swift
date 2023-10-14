@@ -12,7 +12,7 @@ struct Rash {
     /// 体温
     var temperature: String
     /// 場所
-    var site: Site
+    var siteType: SiteType
     /// 場所「その他記入欄」
     var other: String
     /// メモ
@@ -22,7 +22,7 @@ struct Rash {
 }
 
 ///  発疹の場所
-enum Site: String {
+enum SiteType: String {
     case head = "頭"
     case face = "顔"
     case neck = "首"

@@ -27,7 +27,7 @@ final class RashViewController: UIViewController {
     /// ユーザーID
     private var userID: String = ""
     /// 発疹
-    private var site: Site?
+    private var sitetype: SiteType?
     
     // MARK: - IBOutlets
     
@@ -86,7 +86,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .head
+        self.sitetype = .head
     }
     /// 場所：顔ボタンをタップ
     @IBAction private func tapFaceButton(_ sender: CustomButton) {
@@ -99,7 +99,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .face
+        self.sitetype = .face
     }
     /// 場所：首ボタンをタップ
     @IBAction private func tapNeckButton(_ sender: CustomButton) {
@@ -112,7 +112,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .neck
+        self.sitetype = .neck
     }
     /// 場所：お腹ボタンをタップ
     @IBAction private func tapStomachButton(_ sender: CustomButton) {
@@ -125,7 +125,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .stomach
+        self.sitetype = .stomach
     }
     /// 場所：背中ボタンをタップ
     @IBAction private func tapBackButton(_ sender: CustomButton) {
@@ -138,7 +138,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .back
+        self.sitetype = .back
     }
     /// 場所：股ボタンをタップ
     @IBAction private func tapCrotchButton(_ sender: CustomButton) {
@@ -151,7 +151,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .crotch
+        self.sitetype = .crotch
     }
     /// 場所：お尻ボタンをタップ
     @IBAction private func tapHipButton(_ sender: CustomButton) {
@@ -164,7 +164,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .white
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .lightGray
-        self.site = .hip
+        self.sitetype = .hip
     }
     /// 場所：足ボタンをタップ
     @IBAction private func tapLegButton(_ sender: CustomButton) {
@@ -177,7 +177,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .white
         otherButton.backgroundColor = .lightGray
-        self.site = .leg
+        self.sitetype = .leg
     }
     /// 場所：その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: UIButton) {
@@ -190,7 +190,7 @@ final class RashViewController: UIViewController {
         hipButton.backgroundColor = .lightGray
         legButton.backgroundColor = .lightGray
         otherButton.backgroundColor = .white
-        self.site = .other
+        self.sitetype = .other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -368,7 +368,7 @@ final class RashViewController: UIViewController {
         let data: [String: Any] = [
             "recordDate": recordDate,
             "temperature": temperature,
-            "site": Site.self,
+            "siteType": SiteType.self,
             "other": other,
             "memo": memo,
             "imageURL": imageURL
