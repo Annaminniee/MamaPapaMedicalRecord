@@ -12,6 +12,10 @@ final class FeverViewController: UIViewController {
     
     // MARK: - Properties
     
+    /// FirebaseServiceのインスタンス
+    let firebaseService = FirebaseService.shared
+    
+    /// UIDatePickerのインスタンス
     private let datePicker = UIDatePicker()
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -20,14 +24,23 @@ final class FeverViewController: UIViewController {
         return formatter
     }()
     
+    /// ユーザーID
+    private var userID: String = ""
+    /// 解熱剤使用の有無
+    private var isAntipyreticAgent: Bool = false
+    
     // MARK: - IBOutlets
     
     /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
+    /// 解熱剤使用「はい」ボタン
+    @IBOutlet private weak var antipyreticAgentYesButton: CustomButton!
+    /// 解熱剤使用「いいえ」ボタン
+    @IBOutlet private weak var antipyreticAgentNoButton: CustomButton!
     /// メモ設定
-    @IBOutlet private weak var memoTextView: UITextView!
+    @IBOutlet private weak var textView: PlaceHolderTextView!
     /// 画像設定
     @IBOutlet private weak var imageView: UIImageView!
     
@@ -41,15 +54,22 @@ final class FeverViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "熱"
         setupTapGestureRecognizer()
+        textView.placeHolder = "入力してください"
     }
     
     // MARK: - IBActions
     
     /// 解熱剤使用「はい」ボタンをタップ
     @IBAction private func tapAntipyreticAgentYesButton(_ sender: CustomButton) {
+        antipyreticAgentYesButton.backgroundColor = .white
+        antipyreticAgentNoButton.backgroundColor = .lightGray
+        isAntipyreticAgent = true
     }
     /// 解熱剤使用「なし」ボタンをタップ
     @IBAction private func tapAntipyreticAgentNoButton(_ sender: CustomButton) {
+        antipyreticAgentYesButton.backgroundColor = .lightGray
+        antipyreticAgentNoButton.backgroundColor = .white
+        isAntipyreticAgent = false
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -69,9 +89,14 @@ final class FeverViewController: UIViewController {
     }
     /// 削除ボタンをタップ
     @IBAction private func tapTrashButton(_ sender: UIButton) {
+        imageView.image = nil
     }
     
     // MARK: - Other Methods
+    
+    func setData(userID: String) {
+        self.userID = userID
+    }
     
     /// 戻るボタンの設定
     private func configureCancelButtonItem() {
@@ -96,7 +121,28 @@ final class FeverViewController: UIViewController {
     }
     
     @objc func saveButtonTapped() {
-        // TODO: 保存処理
+        isValidData()
+    }
+    /// バリデーション
+    private func isValidData() {
+        if recordDateTextField.text != "",
+           temperatureTextField.text != "",
+           textView.text != "",
+           let image = imageView.image {
+            // 先に画像をアップロードします
+            uploadImage(image: image)
+        } else {
+            showAlert(title: "項目をすべて入力してください", message: "")
+        }
+    }
+    
+    /// アラートを表示
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     /// 日付ピッカーの設定
@@ -162,6 +208,55 @@ final class FeverViewController: UIViewController {
     /// 画面のどこかをタップしてキーボードを閉じるメソッド
     @objc private func handleTap() {
         view.endEditing(true)
+    }
+    
+    /// 画像をアップロード
+    private func uploadImage(image: UIImage) {
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
+        let imageFileName = "antipyreticAgent.jpg"
+        let imagePath = "images/\(imageFileName)"
+        
+        firebaseService.uploadImageToStorage(imageData: imageData,
+                                             path: imagePath) { [weak self] (url, error) in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
+            } else if let url = url {
+                // URL型からString型に変換
+                let imageUrlString = url.absoluteString
+                // アップロードが成功したらデータを保存します
+                self.saveData(imageURL: imageUrlString)
+            }
+        }
+    }
+    
+    /// Firestoreにデータを保存
+    private func saveData(imageURL: String) {
+        
+        guard let recordDate = recordDateTextField.text,
+              let temperature = temperatureTextField.text,
+              let memo = textView.text else { return }
+        
+        let data: [String: Any] = [
+            "recordDate": recordDate,
+            "temperature": temperature,
+            "isAntipyreticAgent": isAntipyreticAgent,
+            "memo": memo,
+            "imageURL": imageURL
+        ]
+        
+        firebaseService.saveDataToFirestore(collection: "fever", data: data) { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
+            } else {
+                print("データが正常に保存されました")
+            }
+        }
+        // 前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
