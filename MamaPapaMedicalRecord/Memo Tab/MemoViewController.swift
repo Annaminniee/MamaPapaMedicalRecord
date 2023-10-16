@@ -62,8 +62,8 @@ final class MemoViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         //カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib = UINib(nibName: "CommonTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CommonTableViewCell")
     }
     
     // MARK: - IBActions
@@ -232,7 +232,7 @@ extension MemoViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonTableViewCell", for: indexPath)as! CommonTableViewCell
         cell.setup(memo: "あああ")
         return cell
     }

@@ -21,6 +21,14 @@ final class RecordNotesListViewController: UIViewController {
         navigationItem.title = "記録ノート一覧"
         configureTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
         
     // MARK: - Other Methods
     
@@ -28,8 +36,8 @@ final class RecordNotesListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         //カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib = UINib(nibName: "CommonTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CommonTableViewCell")
     }
 }
 
@@ -41,10 +49,19 @@ extension RecordNotesListViewController: UITableViewDataSource {
         return 3
     }
     
+    /// セルをタップした時のメソッド
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        // 別の画面に遷移
+        let nextVC = RecordDetailViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     /// 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 再利用可能な cell を得る
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath)as! CoverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommonTableViewCell", for: indexPath)as! CommonTableViewCell
         cell.setup(memo: "あああ")
         return cell
     }

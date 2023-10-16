@@ -9,25 +9,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CoverTableViewCell" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CommonTableViewCell" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-Hm-UQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="memoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCI-Hm-UQ2">
+                        <rect key="frame" x="10" y="0.0" width="300" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="F0O-Te-0r5"/>
-                    <constraint firstAttribute="bottom" secondItem="uCI-Hm-UQ2" secondAttribute="bottom" id="GLP-sy-zh2"/>
-                    <constraint firstAttribute="trailing" secondItem="uCI-Hm-UQ2" secondAttribute="trailing" id="OUE-yW-4Jn"/>
-                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SdD-DM-oSI"/>
+                    <constraint firstAttribute="trailing" secondItem="uCI-Hm-UQ2" secondAttribute="trailing" constant="10" id="0WG-dh-0dN"/>
+                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="A7C-bm-a2G"/>
+                    <constraint firstItem="uCI-Hm-UQ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nSp-ND-d9o"/>
+                    <constraint firstAttribute="bottom" secondItem="uCI-Hm-UQ2" secondAttribute="bottom" id="sBb-xA-9ZJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
