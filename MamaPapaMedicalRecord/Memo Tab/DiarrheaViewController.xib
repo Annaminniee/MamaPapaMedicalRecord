@@ -10,13 +10,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiarrheaViewController" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
             <connections>
+                <outlet property="blackButton" destination="tIK-PT-iuU" id="1H3-X0-jMW"/>
                 <outlet property="imageView" destination="YPB-sy-kTZ" id="z0n-WU-FyS"/>
-                <outlet property="otherTextField" destination="Pa5-x2-1x4" id="zL8-Ac-vge"/>
+                <outlet property="muddyStoolButton" destination="uDM-s8-CqQ" id="nq9-Ql-Gp4"/>
+                <outlet property="otherButton" destination="lH0-wE-hyU" id="S4U-bh-D8m"/>
+                <outlet property="otherTextField" destination="xFj-Po-5oj" id="2sk-dI-k98"/>
                 <outlet property="recordDateTextField" destination="Ka0-W0-w2t" id="dZa-22-2T8"/>
+                <outlet property="redButton" destination="ub6-Fh-q2O" id="YkS-5b-CUy"/>
                 <outlet property="smellTextField" destination="7Ih-0f-fKF" id="Q82-tW-YhD"/>
+                <outlet property="softStoolButton" destination="U4A-hs-Vc7" id="Nxb-bR-Fgh"/>
                 <outlet property="temperatureTextField" destination="q27-yz-P0p" id="1nn-55-JcL"/>
                 <outlet property="textView" destination="KUD-2V-Ocg" id="BWP-VY-LZM"/>
                 <outlet property="view" destination="gxL-s4-Tz1" id="45i-0y-zSL"/>
+                <outlet property="wateryStoolButton" destination="xDt-hs-o4p" id="O4w-7O-wTC"/>
+                <outlet property="whiteButton" destination="4pG-Nh-0Bx" id="OqG-qk-rev"/>
+                <outlet property="yellowButton" destination="TJs-t8-1ds" id="jlk-0U-fL4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -117,7 +125,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4A-hs-Vc7" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="軟便"/>
                                             <userDefinedRuntimeAttributes>
@@ -137,7 +145,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDM-s8-CqQ" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="102.5" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="泥状便"/>
                                             <userDefinedRuntimeAttributes>
@@ -157,7 +165,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDt-hs-o4p" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="205" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="水様便"/>
                                             <userDefinedRuntimeAttributes>
@@ -206,7 +214,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJs-t8-1ds" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain">
                                                 <attributedString key="attributedTitle">
@@ -235,7 +243,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pG-Nh-0Bx" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="102.5" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="白っぽい"/>
                                             <userDefinedRuntimeAttributes>
@@ -255,7 +263,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIK-PT-iuU" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                                             <rect key="frame" x="205" y="0.0" width="102.5" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="黒い"/>
                                             <userDefinedRuntimeAttributes>
@@ -287,7 +295,7 @@
                                 <constraint firstAttribute="trailing" secondItem="EFO-RA-Q52" secondAttribute="trailing" constant="30" id="YD7-zJ-va3"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeC-iD-agM">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khR-zd-qVt">
                             <rect key="frame" x="0.0" y="200" width="414" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdo-3e-Ghy" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
@@ -351,22 +359,82 @@
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pa5-x2-1x4">
                                     <rect key="frame" x="297" y="10" width="87" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="rAa-gF-9ID"/>
+                                        <constraint firstAttribute="height" constant="20" id="ZKo-ab-aiL"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-Xa-GLA">
+                                    <rect key="frame" x="76.5" y="5" width="307.5" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub6-Fh-q2O" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="102.5" height="40"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="赤い所がある">
+                                                        <attributes>
+                                                            <font key="NSFont" size="12" name="HiraginoSans-W3"/>
+                                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </buttonConfiguration>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="tapThereAreRedAreasButton:" destination="-1" eventType="touchUpInside" id="A87-h0-qrL"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lH0-wE-hyU" customClass="CustomButton" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
+                                            <rect key="frame" x="102.5" y="0.0" width="102.5" height="40"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="その他"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="tapOtherButton:" destination="-1" eventType="touchUpInside" id="EFE-1P-YwU"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFj-Po-5oj">
+                                            <rect key="frame" x="205" y="0.0" width="102.5" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.80801349879999995" green="0.93300044540000004" blue="0.94914060830000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="mgX-LN-Qrr" firstAttribute="centerY" secondItem="TeC-iD-agM" secondAttribute="centerY" id="0og-2B-nsd"/>
-                                <constraint firstAttribute="height" constant="50" id="6pD-a0-gsG"/>
-                                <constraint firstItem="Pa5-x2-1x4" firstAttribute="centerY" secondItem="TeC-iD-agM" secondAttribute="centerY" id="7JX-4o-Ax6"/>
-                                <constraint firstItem="Pa5-x2-1x4" firstAttribute="leading" secondItem="mgX-LN-Qrr" secondAttribute="trailing" id="7OO-r5-Bup"/>
-                                <constraint firstAttribute="trailing" secondItem="Pa5-x2-1x4" secondAttribute="trailing" constant="30" id="aJt-va-byI"/>
-                                <constraint firstItem="mgX-LN-Qrr" firstAttribute="leading" secondItem="Jdo-3e-Ghy" secondAttribute="trailing" id="k9S-NJ-oQd"/>
-                                <constraint firstItem="Jdo-3e-Ghy" firstAttribute="leading" secondItem="TeC-iD-agM" secondAttribute="leading" constant="77.5" id="r7s-MS-7jT"/>
-                                <constraint firstItem="Jdo-3e-Ghy" firstAttribute="centerY" secondItem="TeC-iD-agM" secondAttribute="centerY" id="xac-a2-wgI"/>
+                                <constraint firstItem="PMy-0W-E2l" firstAttribute="centerY" secondItem="LZZ-Xa-GLA" secondAttribute="centerY" id="5BH-gv-Mmd"/>
+                                <constraint firstItem="LZZ-Xa-GLA" firstAttribute="leading" secondItem="PMy-0W-E2l" secondAttribute="trailing" constant="29" id="URK-6V-lIg"/>
+                                <constraint firstAttribute="height" constant="50" id="Uya-Wy-fRT"/>
+                                <constraint firstAttribute="bottom" secondItem="LZZ-Xa-GLA" secondAttribute="bottom" constant="5" id="bs0-Fh-fwh"/>
+                                <constraint firstItem="LZZ-Xa-GLA" firstAttribute="top" secondItem="khR-zd-qVt" secondAttribute="top" constant="5" id="fH3-by-e7c"/>
+                                <constraint firstItem="PMy-0W-E2l" firstAttribute="leading" secondItem="khR-zd-qVt" secondAttribute="leading" constant="30" id="hQt-Fs-b9g"/>
+                                <constraint firstAttribute="trailing" secondItem="LZZ-Xa-GLA" secondAttribute="trailing" constant="30" id="ugk-03-nGQ"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSd-Jj-Zfo">
@@ -382,7 +450,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ih-0f-fKF">
-                                    <rect key="frame" x="102" y="8" width="282" height="34"/>
+                                    <rect key="frame" x="90" y="8" width="282" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="LQk-PQ-557"/>
                                     </constraints>
@@ -392,12 +460,11 @@
                             </subviews>
                             <color key="backgroundColor" red="0.80801349878311157" green="0.93300044536590576" blue="0.94914060831069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="7Ih-0f-fKF" secondAttribute="trailing" constant="30" id="3G4-kT-Xjr"/>
+                                <constraint firstItem="7Ih-0f-fKF" firstAttribute="leading" secondItem="ELz-yd-oa7" secondAttribute="trailing" constant="8" symbolic="YES" id="0GU-jE-nd2"/>
+                                <constraint firstAttribute="trailing" secondItem="7Ih-0f-fKF" secondAttribute="trailing" constant="42" id="2EM-NI-hxL"/>
                                 <constraint firstItem="ELz-yd-oa7" firstAttribute="leading" secondItem="sSd-Jj-Zfo" secondAttribute="leading" constant="30" id="JBo-NA-L9U"/>
                                 <constraint firstItem="ELz-yd-oa7" firstAttribute="centerY" secondItem="sSd-Jj-Zfo" secondAttribute="centerY" id="SEb-ba-kKf"/>
-                                <constraint firstItem="7Ih-0f-fKF" firstAttribute="centerY" secondItem="sSd-Jj-Zfo" secondAttribute="centerY" id="dbR-4a-uaV"/>
-                                <constraint firstAttribute="height" constant="50" id="sCJ-Zz-sYo"/>
-                                <constraint firstItem="7Ih-0f-fKF" firstAttribute="leading" secondItem="ELz-yd-oa7" secondAttribute="trailing" constant="20" id="vi9-en-hwK"/>
+                                <constraint firstItem="7Ih-0f-fKF" firstAttribute="centerY" secondItem="ELz-yd-oa7" secondAttribute="centerY" id="uuo-nx-1gN"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -405,11 +472,8 @@
                         <constraint firstItem="ehG-r3-OfS" firstAttribute="top" secondItem="eAO-l1-JPF" secondAttribute="bottom" id="1vX-6h-PBb"/>
                         <constraint firstItem="eAO-l1-JPF" firstAttribute="top" secondItem="VoG-tS-ujZ" secondAttribute="bottom" id="5fF-tT-MJH"/>
                         <constraint firstAttribute="height" constant="300" id="CWS-OL-2wz"/>
-                        <constraint firstItem="TeC-iD-agM" firstAttribute="top" secondItem="ehG-r3-OfS" secondAttribute="bottom" id="Heg-4x-XT0"/>
                         <constraint firstItem="VoG-tS-ujZ" firstAttribute="top" secondItem="pBy-2q-U8P" secondAttribute="bottom" id="NVi-6w-HVm"/>
-                        <constraint firstItem="TeC-iD-agM" firstAttribute="top" secondItem="ehG-r3-OfS" secondAttribute="bottom" id="b0V-sP-r4Q"/>
                         <constraint firstItem="eAO-l1-JPF" firstAttribute="top" secondItem="VoG-tS-ujZ" secondAttribute="bottom" id="cAe-9k-Mhl"/>
-                        <constraint firstItem="sSd-Jj-Zfo" firstAttribute="top" secondItem="TeC-iD-agM" secondAttribute="bottom" id="te6-sy-fVp"/>
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ijl-Cs-u2g">
@@ -431,13 +495,12 @@
                         <constraint firstAttribute="height" constant="50" id="zbw-5n-XxJ"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KUD-2V-Ocg">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KUD-2V-Ocg" customClass="PlaceHolderTextView" customModule="MamaPapaMedicalRecord" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="443" width="414" height="98"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="98" id="h90-eb-FSu"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
