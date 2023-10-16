@@ -382,7 +382,7 @@ final class MemoViewController: UIViewController {
     }
     
     /// Firestoreにデータを保存
-    private func saveData(imageURL: String) {
+    private func saveData() {
         
         guard let recordDate = dateTextField.text,
               let recordName = recordNameTextField.text,
