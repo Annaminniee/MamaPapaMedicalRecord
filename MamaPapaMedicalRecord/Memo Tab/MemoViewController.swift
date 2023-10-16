@@ -206,7 +206,7 @@ final class MemoViewController: UIViewController {
         appetiteUsualButton.backgroundColor = .lightGray
         appetiteLittleButton.backgroundColor = .lightGray
         appetiteNoneButton.backgroundColor = .white
-        self.appetite = Appetite.none
+        self.appetite = .none
     }
     
     /// 水分補給できたボタンをタップ
