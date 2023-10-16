@@ -352,10 +352,13 @@ final class MemoViewController: UIViewController {
     private func isValidData() {
         if dateTextField.text != "",
            recordNameTextField.text != "",
+           appetite != nil,
+           hydration != nil,
+           mood != nil,
+           sleepQuantity != nil,
            sleepHourTextField.text != "",
-           sleepMinuteTextField.text != "",
-           let text = tableView.dataSource {
-            return()
+           sleepMinuteTextField.text != "" {
+            saveData()
         } else {
             showAlert(title: "項目をすべて入力してください", message: "")
         }
