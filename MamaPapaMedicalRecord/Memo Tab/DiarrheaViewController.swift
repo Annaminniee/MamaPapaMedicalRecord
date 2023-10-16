@@ -12,6 +12,10 @@ final class DiarrheaViewController: UIViewController {
     
     // MARK: - Properties
     
+    /// FirebaseServiceのインスタンス
+    let firebaseService = FirebaseService.shared
+    
+    /// UIDatePickerのインスタンス
     private let datePicker = UIDatePicker()
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -20,18 +24,41 @@ final class DiarrheaViewController: UIViewController {
         return formatter
     }()
     
+    /// ユーザーID
+    private var userID: String = ""
+    /// 形
+    private var stoolShape: StoolShape?
+    /// 色
+    private var stoolColor: StoolColor?
+    
     // MARK: - IBOutlets
     
     /// 記録日時設定
     @IBOutlet private weak var recordDateTextField: UITextField!
     /// 体温設定
     @IBOutlet private weak var temperatureTextField: UITextField!
+    /// 軟便ボタン
+    @IBOutlet private weak var softStoolButton: CustomButton!
+    /// 泥状便ボタン
+    @IBOutlet private weak var muddyStoolButton: CustomButton!
+    /// 水様便ボタン
+    @IBOutlet private weak var wateryStoolButton: CustomButton!
+    /// 黄色/茶色ボタン
+    @IBOutlet private weak var yellowButton: CustomButton!
+    /// 白っぽいボタン
+    @IBOutlet private weak var whiteButton: CustomButton!
+    /// 黒いボタン
+    @IBOutlet private weak var blackButton: CustomButton!
+    /// 赤い所があるボタン
+    @IBOutlet private weak var redButton: CustomButton!
+    /// その他ボタン
+    @IBOutlet private weak var otherButton: CustomButton!
     /// その他設定
     @IBOutlet private weak var otherTextField: UITextField!
     /// におい設定
     @IBOutlet private weak var smellTextField: UITextField!
     /// メモ
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var textView: PlaceHolderTextView!
     /// 画像挿入設定
     @IBOutlet private weak var imageView: UIImageView!
     
@@ -45,33 +72,76 @@ final class DiarrheaViewController: UIViewController {
         configureSaveButtonItem()
         navigationItem.title = "下痢"
         setupTapGestureRecognizer()
+        textView.placeHolder = "入力してください"
     }
     
     // MARK: - IBActions
     
     /// 形_軟便ボタンをタップ
     @IBAction private func tapSoftButton(_ sender: CustomButton) {
+        softStoolButton.backgroundColor = .white
+        muddyStoolButton.backgroundColor = .lightGray
+        wateryStoolButton.backgroundColor = .lightGray
+        self.stoolShape = .softStool
     }
     /// 形_泥状ボタンをタップ
     @IBAction private func tapMudButton(_ sender: CustomButton) {
+        softStoolButton.backgroundColor = .lightGray
+        muddyStoolButton.backgroundColor = .white
+        wateryStoolButton.backgroundColor = .lightGray
+        self.stoolShape = .muddyStool
     }
     /// 形_水様ボタンをタップ
     @IBAction private func tapLiquidButton(_ sender: CustomButton) {
+        softStoolButton.backgroundColor = .lightGray
+        muddyStoolButton.backgroundColor = .lightGray
+        wateryStoolButton.backgroundColor = .white
+        self.stoolShape = .wateryStool
     }
     /// 色_黄色ボタンをタップ
     @IBAction private func tapYellowButton(_ sender: CustomButton) {
+        yellowButton.backgroundColor = .white
+        whiteButton.backgroundColor = .lightGray
+        blackButton.backgroundColor = .lightGray
+        redButton.backgroundColor = .lightGray
+        otherButton.backgroundColor = .lightGray
+        self.stoolColor = .yellow
     }
     /// 色_白色ボタンをタップ
     @IBAction private func tapWhiteButton(_ sender: CustomButton) {
+        yellowButton.backgroundColor = .lightGray
+        whiteButton.backgroundColor = .white
+        blackButton.backgroundColor = .lightGray
+        redButton.backgroundColor = .lightGray
+        otherButton.backgroundColor = .lightGray
+        self.stoolColor = .white
     }
     /// 色_黒色ボタンをタップ
     @IBAction private func tapBlackButton(_ sender: CustomButton) {
+        yellowButton.backgroundColor = .lightGray
+        whiteButton.backgroundColor = .lightGray
+        blackButton.backgroundColor = .white
+        redButton.backgroundColor = .lightGray
+        otherButton.backgroundColor = .lightGray
+        self.stoolColor = .black
     }
     /// 赤い箇所があるボタンをタップ
     @IBAction private func tapThereAreRedAreasButton(_ sender: Any) {
+        yellowButton.backgroundColor = .lightGray
+        whiteButton.backgroundColor = .lightGray
+        blackButton.backgroundColor = .lightGray
+        redButton.backgroundColor = .white
+        otherButton.backgroundColor = .lightGray
+        self.stoolColor = .red
     }
     /// その他ボタンをタップ
     @IBAction private func tapOtherButton(_ sender: Any) {
+        yellowButton.backgroundColor = .lightGray
+        whiteButton.backgroundColor = .lightGray
+        blackButton.backgroundColor = .lightGray
+        redButton.backgroundColor = .lightGray
+        otherButton.backgroundColor = .white
+        self.stoolColor = .other
     }
     /// 写真挿入ボタンをタップ
     @IBAction private func tapPhotoButton(_ sender: UIButton) {
@@ -91,6 +161,7 @@ final class DiarrheaViewController: UIViewController {
     }
     /// 削除ボタンをタップ
     @IBAction private func tapTrashButton(_ sender: UIButton) {
+        imageView.image = nil
     }
     
     // MARK: - Other Methods
@@ -122,7 +193,29 @@ final class DiarrheaViewController: UIViewController {
     
     /// 登録ボタンをタップ
     @objc func saveButtonTapped() {
-        // TODO: 保存処理
+        isValidData()
+    }
+    
+    /// バリデーション
+    private func isValidData() {
+        if recordDateTextField.text != "",
+           temperatureTextField.text != "",
+           textView.text != "",
+           let image = imageView.image {
+            // 先に画像をアップロードします
+            uploadImage(image: image)
+        } else {
+            showAlert(title: "項目をすべて入力してください", message: "")
+        }
+    }
+    
+    /// アラートを表示
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     /// 日付ピッカーの設定
@@ -178,7 +271,7 @@ final class DiarrheaViewController: UIViewController {
         // ピッカーを閉じる
         recordDateTextField.resignFirstResponder()
     }
-
+    
     /// タップジェスチャーリコグナイザをセットアップ
     private func setupTapGestureRecognizer() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -188,6 +281,62 @@ final class DiarrheaViewController: UIViewController {
     /// 画面のどこかをタップしてキーボードを閉じるメソッド
     @objc private func handleTap() {
         view.endEditing(true)
+    }
+    
+    /// 画像をアップロード
+    private func uploadImage(image: UIImage) {
+        guard let imageData = image.jpegData(compressionQuality: 0.8) else { return }
+        let imageFileName = "diarrhea.jpg"
+        let imagePath = "images/\(imageFileName)"
+        
+        firebaseService.uploadImageToStorage(imageData: imageData,
+                                             path: imagePath) { [weak self] (url, error) in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
+            } else if let url = url {
+                // URL型からString型に変換
+                let imageUrlString = url.absoluteString
+                // アップロードが成功したらデータを保存します
+                self.saveData(imageURL: imageUrlString)
+            }
+        }
+    }
+    
+    /// Firestoreにデータを保存
+    private func saveData(imageURL: String) {
+        
+        guard let recordDate = recordDateTextField.text,
+              let temperature = temperatureTextField.text,
+              let stoolShape = stoolShape,
+              let stoolColor = stoolColor,
+              let other = otherTextField.text,
+              let smell = smellTextField.text,
+              let memo = textView.text else { return }
+        
+        let data: [String: Any] = [
+            "recordDate": recordDate,
+            "temperature": temperature,
+            "stoolShape": stoolShape,
+            "stoolColor": stoolColor,
+            "other": other,
+            "smell": smell,
+            "memo": memo,
+            "imageURL": imageURL
+        ]
+        
+        firebaseService.saveDataToFirestore(collection: "diarrhea", data: data) { [weak self] error in
+            guard let self = self else { return }
+            if let error = error {
+                print("データの保存エラー: \(error)")
+                self.showAlert(title: "保存に失敗しました", message: "")
+            } else {
+                print("データが正常に保存されました")
+            }
+        }
+        // 前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
