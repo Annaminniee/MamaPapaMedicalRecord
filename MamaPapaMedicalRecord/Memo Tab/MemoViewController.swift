@@ -131,8 +131,8 @@ final class MemoViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         //カスタムセル
-        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CoverTableViewCell")
+        let nib = UINib(nibName: "CommonTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CommonTableViewCell")
     }
     
     // MARK: - IBActions
