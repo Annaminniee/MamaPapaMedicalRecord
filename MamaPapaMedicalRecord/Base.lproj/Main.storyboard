@@ -182,8 +182,8 @@
                                                             <attributedString key="attributedTitle">
                                                                 <fragment content="その他">
                                                                     <attributes>
-                                                                        <font key="NSFont" metaFont="smallSystem"/>
-                                                                        <font key="NSOriginalFont" metaFont="cellTitle"/>
+                                                                        <font key="NSFont" size="13" name=".HiraKakuInterface-W3"/>
+                                                                        <font key="NSOriginalFont" metaFont="smallSystem"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
